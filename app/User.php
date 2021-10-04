@@ -37,6 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function plate() {
+    return $this->hasMany(Plate::class);
+    }
+    
+    
     public function tag() {
     return $this->belongsToMany(Tag::class);
     }
