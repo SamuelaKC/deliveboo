@@ -15,6 +15,13 @@ class CreateIngredientPlateTable extends Migration
     {
         Schema::create('ingredient_plate', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('ingredient_id');
+            $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->unsignedBigInteger('plate_id');
+            $table->foreign('plate_id')->references('id')->on('plates')->onDelete('cascade')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }
