@@ -113,7 +113,7 @@ class UserTableSeeder extends Seeder
             $newRestaurant->password = $faker->password();
             $newRestaurant->address = $addressRestaurants[$x];
             $newRestaurant->phone_number = $faker->e164PhoneNumber();
-            $newRestaurant->piva = $faker->bothify('??###########');
+            $newRestaurant->piva = $faker->bothify('IT###########');
             $newRestaurant->description = $descriptionRestaurants[$x];
             $newRestaurant->picture = $pictureRestaurants[$x];
             $newRestaurant->save();
