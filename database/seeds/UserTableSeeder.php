@@ -14,26 +14,26 @@ class UserTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         $nameRestaurants = [
-            'Il Ristoro',
-            'La Piadineria',
-            'K2',
-            'Girotondo di Pizza',
-            'Oasi del Gelato',
-            'Sweet and Fit',
-            'Il Gatto e La Volpe',
-            'La Perla',
-            'Machebuò',
-            'Fratelli La Bufala',
-            'Easy Rider Pub',
-            'Primo Sushi',
-            'Yama',
-            'Xiao',
-            'Girarrosto La Lanterna',
-            'Gelateria La Scimmietta',
-            'Il Tartufo Nero',
-            'Pizza Scugnizzi',
-            'Baan Thai',
-            'Yum'
+            'Il Ristoro', //1
+            'La Piadineria', //2
+            'K2', //3
+            'Girotondo di Pizza', //4
+            'Oasi del Gelato', //5
+            'Sweet and Fit', //6
+            'Il Gatto e La Volpe', //7
+            'La Perla', //8
+            'Machebuò', //9
+            'Fratelli La Bufala', //10
+            'Easy Rider Pub', //11
+            'Primo Sushi', //12
+            'Yama', //13
+            'Xiao', //14
+            'Girarrosto La Lanterna', //15
+            'Gelateria La Scimmietta', //16
+            'Il Tartufo Nero', //17
+            'Pizza Scugnizzi', //18
+            'Baan Thai', //19
+            'Yum' //20
         ];
 
         $addressRestaurants = [
