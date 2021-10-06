@@ -16,10 +16,10 @@ class CreatePlatesTable extends Migration
         Schema::create('plates', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->double('price', 8, 2);
             $table->boolean('available');
-            $table->text('picture');
+            $table->text('picture')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users'); //tabella users
             $table->unsignedBigInteger('category_id');
