@@ -12,8 +12,6 @@ class PlateTableSeeder extends Seeder
      */
     public function run()
     {
-
-
         $namePlates = [
             //user-id 11
             //--antipasti--
@@ -69,6 +67,27 @@ class PlateTableSeeder extends Seeder
 
             //----------
             //user-id 16
+            //--dessert--
+            'vaschetta gelato 350gr',
+            'vaschetta gelato 500gr',
+            'vaschetta gelato 750gr',
+            'vaschetta gelato 1000gr',
+            'mousse nocciola',
+            'mousse pistacchio',
+            //torte
+            'settemezzo pistacchio',
+            'settemezzo nocciola',
+            'cassata siciliana',
+            //crossaint
+            'cornetto vuoto',
+            'cornetto cioccolato',
+            'cornetto pistacchio',
+            'cornetto crema',
+            'cornetto crema amarena',
+            'brioche vuota',
+            'brioche crema',
+            'brioche cioccolato',
+            
 
         ];
 
@@ -116,10 +135,28 @@ class PlateTableSeeder extends Seeder
             '',
             '',
             //user-id 16
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
         ];
 
         $pricePlates = [
             2.50,
+            3.50,
             3.50,
             4.50,
             4.00,
@@ -160,45 +197,86 @@ class PlateTableSeeder extends Seeder
             4.00,
             4.00,
             //user-id 16
+            7.00,
+            9.00,
+            14.00,
+            18.00,
+            4.00,
+            4.00,
+            20.00,
+            20.00,
+            28.00,
+            1.20,
+            1.50,
+            1.50,
+            1.50,
+            1.50,
+            1.50,
+            2.00,
+            2.00,
 
         ];
 
         $picturePlates = [
             '/image/plates/user-id-11/patatine.jpg',
-            '/image/plates/dipper.jpg',
-            '/image/plates/patatine-wurstel.jpg',
-            '/image/plates/bastoncini-mozzarella.jpg',
-            '/image/plates/alette-pollo.jpg',
-            '/image/plates/spiedini-pollo.jpg',
-            '/image/plates/panino-1.jpg',
-            '/image/plates/panino-2.jpg',
-            '/image/plates/panino-2.jpg',
-            '/image/plates/panino-1.jpg',
-            '/image/plates/panino-1.jpg',
-            '/image/plates/panino-1.jpg',
-            '/image/plates/panino-3.jpg',
-            '/image/plates/panino-2.jpg',
-            '/image/plates/acqua.jpg',
-            '/image/plates/cocacola.jpg',
-            '/image/plates/cocacola.jpg',
-            '/image/plates/fanta.jpg',
-            '/image/plates/birra.jpg',
-            '/image/plates/birra.jpg',
-            '/image/plates/birra.jpg',
-            '/image/plates/birra.jpg',
-            '/image/plates/birra.jpg',
-            '/image/plates/birra.jpg',
-            '/image/plates/birra.jpg',
+            '/image/plates/user-id-11/dipper.jpg',
+            '/image/plates/user-id-11/patatine-wurstel.jpg',
+            '/image/plates/user-id-11/bastoncini-mozzarella.jpg',
+            '/image/plates/user-id-11/alette-pollo.jpg',
+            '/image/plates/user-id-11/spiedini-pollo.jpg',
+            '/image/plates/user-id-11/panino-1.jpg',
+            '/image/plates/user-id-11/panino-2.jpg',
+            '/image/plates/user-id-11/panino-2.jpg',
+            '/image/plates/user-id-11/panino-1.jpg',
+            '/image/plates/user-id-11/panino-1.jpg',
+            '/image/plates/user-id-11/panino-1.jpg',
+            '/image/plates/user-id-11/panino-3.jpg',
+            '/image/plates/user-id-11/panino-2.jpg',
+            '/image/plates/user-id-11/acqua.jpg',
+            '/image/plates/user-id-11/cocacola.jpg',
+            '/image/plates/user-id-11/cocacola.jpg',
+            '/image/plates/user-id-11/fanta.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            '/image/plates/user-id-11/birra.jpg',
             //user-id 8
-            '/image/plates/insalata-mare.jpg',
-            '/image/plates/insalata-mare.jpg',
-            '/image/plates/salmone.jpg',
-            '/image/plates/baccala-pistacchio.jpg',
-            '/image/plates/raviolo-burrata.jpg',
-            '/image/plates/spaghetto-astice.jpg',
-            '/image/plates/paccheri.jpg',
-            '/image/plates/spaghettone.jpg',
-            '/image/plates/grigliata-mista.jpg',
+            '/image/plates/user-id-8/insalata-mare.jpg',
+            '/image/plates/user-id-8/insalata-mare.jpg',
+            '/image/plates/user-id-8/salmone.jpg',
+            '/image/plates/user-id-8/baccala-pistacchio.jpg',
+            '/image/plates/user-id-8/raviolo-burrata.jpg',
+            '/image/plates/user-id-8/spaghetto-astice.jpg',
+            '/image/plates/user-id-8/paccheri.jpg',
+            '/image/plates/user-id-8/spaghettone.jpg',
+            '/image/plates/user-id-8/grigliata-mista.jpg',
+            '/image/plates/user-id-8/catalana.jpg',
+            '/image/plates/user-id-8/tonno.jpg',
+            '/image/plates/user-id-8/polpo.jpg',
+            '/image/plates/user-id-8/verdure-grigliate.jpg',
+            '/image/plates/user-id-8/patate-forno.jpg',
+            '/image/plates/user-id-8/insalata.jpg',
+            //user-id 16
+            '/image/plates/user-id-16/vaschetta-gelato.jpg',
+            '/image/plates/user-id-16/vaschetta-gelato.jpg',
+            '/image/plates/user-id-16/vaschetta-gelato.jpg',
+            '/image/plates/user-id-16/vaschetta-gelato.jpg',
+            '/image/plates/user-id-16/mousse-nocciola.jpg',
+            '/image/plates/user-id-16/mousse-pistacchio.jpg',
+            '/image/plates/user-id-16/torta-pistacchio.jpg',
+            '/image/plates/user-id-16/torta-nocciola.jpg',
+            '/image/plates/user-id-16/cassata.jpg',
+            '/image/plates/user-id-16/cornetto.jpg',
+            '/image/plates/user-id-16/cornetto.jpg',
+            '/image/plates/user-id-16/cornetto.jpg',
+            '/image/plates/user-id-16/cornetto.jpg',
+            '/image/plates/user-id-16/cornetto.jpg',
+            '/image/plates/user-id-16/brioche.jpg',
+            '/image/plates/user-id-16/brioche.jpg',
+            '/image/plates/user-id-16/brioche.jpg',
         ];
 
         $userIDPlates = [
@@ -242,6 +320,23 @@ class PlateTableSeeder extends Seeder
             8,
             8,
             8,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
         ];
 
         $categoryIDPlates = [
@@ -285,8 +380,36 @@ class PlateTableSeeder extends Seeder
             12,
             12,
             12,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            58,
+            58,
+            58,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
         ];
 
+        for ($x = 0; $x < count($namePlates); $x++) {
 
+            $newPlate = new Plate();
+            $newPlate->name = $namePlates[$x];
+            $newPlate->description = $descriptionPlates[$x];
+            $newPlate->price = $pricePlates[$x];
+            $newPlate->available = true;
+            $newPlate->picture = $picturePlates[$x];
+            $newPlate->user_id = $userIDPlates[$x];
+            $newPlate->category_id = $categoryIDPlates[$x];
+            $newPlate->save();
+        }
     }
 }
