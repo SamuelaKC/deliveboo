@@ -261,6 +261,210 @@ class PlateTableSeeder extends Seeder
             'Bua Loi',
             'Crepe Gluay Hoom',
             'Acqua naturale',
+            //id-5 Oasi del gelato Tony
+            'Vaschetta gelato da 750gr',
+            'Vaschetta gelato da 1kg',
+            'Vaschetta gelato da 1.5kg',
+            //Yogurt
+            'Yogurt Frozen 250gr',
+            'Yogurt Frozen 350gr',
+            'Yogurt Greco 250gr',
+            'Yogurt Greco 350gr',
+            'Yogurt intero classico 250gr',
+            'Yogurt intero classico 350gr',
+            'Panna montata 250gr',
+            //Frutta
+            'Spremuta di pompelmo',
+            'Spremuta di arancia',
+            'spremuta mista con limone',
+            //Colazione
+            'Caffè lungo',
+            'Caffè macchiato',
+            'Caffè americano',
+            'Caffè espresso',
+            'Latte macchiato',
+            'Cappuccino',
+            'Thè caldo',
+            'Brioche al pistacchio',
+            'Brioche alla crema',
+            'Brioche alla nutella',
+            'Brioche all’albicocca',
+            'Muffin cioccolato',
+            'Donuts cioccolato',
+            'Donuts fragola',
+            //Torte gelato
+            'Tronchetto di gelato alla frutta per 6 persone',
+            'Tronchetto di gelato alla frutta per 8 persone',
+            'Domus di gelato alla crema e gianduia 6 persone',
+            'Domus di gelato alla crema e gianduia 8 persone',
+            'Cheesecake ai frutti di bosco - 8 persone',
+            'Cheesecake',
+            'Scatola tartufi da 12 pezzi',
+            //Dolci
+            'Cannolo siciliano con ricotta',
+            'Frappè',
+            'Trancio di Cassata gelato',
+            'Tartufo crema e gianduia ricoperto di cacao',
+            'Cassata marzapane e ricotta',
+            //Bevande
+            'Acqua naturale 50 cl',
+            'Acqua frizzante 50 cl',
+            'Cocacola 33 cl',
+            'Cocacola zero 33 cl',
+            'Fanta 33 cl',
+            //id-9 MacheBUò
+            //Antipasto
+            'Bruschette di mare',
+            'Tartara di tonno',
+            'Tartara di gamberi rossi/viola',
+            'Polpo all’insalata',
+            'Zuppa di cozze',
+            //Primi
+            'scialatielli allo scoglio',
+            'genovese di tonno',
+            'Pasta e fagioli di mare',
+            //Secondi
+            'Frittura di gamberi e calamari',
+            'Polpo alla brace',
+            'Hamburger di scottona con patate fritte',
+            'Salsiccia Grill con patate fritt',
+            'entrecote con contorno',
+            'filetto al pepe neo',
+            //Bevande
+            'Pepsi',
+            'Acqua naturale 50 cl',
+            'Acqua frizzante 50 cl',
+            'Cocacola 33 clc',
+            'Cocacola zero 33 clc',
+            'Fanta 33 cl',
+            //id-18 Pizza Scugnizzi 
+            'Margherita',
+            'Marinara',
+            'Mimosa',
+            'Diavola',
+            'Quattro formaggi',
+            'Wurstel e patatine',
+            'Bufalina Doc',
+            'salsicce e friarielli',
+            'ripieno al forno',
+            'ripieno fritto',
+            'Ortolana',
+            'Quattro Stagioni',
+            //Fritti
+            'Frittatina grande',
+            'Crocchè di patate',
+            'Crocchè mignon',
+            'Zeppole  piccole',
+            'Arancino',
+            //Bevande
+            'Pepsi',
+            'Acqua naturale 50 cl',
+            'Acqua frizzante 50 cl',
+            'Cocacola 33 cl',
+            'Cocacola zero 33 cl',
+            'Fanta 33 cl',
+            'Nastro azzurro 33 cl',
+            'Heineken 33 cl',
+            'Corona 33 cl',
+            'Ceres 33 cl',
+            //id-15 Girrarrosto La Lanterna
+            //Prodotti Cotti al Girarrosto
+            'Ali di Pollo',
+            'Cervallatine Aia',
+            'Cosciotto tacchino',
+            'Mezzo Pollo',
+            'Pollo allevato Italia',
+            'Pollo campese Amadori',
+            'Spiedini di carne mista',
+            'Stinco di maiale',
+            //Contorni a scelta
+            'Parmigiana di melanzana',
+            'Involtini di melanzana e peperoni',
+            'Involtini di melanzana e provola',
+            //Patate
+            'Gateau di patate',
+            'Patate al Forno',
+            'Patate in busta',
+            //Bevande
+            'Acqua naturale 50 cl',
+            'Acqua frizzante 50 cl',
+            'Coca Cola',
+            'Coca  Cola zero',
+            //Vino
+            'vino Cantina La Lanterna',
+            //------------------------------------------------------------------
+            // user 7 Edo -> Gatto e Volpe:
+            // primi
+            'spaghetti al pomodoro',
+            'spaghetti al ragù',
+            'gnocchi al ragù',
+            'pasticcio', 
+            'tortellini in brodo',
+            'carbonara',
+            // secondi 
+            'tagliata di manzo',
+            'costata di manzo',
+            'grigliata mista',
+            'spezzatino di vitello',
+            'Brasato',
+            'Arrosto di vitello',
+            // Bevande
+            'coca cola',
+            'birra',
+            //User 10 Edo -> Fratelli bufala:
+            // pizze
+            'marinara',
+            'margherita',
+            'bianca',
+            'rossa',
+            'pugliese',
+            'olive',
+            'semplice',
+            'napoli',
+            'carciofi',
+            'rucola e grana',
+            'salame piccante',
+            'romana',
+            'prosciutto',
+            'rustica',
+            'siciliana',
+            'americana',
+            'tonno e cipolla',
+            'capricciosa',
+            'boscaiola',
+            'bacon',
+            'vegetariana',
+            // Primi piatti:
+            'spaghetti al pomodoro',
+            'spaghetti al ragù',
+            'spaghetti alla busara',
+            'gnocchi gorgonzola speck e noci',
+            // Bevande
+            'coca cola',
+            'birra',
+            // User 13 Edo -> Yama:
+            // antipasti
+            'involtini primavera',
+            'Nuvole di drago',
+            'Baozi',
+            // primi
+            'Riso alla cantonese',
+            'Spaghetti di riso',
+            'Spaghetti con i frutti di mare',
+            'Ravioli alla griglia o al vapore',
+            'Zuppa di noodles',
+            // secondi:
+            'Pollo alle mandorle',
+            'Anatra alla pechinese',
+            'Gamberi alla piastra',
+            // Dessert:
+            'Gelato fritto',
+            // Bevande
+            'coca cola',
+            'birra',
+            //------------------------------------------------------------------
+
+
         ];
 
         $descriptionPlates = [
@@ -530,137 +734,200 @@ class PlateTableSeeder extends Seeder
             'Caramelle di riso glutinoso in latte di cocco',
             'Crepe ripiena alla banana con sciroppo di cacao e panna',
             'Acqua',
-            //id-5 Oasi del gelato Tony
-            'Vaschetta gelato da 750gr',
-            'Vaschetta gelato da 1kg',
-            'Vaschetta gelato da 1.5kg',
-            //Yogurt
-            'Yogurt Frozen 250gr',
-            'Yogurt Frozen 350gr',
-            'Yogurt Greco 250gr',
-            'Yogurt Greco 350gr',
-            'Yogurt intero classico 250gr',
-            'Yogurt intero classico 350gr',
-            'Panna montata 250gr',
-            //Frutta
-            'Spremuta di pompelmo',
-            'Spremuta di arancia',
-            'spremuta mista con limone',
-            //Colazione
-            'Caffè lungo',
-            'Caffè macchiato',
-            'Caffè americano',
-            'Caffè espresso',
-            'Latte macchiato',
-            'Cappuccino',
-            'Thè caldo',
-            'Brioche al pistacchio',
-            'Brioche alla crema',
-            'Brioche alla nutella',
-            'Brioche all’albicocca',
-            'Muffin cioccolato',
-            'Donuts cioccolato',
-            'Donuts fragola',
-            //Torte gelato
-            'Tronchetto di gelato alla frutta per 6 persone',
-            'Tronchetto di gelato alla frutta per 8 persone',
-            'Domus di gelato alla crema e gianduia 6 persone',
-            'Domus di gelato alla crema e gianduia 8 persone',
-            'Cheesecake ai frutti di bosco - 8 persone',
-            'Cheesecake',
-            'Scatola tartufi da 12 pezzi',
-            //Dolci
-            'Cannolo siciliano con ricotta',
-            'Frappè',
-            'Trancio di Cassata gelato',
-            'Tartufo crema e gianduia ricoperto di cacao',
-            'Cassata marzapane e ricotta',
-            //Bevande
-            'Acqua naturale 50 cl',
-            'Acqua frizzante 50 cl',
-            'Cocacola 33 cl',
-            'Cocacola zero 33 cl',
-            'Fanta 33 cl',
-            //id-9 MacheBUò
-            //Antipasto
-            'Bruschette di mare',
-            'Tartara di tonno',
-            'Tartara di gamberi rossi/viola',
-            'Polpo all’insalata',
-            'Zuppa di cozze',
-            //Primi
-            'scialatielli allo scoglio',
-            'genovese di tonno',
-            'Pasta e fagioli di mare',
-            //Secondi
-            'Frittura di gamberi e calamari',
-            'Polpo alla brace',
-            'Hamburger di scottona con patate fritte',
-            'Salsiccia Grill con patate fritt',
-            'entrecote con contorno',
-            'filetto al pepe neo',
-            //Bevande
-            'Pepsi',
-            'Acqua naturale 50 cl',
-            'Acqua frizzante 50 cl',
-            'Cocacola 33 clc',
-            'Cocacola zero 33 clc',
-            'Fanta 33 cl',
-            //id-18 Pizza Scugnizzi 
-            'Margherita',
-            'Marinara',
-            'Mimosa',
-            'Diavola',
-            'Quattro formaggi',
-            'Wurstel e patatine',
-            'Bufalina Doc',
-            'salsicce e friarielli',
-            'ripieno al forno',
-            'ripieno fritto',
-            'Ortolana',
-            'Quattro Stagioni',
-            //Fritti
-            'Frittatina grande',
-            'Crocchè di patate',
-            'Crocchè mignon',
-            'Zeppole  piccole',
-            'Arancino',
-            //Bevande
-            'Pepsi',
-            'Acqua naturale 50 cl',
-            'Acqua frizzante 50 cl',
-            'Cocacola 33 cl',
-            'Cocacola zero 33 cl',
-            'Fanta 33 cl',
-            'Nastro azzurro 33 cl',
-            'Heineken 33 cl',
-            'Corona 33 cl',
-            'Ceres 33 cl',
-            //id-15 Girrarrosto La Lanterna
-            //Prodotti Cotti al Girarrosto
-            'Ali di Pollo',
-            'Cervallatine Aia',
-            'Cosciotto tacchino',
-            'Mezzo Pollo',
-            'Pollo allevato Italia',
-            'Pollo campese Amadori',
-            'Spiedini di carne mista',
-            'Stinco di maiale',
-            //Contorni a scelta
-            'Parmigiana di melanzana',
-            'Involtini di melanzana e peperoni',
-            'Involtini di melanzana e provola',
-            //Patate
-            'Gateau di patate',
-            'Patate al Forno',
-            'Patate in busta',
-            //Bevande
-            'Acqua naturale 50 cl',
-            'Acqua frizzante 50 cl',
-            'Coca Cola',
-            'Coca  Cola zero',
-            //Vino
-            'vino Cantina La Lanterna',
+            //id-5 Oasi del gelato
+            'Scegli fino a 4 gusti',
+            'Scegli fino a 4 gusti',
+            'Scegli fino a 4 gusti',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            'in confezione',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            'Da 400 grammi',
+            'Contiene 3 pz. Al cioccolato, 3pz stracciatella, 3pz nocciola, 3pz bacio',
+            '  ',
+            'Scegli un gusto',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            //id-9 MacheBuò
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            'Cozze, lupini, vongole, pomodoro, polpo, crostini',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            //id-18 Pizza Scugnizzi
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            'pomodorini, mozzarella di bufala, basilico, olio',
+            '  ',
+            'pomodoro mozzarella cigoli  pepe',
+            'pomodoro mozzarella cigoli pepe',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '5pezzi',
+            '5pezzi',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            '  ',
+            //id-15 Girarrosto la lanterna
+            '200gr',
+            '300gr',
+            '2.200gr',
+            '600gr',
+            '1.200gr',
+            '1.500gr',
+            'carne di maiale,tacchino,peperone',
+            '700gr',
+            '400gr',
+            '400gr',
+            '400gr',
+            'Patate,uova,formaggio,salumi 400gr',
+            '400gr',
+            '160gr',
+            '0.50lt',
+            '0.50lt',
+            '0.33cl',
+            '0.33cl',
+            '0.75 lt.',
+            //------------------------------------------------------------------
+            // User 7 gatto e volpe -> Edo:
+            'Classici spaghetti al pomodoro, con sugo fresco',
+            'Classici spaghetti fatti con un ragù a km 0 super fresco',
+            'Gnocchi fatti a mano da noi con il nostro ragù',
+            'Pasticcio congelato preso fresco in macelleria',
+            'Tortellini fatti a mano da noi con brodo del dado', 
+            'Presa direttamente da Roma e portata da vuoi <3',
+            'Carne di prima qualità grigliata con fuoco e amore',
+            'Carne di prima qualità grigliata con fuoco e amore',
+            'Carne di prima qualità grigliata con fuoco e amore',
+            'Carne di prima qualità grigliata con fuoco e amore',
+            'Carne di prima qualità grigliata con fuoco e amore',
+            'Carne di prima qualità grigliata con fuoco e amore',
+            // bere:
+            '33cl',
+            'da 0.5 o 1l',
+            //------------------------------------------------------------------
+            // User 10 Fratelli Bufala -> Edo: 
+            //pizze
+            'pomodoro, aglio, olio, origano',
+            'pomodoro, mozzarella',
+            'mozzarella',
+            'pomodoro',
+            'pomodoro, mozzarella, pomodorini, cipolle',
+            'pomodoro, mozzarella, olive',
+            'pomodoro, mozzarella, basilico, brie, pomodorini',
+            'pomodoro, mozzarella, acciughe',
+            'pomodoro, mozzarella, carciofi',
+            'pomodoro, mozzarella, rucola, grana',
+            'pomodoro, mozzarella, salame piccante',
+            'pomodoro, mozzarella, acciughe, capperi',
+            'pomodoro, mozzarella, prosciutto cotto',
+            'pomodoro, mozzarella, spinaci, gorgonzola',
+            'pomodoro, mozzarella, acciughe, capperi, olive',
+            'pomodoro, mozzarella, patatine, würstel',
+            'pomodoro, mozzarella, tonno, cipolla',
+            'pomodoro, mozzarella, prosciutto cotto, funghi, carciofi, olive',
+            'pomodoro, mozzarella, prosciutto cotto, funghi, panna',
+            'pomodoro, mozzarella, pancetta',
+            'pomodoro, mozzarella, zucchine, melanzane, peperoni grigliati',
+
+            // Primi piatti:
+            'classici spaghetti al pomodoro, con sugo di pomodoro fatto casa',
+            'classici spaghetti al pomodoro, con ragù fatto casa',
+            'spaghetti con scampi freschi e sugo di pomodoro fatto in casa',
+            'classico montanaro gnocchi con ottimo gorgonzola speck dell’alto Adige e noci frescheì',
+            // bere:
+            '33cl',
+            'da 0.5 o 1l',
+            //------------------------------------------------------------------
+            // User 13 Yama -> Edo:
+            'Un piatto ripieno, ma la sfoglia è sottile e croccante ed è farcita con un mix di verdure dal sapore inconfondibile. Sono spesso accompagnati da una salsa agrodolce, anche se molti preferiscono intingerli nella più classica salsa di soia.',
+            
+            'Uno dei piatti a base di riso più famoso di questa cucina. Piselli, tocchetti di prosciutto cotto, uova insaporiscono bianchi chicchi sodi e gustosi. Questa resta una delle pietanze più richieste tra le specialità cinesi.',
+            
+            'Alcuni le conoscono con il nome di nuvole di granchio, sono leggere cialde croccanti servite come accompagnamento ai piatti principali. In alcuni locali sono portate in tavola come antipasto per accogliere i clienti.',
+            
+            'Questo è uno dei must della cucina cinese. Sottilissimi spaghetti realizzati con farina di riso, conditi con verdure, carne o pesce in base ai gusti. La consistenza è callosa ed il gusto davvero delizioso.',
+            
+            'Tra i piatti tipici cinesi non può non essere annoverato il pollo alle mandorle. Piccoli bocconcini di tenero pollo conditi con una gustosa crema a base di salsa di soia e mandorle. Imperdibile.',
+
+            'Questo piatto viene servito in tutti i migliori ristoranti di cucina cinese. L’anatra esternamente si presenta croccante, mentre all’interno resta morbida ed umida. Si mangia appoggiando una fettina di anatra su una piccola sfoglia di pane accompagnata da cetriolo o porro e dalla tipica salsa pechinese.',
+            
+            'Il pesce è uno degli ingredienti più importanti di tutta la cucina asiatica. Per questo trova spazio in uno dei piatti tipici che sono questi spaghetti conditi con i frutti di mare e saltati alla piastra con salsa di soia e zenzero.',
+        
+            'I gamberi non mancano mai sulle tavole più ricercate della cucina cinese. Vengono arrostiti ed insaporiti solo con sale e pepe.',
+
+            'I ravioli sono qualcosa di davvero prelibato. Sono palline di pasta ripiene di carne, pesce o verdure cotte al vapore o alla griglia. Racchiudono il sapore tipico della cucina asiatica, dove soia, zenzero, verza sono solo alcuni degli ingredienti base.',
+
+            'Questo di certo resta uno dei dolci più amati della cucina cinese. Una croccante sfoglia che avvolge una palla di morbido gelato, da leccarsi i baffi.',
+
+            'La zuppa di noodles con manzo e verdure miste è un piatto completo tipico della cucina cinese. La presenza contemporanea di noodles, verdure e carne lo rende un piatto unico.',
+
+            'panini al vapore di alta qualità con tutti prodotti freschi.',
+            // bere:
+            '33cl',
+            'da 0.5 o 1l',
+            //------------------------------------------------------------------
 
           ];
 
@@ -1012,6 +1279,82 @@ class PlateTableSeeder extends Seeder
             2.00,
             2.00,
             4.00,
+            //---------------------------------------------------------------------------
+            // User 7 Gatto e Volpe -> Edo
+            // prezzi:
+            // primi:
+            7.00,
+            7.00,
+            9.00,
+            12.00,
+            10.00,
+            14.00,
+            // secondi:
+            14.00,
+            18.00,
+            22.00,
+            12.00,
+            11.00,
+            10.00,
+            // bevande:
+            3.00,
+            5.00,
+            //---------------------------------------------------------------------------
+            // User 10 Fratelli Bufala -> Edo:
+            // pizze:
+            4.00,
+            4.50,
+            4.00,
+            4.00,
+            6.00,
+            5.00,
+            9.00,
+            8.00,
+            10.00,
+            6.00,
+            8.00,
+            10.00,
+            6.00,
+            12.00,
+            10.00,
+            9.00,
+            10.00,
+            15.00,
+            14.00,
+            11.00,
+            10.00,
+            // primi piatti:
+            8.00,
+            8.00,
+            15.00,
+            12.00,
+            // Bevande;
+            2.00,
+            4.00,
+            //---------------------------------------------------------------------------
+            // User 13 Yama -> Edo:
+            // prezzi:
+            // Antipasti:
+            4.00,
+            8.00,
+            6.00,
+            // Primi:
+            9.00,
+            13.00,
+            12.00,
+            15.00,
+            5.00,
+            // secondi:
+            8.00,
+            4.00,
+            7.00,
+            // dessert:
+            6.00,
+            // bevande
+            2.00,
+            5.00,
+            //---------------------------------------------------------------------------
+
                                     
         ];
 
@@ -1364,6 +1707,71 @@ class PlateTableSeeder extends Seeder
             ' ',
             ' ',
             ' ', 
+            // ---------------------------------------------------
+            // User 7  Gatto e volpe -> Edo:
+            '/image/plates/user-id-7/spaghetti-pomodoro.jpeg',
+            '/image/plates/user-id-7/spaghetti-ragù.jpeg',
+            '/image/plates/user-id-7/gnocchi-al-ragù.jpeg',
+            '/image/plates/user-id-7/pasticcio.jpeg',
+            '/image/plates/user-id-7/tortellini.jpeg',
+            '/image/plates/user-id-7/carbonara.jpeg',
+
+            '/image/plates/user-id-7/tagliata-di-manzo.jpeg',
+            '/image/plates/user-id-7/costata.jpg',
+            '/image/plates/user-id-7/grigliata-di-carne.jpeg',
+            '/image/plates/user-id-7/spezzatino-di-vitello.jpeg',
+            '/image/plates/user-id-7/brasato.jpeg',
+            '/image/plates/user-id-7/arrosto-di-vitello.jpg',
+            // Qui ci vanno le foto del da bere
+            '/image/plates/user-id-11/cocacola.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            // ---------------------------------------------------
+            // User 10  Fratelli Bufala -> Edo:
+            '/image/plates/user-id-10/marinara.jpeg',
+            '/image/plates/user-id-10/margherita.png',
+            '/image/plates/user-id-10/bianca.png',
+            '/image/plates/user-id-10/rossa.png',
+            '/image/plates/user-id-10/pugliese.jpeg',
+            '/image/plates/user-id-10/olive.jpeg',
+            '/image/plates/user-id-10/semplice.jpeg',
+            '/image/plates/user-id-10/napoli.jpeg',
+            '/image/plates/user-id-10/carciofi.png',
+            '/image/plates/user-id-10/rucola-e-grana.jpeg',
+            '/image/plates/user-id-10/salamino.jpeg',
+            '/image/plates/user-id-10/romana.jpeg',
+            '/image/plates/user-id-10/prosciutto-cotto.jepg',
+            '/image/plates/user-id-10/rustica.jpeg',
+            '/image/plates/user-id-10/siciliana.jpeg',
+            '/image/plates/user-id-10/americana.jpeg',
+            '/image/plates/user-id-10/tonno-e-cipolla.jpeg',
+            '/image/plates/user-id-10/pizza-capricciosa.jpeg',
+            '/image/plates/user-id-10/boscaiola.jpeg',
+            '/image/plates/user-id-10/bacon.jpeg',
+            '/image/plates/user-id-10/vegetariana.jpeg',
+            // primi piatti:
+            '/image/plates/user-id-10/spaghetti-pomodoro.jpeg',
+            '/image/plates/user-id-10/spaghetti-ragù.jpeg',
+            '/image/plates/user-id-10/spaghetti-busara.jpeg',
+            '/image/plates/user-id-10/gnocchi-gorg-speck.jpeg',
+            // Qui ci vanno le foto del da bere
+            '/image/plates/user-id-11/cocacola.jpg',
+            '/image/plates/user-id-11/birra.jpg',
+            // ---------------------------------------------------
+            // User 13  Yama -> Edo:
+            '/image/plates/user-id-13/Involtini-primavera.jpg',
+            '/image/plates/user-id-13/nuvoletta-di-drago.jpeg',
+            '/image/plates/user-id-13/Baozi.jpg',
+            '/image/plates/user-id-13/Riso-alla-cantonese.jpg',
+            '/image/plates/user-id-13/spaghetti-di-riso.jpg',
+            '/image/plates/user-id-13/Spaghetti-allo-scoglio.jpg',
+            '/image/plates/user-id-13/Ravioli-cinesi.jpg',
+            '/image/plates/user-id-13/zuppa.jpeg',
+            '/image/plates/user-id-13/Pollo-alle-mandorle.jpeg',
+            '/image/plates/user-id-13/anatra-alla-pechinese.jpeg',
+            '/image/plates/user-id-13/gambero-alla-piastra.jpeg',
+            '/image/plates/user-id-13/gelato-fritto.jpeg',
+            // ---------------------------------------------------
+
         ];
 
         $userIDPlates = [
@@ -1713,7 +2121,72 @@ class PlateTableSeeder extends Seeder
             15,
             15,
             15,
-
+            // ------------------------------------
+            // User 7 Gatto e volpe -> Edo:
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            // ------------------------------------
+            // User 10 Fratelli Bufala -> Edo:
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            // primi piatti:
+            10,
+            10,
+            10,
+            10,
+            //bevande:
+            10,
+            10,
+            // ------------------------------------
+            // User 13 Yama -> Edo:
+            // antipasti
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            // ------------------------------------
+            
         ];
 
         $categoryIDPlates = [
@@ -2062,6 +2535,71 @@ class PlateTableSeeder extends Seeder
             4,
             4,
             61,
+            // --------------------------------------
+            // User 7 Gatoo e volpe -> Edo:
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            51,
+            51,
+            51,
+            51,
+            51,
+            51,
+            4,
+            4,
+            // --------------------------------------
+            // User 10 Fratelli Bufala -> Edo:
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            46,
+            // Id primi piatti:
+            48,
+            48,
+            48,
+            48,
+            //bevande:
+            4,
+            4,
+            // --------------------------------------
+            // User 13 Yama -> Edo:
+            3,
+            3,
+            3,
+            48,
+            48,
+            48,
+            48,
+            48,
+            51,
+            51,
+            51,
+            16,
+            4,
+            4
+            // --------------------------------------
+
         ];
 
         for ($x = 0; $x < count($namePlates); $x++) {
