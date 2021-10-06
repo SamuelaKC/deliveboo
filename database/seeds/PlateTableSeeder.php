@@ -463,6 +463,125 @@ class PlateTableSeeder extends Seeder
             'coca cola',
             'birra',
             //------------------------------------------------------------------
+                        //--MASSIMO--
+
+            //user-id 3   K2
+
+            //--kebab--
+            'menù kebab',
+            'menù falafel',
+            'menù hot dog',
+            //--panini--
+            'panino doner kebab',
+            'paiadina falafel',
+            //--pollo--
+            'alette di pollo',
+            //--riso--
+            'riso bianco',
+            'riso rosso',
+            //--antipasti--
+            'fagottino',
+            'crocchette di patate',
+            'patate fritte porzione media',
+            'patate fritte porzione grande',
+            //--dessert--
+            'baklava',
+            'sùtlac',
+            //--bevande--
+            'acqua minerale',
+            'coca cola',
+            'coca cola zero',
+            'fanta',
+            //----------
+
+            //user-id 14  XIAO
+
+            //--antipasti--
+
+            'edamame',
+            'insalata totoro',
+            'involtini primavera di gamberi',
+            'gyoza',
+
+            //--nigiri--
+            'maguro',
+            'ebi',
+            'tako',
+            'sake mango',
+            'nigiri kongo 6pz',
+            'nigiri kongo 9pz',
+            // --riso--
+            'salmon gunkan',
+            'philadelphia gunkan',
+            'oshinko gunkan',
+            // --tartare--
+            'tartare di salmone',
+            'tartare di tonno',
+            //--sashimi--
+            'sashimi sake',
+            'sahimi tonno',
+            //--secondi piatti--
+            'sake maki',
+            'ebi maki',
+            'dragon roll',
+            'suzuki roll',
+            'california roll',
+            'veggie futo roll',
+            'sakana futo roll',
+            'temaki ebiten',
+            'temaki miura',
+            'barca mista 100pz',
+            //--chirashi--
+            'chirashi misto',
+            'chirashi arcobaleno',
+            //--bevande--
+            'acqua minerale',
+            'coca cola',
+            'coca cola zero',
+            'fanta', 
+
+
+
+            //---------
+            //user-id 16   IL TARTUFO NERO
+
+            //--insalate--
+            'insaltata di polpo piastrato alla catalana',
+            'insalatina di gamberi cous cous verdure grigliateì',
+            //--primi piatti--
+            'paccheri al pomodoro e asilico',
+            'casoncelli bergamaschi crema di grana padano e sesamo nero',
+            'orecchiette di broccholi acciughe del cantabrico e pane croccantte',
+            //secondi piatti--
+            'tagliata di pollo al lime',
+            'cotoletta alla milanese',
+            'filetto di manzo alla piastra',
+            //--contorni--
+            'patate al forno',
+            'erbette al salto',
+            'insaltata di pomodoro missori',
+            'insalata nizzarda',
+            //--dessert--
+            'macedonia di frutta fresca',
+            'tiramisu',
+            'tartufo al cioccolato bianco',
+            'tartufo al cioccolato nero',
+            //-- vini--
+            'brunello di montalcino',
+            'chianti classico',
+            'nobile di montepulciano',
+            'morellino di scansano',
+            'pinot grigio',
+            'chardonnay',
+            'souvignon',
+            //--bevande--
+            'acqua minerale',
+            'coca cola',
+            'coca cola zero',
+            'fanta', 
+
+
+
 
 
         ];
@@ -928,6 +1047,93 @@ class PlateTableSeeder extends Seeder
             '33cl',
             'da 0.5 o 1l',
             //------------------------------------------------------------------
+                        //--MASSIMO--
+
+            //user-id 3   K2
+            'panino kebab,patate fritte,bevanda 33cl',
+            'panino falafel,patate fritte, bevanda 33cl',
+            'hotdog,patate fritte, bevanda 33cl',
+            'carne di vitello e tacchino,insalata,pomodoro,cipolla',
+            'polpette di ceci e verdute macinate,insalata,pomodoro,cipolla',
+            '4pz',
+            'riso marinato,sale,mais, burro',
+            'passata di pomodoro,peperoni,sale,burro ,carote',
+            'patate formaggio  e spezie',
+            '6pz',
+            '',
+            '',
+            'pasta sfoglia,pistacchio,burro,schiroppo di zucchero',
+            'riso,latte,miele,zucchero',
+            '',
+            '33cl',
+            '33cl',
+            '33cl',
+            //user-id 14  XIAO
+            'bacdelli di soia bolliti',
+            'alghe,carote,sesamo',
+            'involtini primavera di gamberi',
+            'ravioli di carne al vapore',
+            'nigiri di tonno',
+            'nighiri di gambero cotto',
+            'nigiri di polpo cotto',
+            'nigiri di mango,salmone',
+            'riso,salmone,mayonese,tobiko',
+            'riso,salmone,philadelphia',
+            'riso,alghe,uova di pesce volante',
+            'tartare di salmone',
+            'tartare di tonno ',
+            'sashimi di salmone',
+            'sashimi di tonno',
+            'salmone,branzinio.gambero cotto',
+            'salmone,branzinio.gambero cotto, polpo,granchio',
+            'alga cetriolo e philadephia',
+            'alga e gambero cotto',
+            'gambero fritto, pollo in fiamma, tobico, salsa piccante',
+            'branzino fritto, formaggio, rucola',
+            'surimi di granchio, avocado, maionese',
+            'avocado, cetriolo, alghe croccanti, philadelphia',
+            'salmone fritto, avocado, topico, salsa dolce',
+            'gambero fritto, insalata verde, salsa teriyaki',
+            ' salmone e branzino cotti, philadelphia, avocado',
+            '100 pezzi misti del menu',
+            'mais, carote, alghe, avocado, riso',
+            'salmone, topico, pomodoro, avocado, riso',
+            '',
+            '33cl',
+            '33cl',
+            '33cl',
+
+
+            //user-id 17    IL TARTUFO NERO
+
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            'contorno a scelta',
+            '',
+            '',
+            '',
+            '',
+            'insalata con uova sode,alici di mare,fichi',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '33cl',
+            '33cl',
+            '33cl',
+
 
           ];
 
@@ -1354,6 +1560,95 @@ class PlateTableSeeder extends Seeder
             2.00,
             5.00,
             //---------------------------------------------------------------------------
+                        //--MASSIMO--
+
+            //user-id 3 K2
+
+            3.50,
+            3.50,
+            3.50,
+            4.00,
+            4.00,
+            3.00,
+            3.00,
+            3.50,
+            2.50,
+            4.00,
+            3.00,
+            4.00,
+            3.50,
+            3.50,
+            1.00,
+            2.00,
+            2.00,
+            2.00,
+
+
+            //user-id 14 XIAO
+
+            4.00,
+            6.00,
+            4.00,
+            4.00,
+            2.00,
+            2.00,
+            2.00,
+            2.00,
+            3.00,
+            3.00,
+            3.00,
+            4.00,
+            4.00,
+            7.00,
+            7.00,
+            4.00,
+            5.00,
+            12.00,
+            12.00,
+            12.00,
+            12.00,
+            12.00,
+            12.00,
+            12.00,
+            10.00,
+            10.00,
+            60.00,
+            12.00,
+            12.00,
+            1.00,
+            2.00,
+            2.00,
+            2.00,
+
+            //user-id 17 IL TARTUFO NERO
+
+            8.00,
+            8.00,
+            9.00,
+            9.00,
+            8.00,
+            12.00,
+            10.00,
+            12.00,
+            12.00,
+            6.00,
+            4.00,
+            6.00,
+            6.00,
+            4.00,
+            4.00,
+            5.00,
+            5.00,
+            20.00,
+            20.00,
+            18.00,
+            16.00,
+            18.00,
+            20.00,
+            1.00,
+            2.00,
+            2.00,
+            2.00,
 
                                     
         ];
@@ -1771,6 +2066,96 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-13/gambero-alla-piastra.jpeg',
             '/image/plates/user-id-13/gelato-fritto.jpeg',
             // ---------------------------------------------------
+                        //--MASSIMO--
+
+            //--K2--
+
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+
+            //--XIAO
+
+
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+
+            //--IL TARTUFO NERO--
+
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+
 
         ];
 
@@ -2186,6 +2571,89 @@ class PlateTableSeeder extends Seeder
             13,
             13,
             // ------------------------------------
+                       //--MASSIMO--
+
+            //user-id 3
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            //user-id 14
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            //user-id 16
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
             
         ];
 
@@ -2597,7 +3065,105 @@ class PlateTableSeeder extends Seeder
             51,
             16,
             4,
-            4
+            4,
+
+            //--MASSIMO--
+
+            //--k2--
+
+
+            24,
+            24,
+            24,
+            43,
+            43,
+            47,
+            49,
+            49,
+            43,
+            43,
+            43,
+            43,
+            43,
+            43,
+            3,
+            3,
+            3,
+            3,
+            16,
+            16,
+            4,
+            4,
+            4,
+            4,
+
+            //--XIAO--
+
+            3,
+            3,
+            3,
+            3,
+            40,
+            40,
+            40,
+            40,
+            40,
+            40,
+            49,
+            49,
+            49,
+            54,
+            54,
+            50,
+            50,
+            51,
+            51,
+            51,
+            51,
+            51,
+            51,
+            51,
+            51,
+            51,
+            51,
+            10,
+            10,
+            4,
+            4,
+            4,
+            4,
+
+
+            //--IL TARTUFO NERO--
+
+            22,
+            22,
+            48,
+            48,
+            48,
+            51,
+            51,
+            51,
+            12,
+            12,
+            12,
+            12,
+            16,
+            16,
+            16,
+            16,
+            61,
+            61,
+            61,
+            61,
+            61,
+            61,
+            61,
+            4,
+            4,
+            4,
+            4,
+
             // --------------------------------------
 
         ];
