@@ -87,8 +87,145 @@ class PlateTableSeeder extends Seeder
             'brioche vuota',
             'brioche crema',
             'brioche cioccolato',
-            
-
+            //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
+            <!-- //user id 2 -->
+            <!-- //piadine -->
+            'La Leggenda',
+            'La Belpaese',
+            'La Semplice',
+            'La Leggerezza',
+            'La Provenzale',
+            'L\’Estate',
+            'Il Mare',
+            'La Contadina',
+            'La Tifosa',
+            'La Golosa',
+            'La Regale',
+            'La Saporita',
+            'La Piccante',
+            'La Verdissima',
+            'La Caprese',
+            'La Primavera',
+            <!-- //piadine dolci -->
+            'Nutella',
+            'Confettura extra di lamponi',
+            'Crema Baci Perugina',
+            'Crema al cioccolato e granella di Kit Kat',
+            'Crema al cioccolato e Smarties',
+            'Crema Galak e Smarties',
+            'Crema Galak, marmellata di lamponi e mirtilli freschi',
+            <!-- //bevande -->
+            'Acqua naturale 50cl',
+            'Acqua frizzante 50cl',
+            'Coca Cola 50cl',
+            'Fanta 50cl',
+            'Sprite 50cl',
+            'Estathè al limone 50cl',
+            'Estathè alla pesca 50cl',
+            'Birra San Gabriel rossa 33cl',
+            'Birra San Gabriel bionda 33cl',
+            'Birra Menabrea 33cl',
+            'Birra Nastro Azzurro 33cl',
+            <!-- // user id 6 -->
+            //Antipasti
+            'Piatto Misto Vegetariano',
+            <!-- // Pesce -->
+            'Arancino di riso con pesce',
+            'Spaghetti cozze e vongole e prezzemolo',
+            'Risotto al nero di seppia',
+            'Filetto del pescato del giorno con salsa agrodolce e verdure',
+            'Cotolette di sarde fritte',
+            'Bruschette con alici',
+            'Insalatona con sgombro',
+            <!-- //vegetariani -->
+            'Linguine con pesto di mandorle e basilico',
+            'Falafel di piselli',
+            'Nuvolette di verdure fritte',
+            'Fiori di zucca fritti',
+            <!-- //dolci -->
+            'Gelato di riso',
+            'Torta di mele',
+            'Torta alla crema di mandorle e mirtillo',
+            <!-- //bevande -->
+            'The beicha 1/4lt',
+            'The beicha 1/2lt',
+            'Acqua minerale Castello 50cl',
+            'Acqua minerale Castello 1lt',
+            'Estratto di carote e frutta 250 ml.',
+            'Estratto di carote e frutta 500 ml.',
+            'Caffè d\'orzo',
+            'Tisana limone e zenzero',
+            'Tisana tarassaco e spirea',
+            'Tisana liquirizia',
+            'Camomilla',
+            <!-- //user id 12 -->
+            <!-- //Antipasti -->
+            'Edame',
+            'Moyashi',
+            'Wakame Suonomono',
+            'Spicy Wakame',
+            'Gari',
+            <!-- //Nigiri -->
+            'Sushi Nigiri Sake 6pz',
+            'Sushi Nigiri Ebi 6pz',
+            'Sushi Nigiri Suzuki 6pz',
+            <!-- //Gunkan -->
+            'Gunkan Sake 2pz',
+            'Gunkan Ebi 2pz',
+            'Gunkan Maguro 2pz',
+            <!-- //temaki -->
+            'Yasai Temaki 1pz',
+            'Sake Temaki 1pz',
+            <!-- //Hosomaki -->
+            'Mix Maki 6pz',
+            'Tekka Maki 6pz',
+            'Sake Maki 6pz',
+            <!-- //Uramaki -->
+            'Ura Yasai 6pz',
+            'Ura California 6pz',
+            'Ura Philadelphia 6pz',
+            <!-- //sushi - sashimi - chirashi -->
+            'Sushi Sakura',
+            'Sushi Take',
+            'Sashimi Sake',
+            'Sashimi Maguro e Sake',
+            'Chirashi Sake Tartare',
+            <!-- //menu giapponese -->
+            'Sushi Maki A',
+            'Sushi Maki B',
+            'Sushi Maki C',
+            'Sushi Sashimi Maki',
+            'Tsunami',
+            <!-- //tempura -->
+            'Ebi Tempura',
+            <!-- //dolci -->
+            'Dolcetto di riso',
+            'Gelato the verde',
+            <!-- //bevande -->
+            'Acqua naturale 50cl',
+            'Acqua frizzante 50cl',
+            'Coca Cola 50cl',
+            'Fanta 50cl',
+            'Sprite 50cl',
+            'The giapponese caldo',
+            'The verde',
+            'The al Gelsomino',
+            'Vino bianco Versus 75cl',
+            'Vino bianco Lugana 75cl',
+            'Birra Kirin 50cl',
+            'Birra Asashi 50cl',
+            <!-- //user id 20 -->
+            <!-- //dolci -->
+            'Camille',
+            'Biscotti Grancerale',
+            'Cannoli di frolla',
+            'Strudel di mele',
+            'Plum cake',
+            'Biscotti con ricotta e limone',
+            'Ricciarelli di Siena',
+            'Baci di dama',
+            'Ciambella al limone',
+            'Torta alle fragole',
         ];
 
         $descriptionPlates = [
@@ -152,6 +289,177 @@ class PlateTableSeeder extends Seeder
             '',
             '',
             '',
+            //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
+            <!-- //user id 2 -->
+            <!-- //piadine -->
+            'Crudo, Squacquerone, Rucola - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se
+            non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default
+            sarà la piadina!',
+            'Bresaola, Rucola, Grana - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se non
+            specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default sarà
+            la piadina!',
+            'Cotto, Mozzarella, Funghi - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se
+            non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default
+            sarà la piadina!',
+            'Tacchino, Squacquerone, Pomodoro, Lattuga - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o
+            kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e
+            rotolo! Di Default sarà la piadina!',
+            'Tonno, Mozzarella, Pomodoro, Origano, Maionese - Nota bene: nelle note specifica che impasto vuoi tra classico,
+            integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra
+            piadina e rotolo! Di Default sarà la piadina!',
+            'Bresaola, Squacquerone, Zucchine grigliate, Crema all\’aceto balsamico - Nota bene: nelle note specifica che impasto
+            vuoi tra classico, integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche
+            la forma!!! Tra piadina e rotolo! Di Default sarà la piadina!',
+            'Salmone, Provola affumicata, Maionese, Lattuga - Nota bene: nelle note specifica che impasto vuoi tra classico,
+            integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra
+            piadina e rotolo! Di Default sarà la piadina!',
+            'Cotto, Brie, Lattuga - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se non
+            specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default sarà
+            la piadina!',
+            'Salsiccia, Gorgonzola DOP, Peperoni Grigliati, Lattuga - Nota bene: nelle note specifica che impasto vuoi tra classico,
+            integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra
+            piadina e rotolo! Di Default sarà la piadina!',
+            'Crudo, Mozzarella, Gamberetti, Salsa cocktail, Lattuga - Nota bene: nelle note specifica che impasto vuoi tra classico,
+            integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra
+            piadina e rotolo! Di Default sarà la piadina!',
+            'Culatta, Brie, Mix Porcini, Rucola - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut
+            bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di
+            Default sarà la piadina!',
+            'Salame, Squacquerone, Rucola - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se
+            non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default
+            sarà la piadina!',
+            'Spianata calabra, Brie, Rucola - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio.
+            Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di
+            Default sarà la piadina!',
+            'Avocado, Pomodoro, Zucchine grigliate, Lattuga, Crema di carciofi - Nota bene: nelle note specifica che impasto vuoi
+            tra classico, integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la
+            forma!!! Tra piadina e rotolo! Di Default sarà la piadina!',
+            'Mozzarella di bufala campana d.o.p., Zucchine grigliate, Pomodoro, Lattuga, Crema all\’aceto balsamico - Nota bene:
+            nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se non specificato l\'impasto sarà quello
+            classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default sarà la piadina!',
+            'Spinaci, Mozzarella, Grana, Crema all\’aceto balsamico, Noci - Nota bene: nelle note specifica che impasto vuoi tra
+            classico, integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la
+            forma!!! Tra piadina e rotolo! Di Default sarà la piadina!',
+            <!-- //piadine dolci -->
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            <!-- //bevande -->
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            <!-- //user id 6 -->
+            <!-- //Antipasti -->
+            'Un piatto completo vegano formato da una zuppa e un piatto unico con cereali integrali, verdure di stagione e legumi.',
+            <!-- // Pesce -->
+            'Arancino di riso con pesce',
+            'Spaghetti cozze e vongole e prezzemolo',
+            'Risotto al nero di seppia',
+            'Filetto del pescato del giorno con salsa agrodolce e verdure',
+            'Cotolette di sarde fritte',
+            'Bruschette con alici',
+            'Insalatona con sgombro',
+            <!-- //Vegetariani -->
+            'Linguine con pesto di mandorle e basilico',
+            'Falafel di piselli',
+            'Nuvolette di verdure fritte',
+            'Fiori di zucca fritti',
+            <!-- //Dolci -->
+            'Gelato di riso',
+            'Torta di mele',
+            'Torta alla crema di mandorle e mirtillo',
+            <!-- //Bevande -->
+            'The verde tostato',
+            'The verde tostato',
+            'Naturale o frizzante',
+            'Naturale o frizzante',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            <!-- //user id 12 -->
+            <!-- //Antipasti -->
+            'Fagioli di soia giapponese',
+            'Germogli di soia alla piastra',
+            'Alghe giapponesi in aceto di riso',
+            'Alghe giapponesi agro-piccanti',
+            'Zenzero in salamoia',
+            <!-- //nigiri -->
+            'Nigiri di salmone',
+            'Nigiri di gambero cotto',
+            'Nigiri di branzino',
+            <!-- //gunkan -->
+            'Bignè di alga con riso, lemon tartare di salmone, avocado e tobiko',
+            'Bignè di alga con riso, lemon tartare di gambero cotto, avocado e tobiko',
+            'Bignè di alga con riso, lemon tartare di tonno, avocado e tobiko ',
+            <!-- //temaki -->
+            'Cono di alga con riso e misto vegetariano',
+            'Cono di alga con riso, salmone e avocado',
+            <!-- //hosomaki -->
+            'Riso, tonno, salmone e cetriolo',
+            'Riso e tonno',
+            'Riso e salmone',
+            <!-- //uramaki -->
+            'Riso e misto vegetariano',
+            'Riso, salsa di tonno, gamberi* cotti e avocado',
+            'Riso, philadelphia, gamberi* cotti e avocado',
+            <!-- //sushi - sashimi - chirashi -->
+            '9 Nigiri, 3 Hosomaki e 2 Uramaki',
+            '7 Nigiri, 3 Hosomaki e 2 Uramaki',
+            '10 filetti di salmone crudo',
+            '10 filetti di tonno crudo',
+            'Riso con salmone tritato, avocado e tobiko',
+            <!-- //menu giapponesi -->
+            '4 Nigiri, 4 Uramaki',
+            '6 Nigiri, 2 Uramaki, 4 Hosomaki',
+            '8 Nigiri, 4 Uramaki, 2 Hosomaki ',
+            '12 filetti di sashimi misti, 4 Nigiri, 3 Hosomaki',
+            '8 Nigiri, 12 Sashimi, 8 Uramaki',
+            <!-- //tempura -->
+            '3 spiedini di gamberetti alla piastra',
+            <!-- //dolci -->
+            '',
+            '',
+            <!-- //bevande -->
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            'Vino bianco secco',
+            'Vino bianco secco',
+            'Birra lager chiara tipica giapponese',
+            'Birra bionda tipica giapponese',
+            <!-- //user id 20 -->
+            <!-- //dolci -->
+            'Senza glutine',
+            'Senza glutine',
+            'Cannoli di frolla senza burro con crema di ricotta senza glutine',
+            'Senza glutine',
+            'Plum Cake di grano saraceno con scaglie di cioccolata bianca',
+            'Senza glutine',
+            'Senza glutine',
+            'Senza glutine',
+            'Senza glutine',
+            'Torta morbida con le fragole senza glutine',
         ];
 
         $pricePlates = [
@@ -214,7 +522,145 @@ class PlateTableSeeder extends Seeder
             1.50,
             2.00,
             2.00,
-
+            //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
+            <!-- //user id 2 -->
+            <!-- //piadine -->
+            6.40,
+            6.50,
+            6.20,
+            6.60,
+            6.50,
+            7.40,
+            6.80,
+            6.10,
+            7.10,
+            7.90,
+            7.70,
+            6.30,
+            6.30,
+            7.70,
+            7.20,
+            7.10,
+            4.10,
+            <!-- //piadine dolci -->
+            4.10,
+            4.10,
+            4.10,
+            4.10,
+            4.10,
+            4.10,
+            <!-- //bevande -->
+            1.50,
+            1.50,
+            3.00,
+            3.00,
+            3.00,
+            3.00,
+            3.00,
+            4.50,
+            4.50,
+            4.00,
+            4.00,
+            <!-- //user id 6 -->
+            <!-- //antipasti -->
+            12.00,
+            <!-- //pesce -->
+            4.00,
+            12.00,
+            14.00,
+            15.00,
+            6.00,
+            6.00,
+            9.00,
+            <!-- //vegetariani -->
+            6.00,
+            6.00,
+            7.00,
+            7.00,
+            <!-- //dolci -->
+            4.00,
+            4.00,
+            4.50,
+            <!-- //bevande -->
+            0.50,
+            1.00,
+            1.50,
+            2.00,
+            3.50,
+            6,00,
+            1.00,
+            2.50,
+            2.50,
+            2.50,
+            2.50
+            <!-- //user id 12 -->
+            <!-- //antipasti -->
+            4.00,
+            4.00,
+            4.00,
+            4.00,
+            4.00,
+            <!-- //nigiri -->
+            9.00,
+            9.00,
+            9.00,
+            <!-- //gunkan -->
+            5.00,
+            5.00,
+            5.00,
+            <!-- //temaki -->
+            4.50,
+            4.50,
+            //hosomaki
+            5.00,
+            5.00,
+            5.00,
+            <!-- //uramaki -->
+            8.00,
+            8.00,
+            8.00,
+            <!-- //sushi - sashimi - chirashi -->
+            15.00,
+            13.00,
+            14.00,
+            18.00,
+            14.00,
+            <!-- //menu giapponese -->
+            9.00,
+            13.00,
+            15.00,
+            18.00,
+            35.00,
+            <!-- //tempura -->
+            9.00,
+            //dolci
+            4.00,
+            4.00,
+            <!-- //bevande -->
+            1.50,
+            1.50,
+            2.50,
+            2.50,
+            2.50,
+            3.00,
+            3.00,
+            3.00,
+            12.00,
+            18.00,
+            5.00,
+            5.00,
+            <!-- //user id 20 -->
+            <!-- //dolci -->
+            3.00,
+            2.00,
+            3.00,
+            5.00,
+            3.00,
+            2.00,
+            2.00,
+            2.00,
+            4.00,
+            5.00,
         ];
 
         $picturePlates = [
@@ -277,6 +723,145 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-16/brioche.jpg',
             '/image/plates/user-id-16/brioche.jpg',
             '/image/plates/user-id-16/brioche.jpg',
+            //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
+            <!-- //user id 2 -->
+            <!-- //piadine -->
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            '/image/plates/user-id-2/piadina_default.jpg',
+            <!-- //piadine dolci -->
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            '/image/plates/user-id-2/piadina_dolce.jpg',
+            <!-- //bevande -->
+            '/image/plates/user-id-2/acquan.jpeg',
+            '/image/plates/user-id-2/acqua.jpg',
+            '/image/plates/user-id-2/cocacola.jpg',
+            '/image/plates/user-id-2/fanta.jpg',
+            '/image/plates/user-id-2/sprite.jpg',
+            '/image/plates/user-id-2/estathe.png',
+            '/image/plates/user-id-2/estathe.png',
+            '/image/plates/user-id-2/birra0.jpg',
+            '/image/plates/user-id-2/birra0.jpg',
+            '/image/plates/user-id-2/birra1.jpg',
+            '/image/plates/user-id-2/birra2.jpg',
+            <!-- //user id 6 -->
+            <!-- //Antipasti -->
+            '/image/plates/user-id-6/piatto_misto_vegetariano.jpg',
+            <!-- // Pesce -->
+            '/image/plates/user-id-6/arancino_riso_pesce.jpg',
+            '/image/plates/user-id-6/spaghetti_cozze_vongole.jpg',
+            '/image/plates/user-id-6/risotto_nero_seppia.jpg',
+            '/image/plates/user-id-6/filetto_pescato_salsa_agrodolce.jpg',
+            '/image/plates/user-id-6/cotolette_sarde_fritte.jpg',
+            '/image/plates/user-id-6/brushette_alici.jpg',
+            '/image/plates/user-id-6/insalatona_sgombro.jpg',
+            <!-- //Vegetariani -->
+            '/image/plates/user-id-6/linguine_pesto_mandorle.jpg',
+            '/image/plates/user-id-6/falafel_piselli.jpg',
+            '/image/plates/user-id-6/nuvolette_verdure_fritte.jpg',
+            '/image/plates/user-id-6/fiori_zucca_fritti.jpg',
+            <!-- //Dolci -->
+            '/image/plates/user-id-6/gelato_riso.jpg',
+            '/image/plates/user-id-6/torta_mele.jpg',
+            '/image/plates/user-id-6/torta_mandorle_mirtillo.jpg',
+            <!-- //Bevande -->
+            '/image/plates/user-id-6/the_bancha.jpg',
+            '/image/plates/user-id-6/the_bancha.jpg',
+            '/image/plates/user-id-6/acqua_castello.jpg',
+            '/image/plates/user-id-6/acqua_castello.jpg',
+            '/image/plates/user-id-6/estratto_carote_frutta.jpg',
+            '/image/plates/user-id-6/estratto_carote_frutta.jpg',
+            '/image/plates/user-id-6/caffe_orzo.jpg',
+            '/image/plates/user-id-6/the_bancha.jpg',
+            '/image/plates/user-id-6/the_bancha.jpg',
+            '/image/plates/user-id-6/the_bancha.jpg',
+            '/image/plates/user-id-6/the_bancha.jpg',
+            <!-- //user id 12 -->
+            <!-- //Antipasti -->
+            '/image/plates/user-id-12/edame.jpg',
+            '/image/plates/user-id-12/moyashi.jpg',
+            '/image/plates/user-id-12/wakame_suonomono.jpg',
+            '/image/plates/user-id-12/spicy_wakame.jpg',
+            '/image/plates/user-id-12/gari.jpg',
+            <!-- //Nigiri -->
+            '/image/plates/user-id-12/nigiri_sake.jpg',
+            '/image/plates/user-id-12/nigiri_ebi.jpg',
+            '/image/plates/user-id-12/suzuki.jpg',
+            <!-- //Gunkan -->
+            '/image/plates/user-id-12/gunkan_sake.jpg',
+            '/image/plates/user-id-12/gunkan_ebi.jpg',
+            '/image/plates/user-id-12/gunkan_maguro.jpg',
+            <!-- //temaki -->
+            '/image/plates/user-id-12/temaki_yasai.jpg',
+            '/image/plates/user-id-12/temaki_sake.jpg',
+            <!-- //Hosomaki -->
+            '/image/plates/user-id-12/hosomaki_mix_maki.jpg',
+            '/image/plates/user-id-12/hosomaki_tekka_maki.jpg',
+            '/image/plates/user-id-12/hosomaki_sake_maki.jpg',
+            <!-- //Uramaki -->
+            '/image/plates/user-id-12/ura_yasai.jpg',
+            '/image/plates/user-id-12/uramaki_ura_california.jpg',
+            '/image/plates/user-id-12/uramaki_ura_philadelphia.jpg',
+            <!-- //sushi - sashimi - chirashi -->
+            '/image/plates/user-id-12/sushi_default.jpg',
+            '/image/plates/user-id-12/sushi_default.jpg',
+            '/image/plates/user-id-12/sashimi_default.jpg',
+            '/image/plates/user-id-12/sashimi_default.jpg',
+            '/image/plates/user-id-12/chirashi_default.jpg',
+            <!-- //menu giapponese -->
+            '/image/plates/user-id-12/sushi_maki_a.jpg',
+            '/image/plates/user-id-12/sushi_maki_b.jpg',
+            '/image/plates/user-id-12/sushi_maki_c.jpg',
+            '/image/plates/user-id-12/sushi_sashimi_maki.jpg',
+            '/image/plates/user-id-12/menu_sushi_tsunami.jpg',
+            <!-- //tempura -->
+            '/image/plates/user-id-12/tempura.jpg',
+            <!-- //dolci -->
+            '/image/plates/user-id-12/dolce_riso.jpg',
+            '/image/plates/user-id-12/gelato_the_verde.jpg',
+            <!-- //bevande -->
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            '/image/plates/user-id-12/bevande_default.jpg',
+            <!-- //user id 20 -->
+            <!-- //dolci -->
+            '/image/plates/user-id-20/camille.jpeg',
+            '/image/plates/user-id-20/grancereale.jpeg',
+            '/image/plates/user-id-20/cannoli.jpeg',
+            '/image/plates/user-id-20/strudel.jpg',
+            '/image/plates/user-id-20/plumcake.jpg',
+            '/image/plates/user-id-20/biscotti_limone.jpg',
+            '/image/plates/user-id-20/ricciarelli.jpg',
+            '/image/plates/user-id-20/baci.jpg',
+            '/image/plates/user-id-20/ciambella.jpg',
+            '/image/plates/user-id-20/torta_fragola.jpg',
         ];
 
         $userIDPlates = [
@@ -337,6 +922,145 @@ class PlateTableSeeder extends Seeder
             16,
             16,
             16,
+            //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
+            <!-- //user id 2 -->
+            <!-- //piadine -->
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            <!-- //piadine dolci -->
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            <!-- //bevande -->
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            <!-- // user id 6 -->
+            <!-- //Antipasti -->
+            6,
+            <!-- // Pesce -->
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            <!-- //vegetariani -->
+            6,
+            6,
+            6,
+            6,
+            <!-- //dolci -->
+            6,
+            6,
+            6,
+            <!-- //bevande -->
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            <!-- //user id 12 -->
+            <!-- //Antipasti -->
+            12,
+            12,
+            12,
+            12,
+            12,
+            <!-- //Nigiri -->
+            12,
+            12,
+            12,
+            <!-- //Gunkan -->
+            12,
+            12,
+            12,
+            <!-- //temaki -->
+            12,
+            12,
+            <!-- //Hosomaki -->
+            12,
+            12,
+            12,
+            <!-- //Uramaki -->
+            12,
+            12,
+            12,
+            <!-- //sushi - sashimi - chirashi -->
+            12,
+            12,
+            12,
+            12,
+            12,
+            <!-- //menu giapponese -->
+            12,
+            12,
+            12,
+            12,
+            12,
+            <!-- //tempura -->
+            12,
+            <!-- //dolci -->
+            12,
+            12,
+            <!-- //bevande -->
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            <!-- //user id 20 -->
+            <!-- //dolci -->
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
         ];
 
         $categoryIDPlates = [
@@ -397,6 +1121,144 @@ class PlateTableSeeder extends Seeder
             14,
             14,
             14,
+            //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
+            <!-- //piadine -->
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            <!-- //piadine dolci -->
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            45,
+            <!-- //bevande -->
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            <!-- // user id 6 -->
+            <!-- //Antipasti -->
+            3,
+            <!-- // Pesce -->
+            44,
+            44,
+            44,
+            44,
+            44,
+            44,
+            44,
+            <!-- //vegetariani -->
+            15,
+            15,
+            15,
+            15,
+            <!-- //dolci -->
+            16,
+            16,
+            16,
+            <!-- //bevande -->
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            <!-- //user id 12 -->
+            <!-- //Antipasti -->
+            3,
+            3,
+            3,
+            3,
+            3,
+            <!-- //Nigiri -->
+            40,
+            40,
+            40,
+            <!-- //Gunkan -->
+            19,
+            19,
+            19,
+            <!-- //temaki -->
+            56,
+            56,
+            <!-- //Hosomaki -->
+            21,
+            21,
+            21,
+            <!-- //Uramaki -->
+            59,
+            59,
+            59,
+            <!-- //sushi - sashimi - chirashi -->
+            53,
+            53,
+            50,
+            50,
+            10,
+            <!-- //menu giapponese -->
+            30,
+            30,
+            30,
+            30,
+            30,
+            <!-- //tempura -->
+            57,
+            <!-- //dolci -->
+            16,
+            16,
+            <!-- //bevande -->
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            <!-- //user id 20 -->
+            <!-- //dolci -->
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
         ];
 
         for ($x = 0; $x < count($namePlates); $x++) {
