@@ -35,8 +35,123 @@ class OrderTableSeeder extends Seeder
             'Via Andegari, 7, Milano',
             'Via Alessandro Volta, 3, Milano'
         ];
+        $plateOrder = [
 
-        for ($x = 0; $x < 60; $x++) {
+            [
+                11,
+                15,
+                1,
+            ],
+            [
+                19,
+                8,
+                10,
+            ],
+            [
+                33,
+                34,
+                30,
+                39,
+            ],
+            [
+                42,
+            ],
+            [
+                50,
+                44,
+            ],
+            [
+                65,
+                66,
+                74,
+                82,
+            ],
+            [
+                94,
+                95,
+            ],
+            [
+                248,
+                253,
+                256,
+                264,
+            ],
+            [
+                102,
+                103,
+                110,
+            ],
+            [
+                126,
+                129,
+                132,
+            ],
+            [
+                274,
+                277,
+                281,
+                291,
+            ],
+            [
+                166,
+                169,
+            ],
+            [
+                300,
+                307,
+                310,
+            ],
+            [
+                172,
+                174,
+                181,
+                182,
+            ],
+            [
+                319,
+                320,
+                327,
+            ],
+            [
+                184,
+                186,
+                193,
+            ],
+            [
+                194,
+                198,
+                201,
+            ],
+            [
+                369,
+                370,
+                371,
+            ],
+            [
+                211,
+            ],
+            //-- 11,8,16,2,6,12,20,1,4,19,5,7,10,13   VIN
+            //-- 9,18,15,3,                     TONY
+            [
+                321,
+                323,
+                318,
+                326,
+            ],
+            [
+                329,
+                335,
+                336,
+                354,
+            ],
+            [
+                358,
+                359,
+                367,
+            ],
+        ];
+
+        for ($x = 0; $x < 22; $x++) {
             $newOrder = new Order();
             $newOrder->name_surname = $faker->name();
             $randomAddressKey = array_rand($addressOrders, 1);
@@ -45,6 +160,8 @@ class OrderTableSeeder extends Seeder
             $newOrder->phone_number = $faker->e164PhoneNumber();
             $newOrder->total_price = $faker->randomFloat(2, 15, 50); 
             $newOrder->save();
+
+            $newOrder->plate()->sync($plateOrder[$x]);
         }
     }
 }
