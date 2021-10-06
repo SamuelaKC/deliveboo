@@ -88,8 +88,8 @@ class PlateTableSeeder extends Seeder
             'brioche crema',
             'brioche cioccolato',
             //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
-            <!-- //user id 2 -->
-            <!-- //piadine -->
+            //user id 2
+            //piadine
             'La Leggenda',
             'La Belpaese',
             'La Semplice',
@@ -106,7 +106,7 @@ class PlateTableSeeder extends Seeder
             'La Verdissima',
             'La Caprese',
             'La Primavera',
-            <!-- //piadine dolci -->
+            //piadine dolci -->
             'Nutella',
             'Confettura extra di lamponi',
             'Crema Baci Perugina',
@@ -114,7 +114,7 @@ class PlateTableSeeder extends Seeder
             'Crema al cioccolato e Smarties',
             'Crema Galak e Smarties',
             'Crema Galak, marmellata di lamponi e mirtilli freschi',
-            <!-- //bevande -->
+            //bevande
             'Acqua naturale 50cl',
             'Acqua frizzante 50cl',
             'Coca Cola 50cl',
@@ -126,10 +126,10 @@ class PlateTableSeeder extends Seeder
             'Birra San Gabriel bionda 33cl',
             'Birra Menabrea 33cl',
             'Birra Nastro Azzurro 33cl',
-            <!-- // user id 6 -->
+            // user id 6
             //Antipasti
             'Piatto Misto Vegetariano',
-            <!-- // Pesce -->
+            // Pesce -->
             'Arancino di riso con pesce',
             'Spaghetti cozze e vongole e prezzemolo',
             'Risotto al nero di seppia',
@@ -137,16 +137,16 @@ class PlateTableSeeder extends Seeder
             'Cotolette di sarde fritte',
             'Bruschette con alici',
             'Insalatona con sgombro',
-            <!-- //vegetariani -->
+            //vegetariani -->
             'Linguine con pesto di mandorle e basilico',
             'Falafel di piselli',
             'Nuvolette di verdure fritte',
             'Fiori di zucca fritti',
-            <!-- //dolci -->
+            //dolci -->
             'Gelato di riso',
             'Torta di mele',
             'Torta alla crema di mandorle e mirtillo',
-            <!-- //bevande -->
+            //bevande -->
             'The beicha 1/4lt',
             'The beicha 1/2lt',
             'Acqua minerale Castello 50cl',
@@ -158,50 +158,50 @@ class PlateTableSeeder extends Seeder
             'Tisana tarassaco e spirea',
             'Tisana liquirizia',
             'Camomilla',
-            <!-- //user id 12 -->
-            <!-- //Antipasti -->
+            //user id 12 -->
+            //Antipasti -->
             'Edame',
             'Moyashi',
             'Wakame Suonomono',
             'Spicy Wakame',
             'Gari',
-            <!-- //Nigiri -->
+            //Nigiri -->
             'Sushi Nigiri Sake 6pz',
             'Sushi Nigiri Ebi 6pz',
             'Sushi Nigiri Suzuki 6pz',
-            <!-- //Gunkan -->
+            //Gunkan -->
             'Gunkan Sake 2pz',
             'Gunkan Ebi 2pz',
             'Gunkan Maguro 2pz',
-            <!-- //temaki -->
+            //temaki -->
             'Yasai Temaki 1pz',
             'Sake Temaki 1pz',
-            <!-- //Hosomaki -->
+            //Hosomaki -->
             'Mix Maki 6pz',
             'Tekka Maki 6pz',
             'Sake Maki 6pz',
-            <!-- //Uramaki -->
+            //Uramaki -->
             'Ura Yasai 6pz',
             'Ura California 6pz',
             'Ura Philadelphia 6pz',
-            <!-- //sushi - sashimi - chirashi -->
+            //sushi - sashimi - chirashi -->
             'Sushi Sakura',
             'Sushi Take',
             'Sashimi Sake',
             'Sashimi Maguro e Sake',
             'Chirashi Sake Tartare',
-            <!-- //menu giapponese -->
+            //menu giapponese -->
             'Sushi Maki A',
             'Sushi Maki B',
             'Sushi Maki C',
             'Sushi Sashimi Maki',
             'Tsunami',
-            <!-- //tempura -->
+            //tempura -->
             'Ebi Tempura',
-            <!-- //dolci -->
+            //dolci -->
             'Dolcetto di riso',
             'Gelato the verde',
-            <!-- //bevande -->
+            //bevande -->
             'Acqua naturale 50cl',
             'Acqua frizzante 50cl',
             'Coca Cola 50cl',
@@ -214,8 +214,8 @@ class PlateTableSeeder extends Seeder
             'Vino bianco Lugana 75cl',
             'Birra Kirin 50cl',
             'Birra Asashi 50cl',
-            <!-- //user id 20 -->
-            <!-- //dolci -->
+            //user id 20 -->
+            //dolci -->
             'Camille',
             'Biscotti Grancerale',
             'Cannoli di frolla',
@@ -648,8 +648,8 @@ class PlateTableSeeder extends Seeder
             '',
             '',
             //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
-            <!-- //user id 2 -->
-            <!-- //piadine -->
+            //user id 2 -->
+            //piadine -->
             'Crudo, Squacquerone, Rucola - Nota bene: nelle note specifica che impasto vuoi tra classico, integrale o kamut bio. Se
             non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la forma!!! Tra piadina e rotolo! Di Default
             sarà la piadina!',
@@ -698,14 +698,14 @@ class PlateTableSeeder extends Seeder
             'Spinaci, Mozzarella, Grana, Crema all\’aceto balsamico, Noci - Nota bene: nelle note specifica che impasto vuoi tra
             classico, integrale o kamut bio. Se non specificato l\'impasto sarà quello classico. E puoi scegliere tra anche la
             forma!!! Tra piadina e rotolo! Di Default sarà la piadina!',
-            <!-- //piadine dolci -->
+            //piadine dolci -->
             '',
             '',
             '',
             '',
             '',
             '',
-            <!-- //bevande -->
+            //bevande -->
             '',
             '',
             '',
@@ -718,10 +718,10 @@ class PlateTableSeeder extends Seeder
             '',
             '',
             '',
-            <!-- //user id 6 -->
-            <!-- //Antipasti -->
+            //user id 6 -->
+            //Antipasti -->
             'Un piatto completo vegano formato da una zuppa e un piatto unico con cereali integrali, verdure di stagione e legumi.',
-            <!-- // Pesce -->
+            // Pesce -->
             'Arancino di riso con pesce',
             'Spaghetti cozze e vongole e prezzemolo',
             'Risotto al nero di seppia',
@@ -729,16 +729,16 @@ class PlateTableSeeder extends Seeder
             'Cotolette di sarde fritte',
             'Bruschette con alici',
             'Insalatona con sgombro',
-            <!-- //Vegetariani -->
+            //Vegetariani -->
             'Linguine con pesto di mandorle e basilico',
             'Falafel di piselli',
             'Nuvolette di verdure fritte',
             'Fiori di zucca fritti',
-            <!-- //Dolci -->
+            //Dolci -->
             'Gelato di riso',
             'Torta di mele',
             'Torta alla crema di mandorle e mirtillo',
-            <!-- //Bevande -->
+            //Bevande -->
             'The verde tostato',
             'The verde tostato',
             'Naturale o frizzante',
@@ -750,50 +750,50 @@ class PlateTableSeeder extends Seeder
             '',
             '',
             '',
-            <!-- //user id 12 -->
-            <!-- //Antipasti -->
+            //user id 12 -->
+            //Antipasti -->
             'Fagioli di soia giapponese',
             'Germogli di soia alla piastra',
             'Alghe giapponesi in aceto di riso',
             'Alghe giapponesi agro-piccanti',
             'Zenzero in salamoia',
-            <!-- //nigiri -->
+            //nigiri -->
             'Nigiri di salmone',
             'Nigiri di gambero cotto',
             'Nigiri di branzino',
-            <!-- //gunkan -->
+            //gunkan -->
             'Bignè di alga con riso, lemon tartare di salmone, avocado e tobiko',
             'Bignè di alga con riso, lemon tartare di gambero cotto, avocado e tobiko',
             'Bignè di alga con riso, lemon tartare di tonno, avocado e tobiko ',
-            <!-- //temaki -->
+            //temaki -->
             'Cono di alga con riso e misto vegetariano',
             'Cono di alga con riso, salmone e avocado',
-            <!-- //hosomaki -->
+            //hosomaki -->
             'Riso, tonno, salmone e cetriolo',
             'Riso e tonno',
             'Riso e salmone',
-            <!-- //uramaki -->
+            //uramaki -->
             'Riso e misto vegetariano',
             'Riso, salsa di tonno, gamberi* cotti e avocado',
             'Riso, philadelphia, gamberi* cotti e avocado',
-            <!-- //sushi - sashimi - chirashi -->
+            //sushi - sashimi - chirashi -->
             '9 Nigiri, 3 Hosomaki e 2 Uramaki',
             '7 Nigiri, 3 Hosomaki e 2 Uramaki',
             '10 filetti di salmone crudo',
             '10 filetti di tonno crudo',
             'Riso con salmone tritato, avocado e tobiko',
-            <!-- //menu giapponesi -->
+            //menu giapponesi -->
             '4 Nigiri, 4 Uramaki',
             '6 Nigiri, 2 Uramaki, 4 Hosomaki',
             '8 Nigiri, 4 Uramaki, 2 Hosomaki ',
             '12 filetti di sashimi misti, 4 Nigiri, 3 Hosomaki',
             '8 Nigiri, 12 Sashimi, 8 Uramaki',
-            <!-- //tempura -->
+            //tempura -->
             '3 spiedini di gamberetti alla piastra',
-            <!-- //dolci -->
+            //dolci -->
             '',
             '',
-            <!-- //bevande -->
+            //bevande -->
             '',
             '',
             '',
@@ -806,8 +806,8 @@ class PlateTableSeeder extends Seeder
             'Vino bianco secco',
             'Birra lager chiara tipica giapponese',
             'Birra bionda tipica giapponese',
-            <!-- //user id 20 -->
-            <!-- //dolci -->
+            //user id 20 -->
+            //dolci -->
             'Senza glutine',
             'Senza glutine',
             'Cannoli di frolla senza burro con crema di ricotta senza glutine',
@@ -1198,8 +1198,8 @@ class PlateTableSeeder extends Seeder
             2.00,
             2.00,
             //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
-            <!-- //user id 2 -->
-            <!-- //piadine -->
+            //user id 2 -->
+            //piadine -->
             6.40,
             6.50,
             6.20,
@@ -1217,14 +1217,14 @@ class PlateTableSeeder extends Seeder
             7.20,
             7.10,
             4.10,
-            <!-- //piadine dolci -->
+            //piadine dolci -->
             4.10,
             4.10,
             4.10,
             4.10,
             4.10,
             4.10,
-            <!-- //bevande -->
+            //bevande -->
             1.50,
             1.50,
             3.00,
@@ -1236,10 +1236,10 @@ class PlateTableSeeder extends Seeder
             4.50,
             4.00,
             4.00,
-            <!-- //user id 6 -->
-            <!-- //antipasti -->
+            //user id 6 -->
+            //antipasti -->
             12.00,
-            <!-- //pesce -->
+            //pesce -->
             4.00,
             12.00,
             14.00,
@@ -1247,16 +1247,16 @@ class PlateTableSeeder extends Seeder
             6.00,
             6.00,
             9.00,
-            <!-- //vegetariani -->
+            //vegetariani -->
             6.00,
             6.00,
             7.00,
             7.00,
-            <!-- //dolci -->
+            //dolci -->
             4.00,
             4.00,
             4.50,
-            <!-- //bevande -->
+            //bevande -->
             0.50,
             1.00,
             1.50,
@@ -1267,51 +1267,51 @@ class PlateTableSeeder extends Seeder
             2.50,
             2.50,
             2.50,
-            2.50
-            <!-- //user id 12 -->
-            <!-- //antipasti -->
+            2.50,
+            //user id 12 -->
+            //antipasti -->
             4.00,
             4.00,
             4.00,
             4.00,
             4.00,
-            <!-- //nigiri -->
+            //nigiri -->
             9.00,
             9.00,
             9.00,
-            <!-- //gunkan -->
+            //gunkan -->
             5.00,
             5.00,
             5.00,
-            <!-- //temaki -->
+            //temaki -->
             4.50,
             4.50,
             //hosomaki
             5.00,
             5.00,
             5.00,
-            <!-- //uramaki -->
+            //uramaki -->
             8.00,
             8.00,
             8.00,
-            <!-- //sushi - sashimi - chirashi -->
+            //sushi - sashimi - chirashi -->
             15.00,
             13.00,
             14.00,
             18.00,
             14.00,
-            <!-- //menu giapponese -->
+            //menu giapponese -->
             9.00,
             13.00,
             15.00,
             18.00,
             35.00,
-            <!-- //tempura -->
+            //tempura -->
             9.00,
             //dolci
             4.00,
             4.00,
-            <!-- //bevande -->
+            //bevande -->
             1.50,
             1.50,
             2.50,
@@ -1324,8 +1324,8 @@ class PlateTableSeeder extends Seeder
             18.00,
             5.00,
             5.00,
-            <!-- //user id 20 -->
-            <!-- //dolci -->
+            //user id 20 -->
+            //dolci -->
             3.00,
             2.00,
             3.00,
@@ -1714,8 +1714,8 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-16/brioche.jpg',
             '/image/plates/user-id-16/brioche.jpg',
             //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
-            <!-- //user id 2 -->
-            <!-- //piadine -->
+            //user id 2 -->
+            //piadine -->
             '/image/plates/user-id-2/piadina_default.jpg',
             '/image/plates/user-id-2/piadina_default.jpg',
             '/image/plates/user-id-2/piadina_default.jpg',
@@ -1732,7 +1732,7 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-2/piadina_default.jpg',
             '/image/plates/user-id-2/piadina_default.jpg',
             '/image/plates/user-id-2/piadina_default.jpg',
-            <!-- //piadine dolci -->
+            //piadine dolci -->
             '/image/plates/user-id-2/piadina_dolce.jpg',
             '/image/plates/user-id-2/piadina_dolce.jpg',
             '/image/plates/user-id-2/piadina_dolce.jpg',
@@ -1740,7 +1740,7 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-2/piadina_dolce.jpg',
             '/image/plates/user-id-2/piadina_dolce.jpg',
             '/image/plates/user-id-2/piadina_dolce.jpg',
-            <!-- //bevande -->
+            //bevande -->
             '/image/plates/user-id-2/acquan.jpeg',
             '/image/plates/user-id-2/acqua.jpg',
             '/image/plates/user-id-2/cocacola.jpg',
@@ -1752,10 +1752,10 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-2/birra0.jpg',
             '/image/plates/user-id-2/birra1.jpg',
             '/image/plates/user-id-2/birra2.jpg',
-            <!-- //user id 6 -->
-            <!-- //Antipasti -->
+            //user id 6 -->
+            //Antipasti -->
             '/image/plates/user-id-6/piatto_misto_vegetariano.jpg',
-            <!-- // Pesce -->
+            // Pesce -->
             '/image/plates/user-id-6/arancino_riso_pesce.jpg',
             '/image/plates/user-id-6/spaghetti_cozze_vongole.jpg',
             '/image/plates/user-id-6/risotto_nero_seppia.jpg',
@@ -1763,16 +1763,16 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-6/cotolette_sarde_fritte.jpg',
             '/image/plates/user-id-6/brushette_alici.jpg',
             '/image/plates/user-id-6/insalatona_sgombro.jpg',
-            <!-- //Vegetariani -->
+            //Vegetariani -->
             '/image/plates/user-id-6/linguine_pesto_mandorle.jpg',
             '/image/plates/user-id-6/falafel_piselli.jpg',
             '/image/plates/user-id-6/nuvolette_verdure_fritte.jpg',
             '/image/plates/user-id-6/fiori_zucca_fritti.jpg',
-            <!-- //Dolci -->
+            //Dolci -->
             '/image/plates/user-id-6/gelato_riso.jpg',
             '/image/plates/user-id-6/torta_mele.jpg',
             '/image/plates/user-id-6/torta_mandorle_mirtillo.jpg',
-            <!-- //Bevande -->
+            //Bevande -->
             '/image/plates/user-id-6/the_bancha.jpg',
             '/image/plates/user-id-6/the_bancha.jpg',
             '/image/plates/user-id-6/acqua_castello.jpg',
@@ -1784,50 +1784,50 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-6/the_bancha.jpg',
             '/image/plates/user-id-6/the_bancha.jpg',
             '/image/plates/user-id-6/the_bancha.jpg',
-            <!-- //user id 12 -->
-            <!-- //Antipasti -->
+            //user id 12 -->
+            //Antipasti -->
             '/image/plates/user-id-12/edame.jpg',
             '/image/plates/user-id-12/moyashi.jpg',
             '/image/plates/user-id-12/wakame_suonomono.jpg',
             '/image/plates/user-id-12/spicy_wakame.jpg',
             '/image/plates/user-id-12/gari.jpg',
-            <!-- //Nigiri -->
+            //Nigiri -->
             '/image/plates/user-id-12/nigiri_sake.jpg',
             '/image/plates/user-id-12/nigiri_ebi.jpg',
             '/image/plates/user-id-12/suzuki.jpg',
-            <!-- //Gunkan -->
+            //Gunkan -->
             '/image/plates/user-id-12/gunkan_sake.jpg',
             '/image/plates/user-id-12/gunkan_ebi.jpg',
             '/image/plates/user-id-12/gunkan_maguro.jpg',
-            <!-- //temaki -->
+            //temaki -->
             '/image/plates/user-id-12/temaki_yasai.jpg',
             '/image/plates/user-id-12/temaki_sake.jpg',
-            <!-- //Hosomaki -->
+            //Hosomaki -->
             '/image/plates/user-id-12/hosomaki_mix_maki.jpg',
             '/image/plates/user-id-12/hosomaki_tekka_maki.jpg',
             '/image/plates/user-id-12/hosomaki_sake_maki.jpg',
-            <!-- //Uramaki -->
+            //Uramaki -->
             '/image/plates/user-id-12/ura_yasai.jpg',
             '/image/plates/user-id-12/uramaki_ura_california.jpg',
             '/image/plates/user-id-12/uramaki_ura_philadelphia.jpg',
-            <!-- //sushi - sashimi - chirashi -->
+            //sushi - sashimi - chirashi -->
             '/image/plates/user-id-12/sushi_default.jpg',
             '/image/plates/user-id-12/sushi_default.jpg',
             '/image/plates/user-id-12/sashimi_default.jpg',
             '/image/plates/user-id-12/sashimi_default.jpg',
             '/image/plates/user-id-12/chirashi_default.jpg',
-            <!-- //menu giapponese -->
+            //menu giapponese -->
             '/image/plates/user-id-12/sushi_maki_a.jpg',
             '/image/plates/user-id-12/sushi_maki_b.jpg',
             '/image/plates/user-id-12/sushi_maki_c.jpg',
             '/image/plates/user-id-12/sushi_sashimi_maki.jpg',
             '/image/plates/user-id-12/menu_sushi_tsunami.jpg',
-            <!-- //tempura -->
+            //tempura -->
             '/image/plates/user-id-12/tempura.jpg',
-            <!-- //dolci -->
+            //dolci -->
             '/image/plates/user-id-12/dolce_riso.jpg',
             '/image/plates/user-id-12/gelato_the_verde.jpg',
-            <!-- //bevande -->
+            //bevande -->
             '/image/plates/user-id-12/bevande_default.jpg',
             '/image/plates/user-id-12/bevande_default.jpg',
             '/image/plates/user-id-12/bevande_default.jpg',
@@ -1840,8 +1840,8 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-12/bevande_default.jpg',
             '/image/plates/user-id-12/bevande_default.jpg',
             '/image/plates/user-id-12/bevande_default.jpg',
-            <!-- //user id 20 -->
-            <!-- //dolci -->
+            //user id 20 -->
+            //dolci -->
             '/image/plates/user-id-20/camille.jpeg',
             '/image/plates/user-id-20/grancereale.jpeg',
             '/image/plates/user-id-20/cannoli.jpeg',
@@ -2218,8 +2218,8 @@ class PlateTableSeeder extends Seeder
             16,
             16,
             //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
-            <!-- //user id 2 -->
-            <!-- //piadine -->
+            //user id 2 -->
+            //piadine -->
             2,
             2,
             2,
@@ -2236,7 +2236,7 @@ class PlateTableSeeder extends Seeder
             2,
             2,
             2,
-            <!-- //piadine dolci -->
+            //piadine dolci -->
             2,
             2,
             2,
@@ -2244,7 +2244,7 @@ class PlateTableSeeder extends Seeder
             2,
             2,
             2,
-            <!-- //bevande -->
+            //bevande -->
             2,
             2,
             2,
@@ -2256,29 +2256,27 @@ class PlateTableSeeder extends Seeder
             2,
             2,
             2,
-            <!-- // user id 6 -->
-            <!-- //Antipasti -->
+            // user id 6 -->
+            //Antipasti -->
             6,
-            <!-- // Pesce -->
-            6,
-            6,
+            // Pesce -->
             6,
             6,
             6,
             6,
             6,
-            <!-- //vegetariani -->
+            6,
+            6,
+            //vegetariani -->
             6,
             6,
             6,
             6,
-            <!-- //dolci -->
+            //dolci -->
             6,
             6,
             6,
-            <!-- //bevande -->
-            6,
-            6,
+            //bevande -->
             6,
             6,
             6,
@@ -2288,54 +2286,52 @@ class PlateTableSeeder extends Seeder
             6,
             6,
             6,
-            <!-- //user id 12 -->
-            <!-- //Antipasti -->
+            6,
+            6,
+            //user id 12 -->
+            //Antipasti -->
             12,
             12,
             12,
             12,
             12,
-            <!-- //Nigiri -->
+            //Nigiri -->
             12,
             12,
             12,
-            <!-- //Gunkan -->
+            //Gunkan -->
             12,
             12,
             12,
-            <!-- //temaki -->
+            //temaki -->
             12,
             12,
-            <!-- //Hosomaki -->
-            12,
-            12,
-            12,
-            <!-- //Uramaki -->
+            //Hosomaki -->
             12,
             12,
             12,
-            <!-- //sushi - sashimi - chirashi -->
+            //Uramaki -->
             12,
             12,
             12,
-            12,
-            12,
-            <!-- //menu giapponese -->
+            //sushi - sashimi - chirashi -->
             12,
             12,
             12,
             12,
             12,
-            <!-- //tempura -->
-            12,
-            <!-- //dolci -->
-            12,
-            12,
-            <!-- //bevande -->
+            //menu giapponese -->
             12,
             12,
             12,
             12,
+            12,
+            //tempura -->
+            12,
+            //dolci -->
+            12,
+            12,
+            //bevande -->
             12,
             12,
             12,
@@ -2344,8 +2340,12 @@ class PlateTableSeeder extends Seeder
             12,
             12,
             12,
-            <!-- //user id 20 -->
-            <!-- //dolci -->
+            12,
+            12,
+            12,
+            12,
+            //user id 20 -->
+            //dolci -->
             20,
             20,
             20,
@@ -2716,7 +2716,7 @@ class PlateTableSeeder extends Seeder
             14,
             14,
             //Ristoranti: Piadineria, Sweet and Fit, Primo sushi, Yum - Sam
-            <!-- //piadine -->
+            //piadine -->
             45,
             45,
             45,
@@ -2733,7 +2733,7 @@ class PlateTableSeeder extends Seeder
             45,
             45,
             45,
-            <!-- //piadine dolci -->
+            //piadine dolci -->
             45,
             45,
             45,
@@ -2741,7 +2741,7 @@ class PlateTableSeeder extends Seeder
             45,
             45,
             45,
-            <!-- //bevande -->
+            //bevande -->
             4,
             4,
             4,
@@ -2753,10 +2753,10 @@ class PlateTableSeeder extends Seeder
             4,
             4,
             4,
-            <!-- // user id 6 -->
-            <!-- //Antipasti -->
+            // user id 6 -->
+            //Antipasti -->
             3,
-            <!-- // Pesce -->
+            // Pesce -->
             44,
             44,
             44,
@@ -2764,16 +2764,16 @@ class PlateTableSeeder extends Seeder
             44,
             44,
             44,
-            <!-- //vegetariani -->
+            //vegetariani -->
             15,
             15,
             15,
             15,
-            <!-- //dolci -->
+            //dolci -->
             16,
             16,
             16,
-            <!-- //bevande -->
+            //bevande -->
             4,
             4,
             4,
@@ -2785,50 +2785,50 @@ class PlateTableSeeder extends Seeder
             4,
             4,
             4,
-            <!-- //user id 12 -->
-            <!-- //Antipasti -->
+            //user id 12 -->
+            //Antipasti -->
             3,
             3,
             3,
             3,
             3,
-            <!-- //Nigiri -->
+            //Nigiri -->
             40,
             40,
             40,
-            <!-- //Gunkan -->
+            //Gunkan -->
             19,
             19,
             19,
-            <!-- //temaki -->
+            //temaki -->
             56,
             56,
-            <!-- //Hosomaki -->
+            //Hosomaki -->
             21,
             21,
             21,
-            <!-- //Uramaki -->
+            //Uramaki -->
             59,
             59,
             59,
-            <!-- //sushi - sashimi - chirashi -->
+            //sushi - sashimi - chirashi -->
             53,
             53,
             50,
             50,
             10,
-            <!-- //menu giapponese -->
+            //menu giapponese -->
             30,
             30,
             30,
             30,
             30,
-            <!-- //tempura -->
+            //tempura -->
             57,
-            <!-- //dolci -->
+            //dolci -->
             16,
             16,
-            <!-- //bevande -->
+            //bevande -->
             4,
             4,
             4,
@@ -2841,8 +2841,8 @@ class PlateTableSeeder extends Seeder
             4,
             4,
             4,
-            <!-- //user id 20 -->
-            <!-- //dolci -->
+            //user id 20 -->
+            //dolci -->
             16,
             16,
             16,
