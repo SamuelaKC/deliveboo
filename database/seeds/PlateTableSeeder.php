@@ -2065,6 +2065,8 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-13/anatra-alla-pechinese.jpeg',
             '/image/plates/user-id-13/gambero-alla-piastra.jpeg',
             '/image/plates/user-id-13/gelato-fritto.jpeg',
+            '/image/plates/user-id-11/cocacola.jpg',
+            '/image/plates/user-id-11/birra.jpg',
             // ---------------------------------------------------
                         //--MASSIMO--
 
