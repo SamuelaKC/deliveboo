@@ -22,6 +22,8 @@ class CreateOrderPlateTable extends Migration
             $table->unsignedBigInteger('plate_id');
             $table->foreign('plate_id')->references('id')->on('plates')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->unsignedTinyInteger('quantity');
+
             $table->timestamps();
         });
     }

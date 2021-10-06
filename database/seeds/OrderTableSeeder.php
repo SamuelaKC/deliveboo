@@ -131,7 +131,7 @@ class OrderTableSeeder extends Seeder
                 211,
             ],
             //-- 11,8,16,2,6,12,20,1,4,19,5,7,10,13   VIN
-            //-- 9,18,15,3,                     TONY
+            //-- 9,18,15,3,                           TONY
             [
                 321,
                 323,
@@ -160,6 +160,8 @@ class OrderTableSeeder extends Seeder
             $newOrder->phone_number = $faker->e164PhoneNumber();
             $newOrder->total_price = $faker->randomFloat(2, 15, 50); 
             $newOrder->save();
+
+
 
             $newOrder->plate()->sync($plateOrder[$x]);
         }
