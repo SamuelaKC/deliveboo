@@ -862,7 +862,6 @@ class PlateTableSeeder extends Seeder
             '  ',
             '  ',
             '  ',
-            '  ',
             'in confezione',
             '  ',
             '  ',
@@ -1931,7 +1930,6 @@ class PlateTableSeeder extends Seeder
             ' ',
             ' ',
             ' ',
-            ' ',
             //id-9 MacheBuò
             ' ',
             ' ',
@@ -2065,6 +2063,8 @@ class PlateTableSeeder extends Seeder
             '/image/plates/user-id-13/anatra-alla-pechinese.jpeg',
             '/image/plates/user-id-13/gambero-alla-piastra.jpeg',
             '/image/plates/user-id-13/gelato-fritto.jpeg',
+            '/image/plates/user-id-11/cocacola.jpg',
+            '/image/plates/user-id-11/birra.jpg',
             // ---------------------------------------------------
                         //--MASSIMO--
 
@@ -2392,7 +2392,6 @@ class PlateTableSeeder extends Seeder
             19,
             19,
             //id-5 Oasi del gelato Tony
-            5,
             5,
             5,
             5,
@@ -2916,7 +2915,6 @@ class PlateTableSeeder extends Seeder
             11,
             11,
             11,
-            11,
             16,
             16,
             16,
@@ -3084,12 +3082,6 @@ class PlateTableSeeder extends Seeder
             43,
             43,
             43,
-            43,
-            43,
-            3,
-            3,
-            3,
-            3,
             16,
             16,
             4,
