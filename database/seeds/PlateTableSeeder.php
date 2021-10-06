@@ -1261,7 +1261,7 @@ class PlateTableSeeder extends Seeder
             1.50,
             2.00,
             3.50,
-            6,00,
+            6.00,
             1.00,
             2.50,
             2.50,

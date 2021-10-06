@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('phone_number', 20); 
             $table->string('piva', 13);
             $table->string('description')->nullable();
-            $table->text('picture');
+            $table->text('picture')->nullable();
             $table->timestamps();
         });
     }

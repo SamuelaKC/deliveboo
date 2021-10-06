@@ -1,17 +1,16 @@
 <?php
 
-use App\Tag;
 use Illuminate\Database\Seeder;
-use Faker\Generator as Faker;
+use App\Tag;
 
-class DelivebooSeeder extends Seeder
+class TagTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
         $tagList = [
             'Americano',
@@ -58,7 +57,7 @@ class DelivebooSeeder extends Seeder
             '/image/tags/thailandese.jpg',
             '/image/tags/vegetariano.jpg'
         ];
-        
+
         $tagUserID = [
             [11],
             [5, 16, 20],
@@ -82,15 +81,15 @@ class DelivebooSeeder extends Seeder
             [1, 2, 4, 6, 17, 19]
         ];
 
-        
-        
+
+
         for ($x = 0; $x < count($tagList); $x++) {
-            
+
             $newTag = new Tag();
             $newTag->name = $tagList[$x];
             $newTag->picture = $tagImgs[$x];
             $newTag->save();
-    
+
             $newTag->user()->sync($tagUserID[$x]);
         }
     }
