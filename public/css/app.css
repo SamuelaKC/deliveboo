@@ -12346,3 +12346,7 @@ a.text-dark:focus {
   border-radius: 3px;
 }
 
+.title-form-container .image-user img {
+  width: 100%;
+}
+

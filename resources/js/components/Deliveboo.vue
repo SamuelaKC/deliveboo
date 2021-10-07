@@ -13,15 +13,10 @@ export default {
   },
 
   created() {
-    axios.get("/api/users/10").then((response) => {
-      this.user = response.data;
-      console.log(response.data);
-    });
   },
 
   data() {
     return {
-      user: [],
     };
   },
 };

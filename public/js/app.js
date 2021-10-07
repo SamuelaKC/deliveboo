@@ -1920,18 +1920,9 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     FormUser: _FormUser_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  created: function created() {
-    var _this = this;
-
-    axios.get("/api/users/10").then(function (response) {
-      _this.user = response.data;
-      console.log(response.data);
-    });
-  },
+  created: function created() {},
   data: function data() {
-    return {
-      user: []
-    };
+    return {};
   }
 });
 
@@ -1993,15 +1984,71 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "FormUser",
+  created: function created() {
+    this.getUser();
+  },
   data: function data() {
     return {
       nameUser: "",
       emailUser: "",
       phoneUser: "",
-      descriptionUser: ""
+      descriptionUser: "",
+      addressUser: "",
+      pivaUser: "",
+      user: []
     };
+  },
+  computed: {
+    editUser: function editUser() {
+      return {
+        name: this.nameUser,
+        email: this.emailUser,
+        address: this.addressUser,
+        phone_number: this.phoneUser,
+        piva: this.pivaUser,
+        description: this.descriptionUser
+      };
+    }
+  },
+  methods: {
+    getUser: function getUser() {
+      var _this = this;
+
+      axios.get("/api/users/10").then(function (response) {
+        _this.user = response.data;
+        _this.nameUser = _this.user.name;
+        _this.emailUser = _this.user.email;
+        _this.phoneUser = _this.user.phone_number;
+        _this.descriptionUser = _this.user.description;
+        _this.addressUser = _this.user.address;
+        _this.pivaUser = _this.user.piva;
+      });
+    },
+    saveEdit: function saveEdit() {
+      axios.put('/api/users/10', this.editUser).then(function (response) {
+        console.log(response);
+      });
+    }
   }
 });
 
@@ -37694,7 +37741,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row justify-content-center" }, [
     _c("div", { staticClass: "col-8" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "title-form-container" }, [
+        _c("h1", { staticClass: "title-form" }, [
+          _vm._v("Modifica i tuoi dati")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "image-user" }, [
+          _c("img", { attrs: { src: _vm.user.picture, alt: "" } })
+        ])
+      ]),
       _vm._v(" "),
       _c("form", { staticClass: "form-user form-group" }, [
         _c("label", { attrs: { for: "name-user" } }, [
@@ -37743,6 +37798,32 @@ var render = function() {
                 return
               }
               _vm.emailUser = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "address-user" } }, [
+          _vm._v("il tuo Indirizzo")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.addressUser,
+              expression: "addressUser"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", id: "address-user" },
+          domProps: { value: _vm.addressUser },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.addressUser = $event.target.value
             }
           }
         }),
@@ -37797,25 +37878,48 @@ var render = function() {
               _vm.descriptionUser = $event.target.value
             }
           }
-        })
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "piva-user" } }, [_vm._v("P.Iva")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.pivaUser,
+              expression: "pivaUser"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", id: "piva-user" },
+          domProps: { value: _vm.pivaUser },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.pivaUser = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.saveEdit()
+              }
+            }
+          },
+          [_vm._v("Salva")]
+        )
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "title-form-container" }, [
-      _c("h1", { staticClass: "title-form" }, [_vm._v("Modifica i tuoi dati")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "image-user" }, [
-        _c("img", { attrs: { src: "", alt: "" } })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
