@@ -1,0 +1,11 @@
+.title-form-container {
+    display: flex;
+    justify-content: space-between;
+
+    .image-user {
+        width: 40px;
+        height: 40px;
+        border: 1px solid grey;
+        border-radius: 3px;
+    }
+}

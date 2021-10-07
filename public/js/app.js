@@ -1908,26 +1908,30 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormUser_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormUser.vue */ "./resources/js/components/FormUser.vue");
 //
 //
 //
 //
 //
 //
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      user: []
-    };
+  components: {
+    FormUser: _FormUser_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   created: function created() {
     var _this = this;
 
-    axios.get('/api/users/10').then(function (response) {
+    axios.get("/api/users/10").then(function (response) {
       _this.user = response.data;
       console.log(response.data);
     });
+  },
+  data: function data() {
+    return {
+      user: []
+    };
   }
 });
 
@@ -1947,7 +1951,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "FormUser",
+  data: function data() {
+    return {
+      nameUser: "",
+      emailUser: "",
+      phoneUser: "",
+      descriptionUser: ""
+    };
+  }
+});
 
 /***/ }),
 
@@ -37612,9 +37668,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _vm._v("\n    deliveboo\n    " + _vm._s(_vm.user.name) + "\n")
-  ])
+  return _c("div", { staticClass: "container" }, [_c("FormUser")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37638,9 +37692,130 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    form user\n")])
+  return _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", { staticClass: "col-8" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("form", { staticClass: "form-user form-group" }, [
+        _c("label", { attrs: { for: "name-user" } }, [
+          _vm._v("Nome del tuo Servizio")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.nameUser,
+              expression: "nameUser"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", id: "name-user" },
+          domProps: { value: _vm.nameUser },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.nameUser = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "email-user" } }, [_vm._v("la tua Email")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.emailUser,
+              expression: "emailUser"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "email", id: "email-user" },
+          domProps: { value: _vm.emailUser },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.emailUser = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "phone-user" } }, [
+          _vm._v("il tuo Contatto")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.phoneUser,
+              expression: "phoneUser"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "tel", id: "phone-user" },
+          domProps: { value: _vm.phoneUser },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.phoneUser = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "description-user" } }, [
+          _vm._v("una breve Descrizione")
+        ]),
+        _vm._v(" "),
+        _c("textarea", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.descriptionUser,
+              expression: "descriptionUser"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { id: "decription-user" },
+          domProps: { value: _vm.descriptionUser },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.descriptionUser = $event.target.value
+            }
+          }
+        })
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "title-form-container" }, [
+      _c("h1", { staticClass: "title-form" }, [_vm._v("Modifica i tuoi dati")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "image-user" }, [
+        _c("img", { attrs: { src: "", alt: "" } })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

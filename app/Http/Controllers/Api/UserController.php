@@ -15,9 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $userNow = User::find(10);
-        //dd($userNow);
-        return response()->json($userNow);
+
     }
 
     /**
@@ -49,9 +47,6 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //$idUser = $user->id;
-        //$userNow = User::find($idUser);
-        //dd($idUser);
         return response()->json($user);
     }
 
