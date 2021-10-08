@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
-class BackofficeController extends Controller
+class UserController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -59,9 +55,9 @@ class BackofficeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        return view('auth.edit');
+        return view('auth.edit', compact('user'));
     }
 
     /**
@@ -71,9 +67,12 @@ class BackofficeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $data = $request->all();
+        $user->update($data);
+
+        return redirect()->route('dashboard');
     }
 
     /**
