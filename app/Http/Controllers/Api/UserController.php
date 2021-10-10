@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RestaurantResource;
+use App\Plate;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -47,7 +49,8 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return response()->json($user);
+
+        return new RestaurantResource($user);
     }
 
     /**
