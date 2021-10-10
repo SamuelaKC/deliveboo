@@ -70,6 +70,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => 'required|max:255',
+            'address' => 'required|max:150',
+            'phone_number' => 'required|max:20',
+            'piva' => 'required|max:13',
+            'description' => 'nullable',
+            'pictureFile' => 'nullable|image',
+        ]);
+
         $data = $request->all();
         $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
         $user->picture = $imgPath;
