@@ -21,7 +21,9 @@ class UserResource extends JsonResource
             'phone_number' =>$this -> phone_number,
             'description'=>$this -> description,
             'picture'=>$this -> picture,
-            'tag'=>$this -> tag
+            'tag'=>$this -> tag,
+            'plates' =>$this -> plate,
+
         ];
     }
 }
