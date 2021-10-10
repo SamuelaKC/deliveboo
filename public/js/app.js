@@ -2076,12 +2076,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: Restaurant,
   created: function created() {
-    axios.get();
+    var _this = this;
+
+    axios.get('/api/users/11').then(function (response) {
+      _this.restaurant = response.data;
+    });
   },
   data: function data() {
     return {
-      restaurant: [],
-      plates: []
+      restaurant: []
     };
   }
 });
@@ -37980,11 +37983,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "restaurant" }, [
-    _c("div", [_vm._v(_vm._s())])
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "restaurant" }, [_c("div")])
+  }
+]
 render._withStripped = true
 
 

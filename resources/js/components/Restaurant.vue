@@ -1,6 +1,6 @@
 <template>
   <div class="restaurant">
-    <div>{{  }}</div>
+    <div></div>
   </div>
 </template>
 
@@ -10,13 +10,14 @@ export default {
     name: Restaurant,
 
   created() {
-      axios.get()
+      axios.get('/api/users/11').then((response) => {
+        this.restaurant = response.data;
+      })
   },
 
   data() {
     return {
         restaurant: [],
-        plates: [],
     };
   },
 };
