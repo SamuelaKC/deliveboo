@@ -19,7 +19,9 @@
 
 
 <script>
+ 
     export default {
+        name:Plates,
         data() {
             return {
                 plate: [],

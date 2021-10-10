@@ -1,22 +1,25 @@
 <template>
     <div class="container">
-        deliveboo
-        {{ user.name }}
+        <Plates />
     </div>
 </template>
 
 <script>
+import Plates from './Plates.vue';
     export default {
+        components : {
+            Plates
+        },
         data() {
             return {
-                user: [],
+                plate: [],
             }
         },
         created() {
-            axios.get('/api/users/10').then((response)=>{
-                this.user = response.data;
+            axios.get().then((response)=>{
+                this.plate = response.data;
                 console.log(response.data);
             });
-        }
+        },
     }
 </script>
