@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -70,6 +71,8 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $data = $request->all();
+        $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
+        $user->picture = $imgPath;
         $user->update($data);
 
         return redirect()->route('dashboard');

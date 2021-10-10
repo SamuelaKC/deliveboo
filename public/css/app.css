@@ -12354,3 +12354,7 @@ a.text-dark:focus {
   display: flex;
 }
 
+.dashboard img {
+  width: 100%;
+}
+

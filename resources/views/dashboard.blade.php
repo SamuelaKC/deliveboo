@@ -14,6 +14,8 @@
                 <button class="btn btn-primary">Resetta Password</button>
             </a>
         </div>
-        <aside class="col-2 d-none d-md-block">d</aside>
+        <aside class="col-2 d-none d-md-block">
+            <img src="{{ asset('storage/' . $user->picture) }}" alt="Foto profilo {{ $user->name }}">
+        </aside>
     </div>
 @endsection

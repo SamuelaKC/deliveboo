@@ -8,7 +8,7 @@
                 <div class="card-header">Inserisci i tuoi dati</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('users.update', $user) }}">
+                    <form method="POST" action="{{ route('users.update', $user) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -89,6 +89,20 @@
                                 <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>{{ $user->description }}</textarea>
 
                                 @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="pictureFile" class="col-md-4 col-form-label text-md-right">carica la tua Foto</label>
+
+                            <div class="col-md-6">
+                                <input id="pictureFile" type="file" class="form-control @error('pictureFile') is-invalid @enderror" name="pictureFile" required autocomplete="pictureFile" autofocus>
+
+                                @error('pictureFile')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
