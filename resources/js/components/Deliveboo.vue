@@ -1,14 +1,17 @@
 <template>
     <div class="container">
         <Plates />
+        <HomeRestaurants/>
     </div>
 </template>
 
 <script>
 import Plates from './Plates.vue';
+import HomeRestaurants from './HomeRestaurants.vue';
     export default {
         components : {
-            Plates
+            Plates,
+            HomeRestaurants,
         },
         data() {
             return {
