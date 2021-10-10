@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Order;
 
 class OrderController extends Controller
 {
@@ -14,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +36,20 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newOrder = new Order();
+        $newOrder->details = $data['details']; 
+        $newOrder->name_surname = $data['name_surname'];
+        $newOrder->address = $data['address'];
+        $newOrder->phone_number = $data['phone_number'];
+        $newOrder->total_price = $data['total_price'];
+        $newOrder->save();
+
+        // Creazione api:
+        return response()->json([
+            // Qui status serve per capire se va tutto a buon fine
+            'status' => 'success'
+        ]);
     }
 
     /**
@@ -44,9 +58,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Order $order)
     {
-        //
+        return response()->json($order);
     }
 
     /**
@@ -57,7 +71,7 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
