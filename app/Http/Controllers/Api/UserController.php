@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
+use App\Order;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -15,9 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $userNow = User::find(10);
+        $users = User::all();
         //dd($userNow);
-        return response()->json($userNow);
+        return UserResource::collection($users);
     }
 
     /**
@@ -52,7 +54,7 @@ class UserController extends Controller
         //$idUser = $user->id;
         //$userNow = User::find($idUser);
         //dd($idUser);
-        return response()->json($user);
+        return new UserResource($user);
     }
 
     /**
