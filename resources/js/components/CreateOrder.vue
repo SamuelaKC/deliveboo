@@ -62,7 +62,7 @@
 </template>
 <script>
     export default {
-        name: CreateOrder,
+        name: 'CreateOrder',
         data() {
             return {
                 fields:{}, 

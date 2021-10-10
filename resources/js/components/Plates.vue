@@ -21,7 +21,7 @@
 <script>
  
     export default {
-        name:Plates,
+        name: 'Plates',
         data() {
             return {
                 plate: [],
