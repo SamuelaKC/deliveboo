@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Plate;
 use Illuminate\Http\Request;
 
@@ -63,9 +64,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plate $plate)
     {
-        //
+        $categories = Category::all();
+        return view('plates.edit', compact('plate', 'categories')); 
     }
 
     /**
@@ -75,9 +77,11 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Plate $plate)
     {
-        //
+        $data=$request->all();
+        $this->fillAndSavePlate($plate, $data);
+        return redirect()->route('plates.show', $plate);
     }
 
     /**
@@ -86,9 +90,20 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Plate $plate)
     {
-        //
+        $plate->delete();
+        return redirect()->route('plates.index');
+        // settare nell'index il collegamento alla route, nella form :
+        // {{  route('book.delete', $book}}
+        // e dopo il @csrf
+        // @method('DELETE') per cambiare il method 'POST' scritto necessariamente sopra nel form
+
+        // <form action="{{route('plates.destroy',$plate)}}" method="POST">
+        //     @csrf
+        //     @method('DELETE')
+        //     <button type="submit">Elimina</button>
+        // </form>
     }
 
     private function fillAndSavePlate(Plate $plate, $data)
