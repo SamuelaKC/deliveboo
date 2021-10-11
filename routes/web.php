@@ -23,3 +23,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::resource('orders', 'OrderController');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('users', 'UserController');
+
+Route::get('/userDetail', function () {
+    // Qui devo richiamare il file creato in config, dove si trova l'array:
+    return view('userPlateDetail');
+})->name('userDetail');

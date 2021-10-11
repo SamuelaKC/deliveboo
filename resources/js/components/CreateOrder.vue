@@ -2,9 +2,7 @@
   <div>
       <div class="container">
         
-        <!-- <div v-for="(ordine, index) in orders" :key="index">
-          {{ ordine.address }}
-        </div> -->
+        
         <h1>Dettagli dell'ordine</h1>
         <form @submit.prevent="sendOrder">
           <!-- nome e cognome -->
