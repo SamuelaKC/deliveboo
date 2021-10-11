@@ -5,21 +5,13 @@
         <!-- <div v-for="(ordine, index) in orders" :key="index">
           {{ ordine.address }}
         </div> -->
-        <h1>Creazione dell'ordine</h1>
+        <h1>Dettagli dell'ordine</h1>
         <form @submit.prevent="sendOrder">
-          <!-- dettagli -->
-          <div class="form-group">
-              <label for="details">Dettagli ordine</label>
-              <input type="text" 
-              class="form-control" 
-              name="details" 
-              id="details"
-              v-model="fields.details" />
-          </div>
           <!-- nome e cognome -->
           <div class="form-group">
               <label for="name_surname">Nome e cognome</label>
-              <input type="text"  
+              <input type="text" 
+              placeholder="es. Gino Rossi" 
               class="form-control" 
               name="name_surname" 
               id="name_surname"
@@ -28,7 +20,8 @@
           <!-- address(via di casa) -->
           <div class="form-group">
               <label for="address">Via</label>
-              <input type="text" 
+              <input type="text"
+              placeholder="es. Via Ettore Ponti, 21" 
               class="form-control" 
               name="address" 
               id="address"
@@ -38,10 +31,21 @@
           <div class="form-group">
               <label for="phone_number">Numero del telefono</label>
               <input type="text" 
+              placeholder="+39 0230578330"
               class="form-control" 
               name="phone_number" 
               id="phone_number"
               v-model="fields.phone_number" />
+          </div>
+          <!-- dettagli -->
+          <div class="form-group">
+              <label for="details">Istruzioni per il rider</label>
+              <input type="text"
+              placeholder="es. È la porta nera vicino al negozio di animali. Per favore chiama quando arrivi."
+              class="form-control" 
+              name="details" 
+              id="details"
+              v-model="fields.details" />
           </div>
           <!-- prezzo totale -->
           <div class="form-group">

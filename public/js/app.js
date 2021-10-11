@@ -1970,6 +1970,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
@@ -37837,7 +37841,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container" }, [
-      _c("h1", [_vm._v("Creazione dell'ordine")]),
+      _c("h1", [_vm._v("Dettagli dell'ordine")]),
       _vm._v(" "),
       _c(
         "form",
@@ -37850,34 +37854,6 @@ var render = function() {
           }
         },
         [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "details" } }, [
-              _vm._v("Dettagli ordine")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.fields.details,
-                  expression: "fields.details"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: { type: "text", name: "details", id: "details" },
-              domProps: { value: _vm.fields.details },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.fields, "details", $event.target.value)
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
             _c("label", { attrs: { for: "name_surname" } }, [
               _vm._v("Nome e cognome")
@@ -37893,7 +37869,12 @@ var render = function() {
                 }
               ],
               staticClass: "form-control",
-              attrs: { type: "text", name: "name_surname", id: "name_surname" },
+              attrs: {
+                type: "text",
+                placeholder: "es. Gino Rossi",
+                name: "name_surname",
+                id: "name_surname"
+              },
               domProps: { value: _vm.fields.name_surname },
               on: {
                 input: function($event) {
@@ -37919,7 +37900,12 @@ var render = function() {
                 }
               ],
               staticClass: "form-control",
-              attrs: { type: "text", name: "address", id: "address" },
+              attrs: {
+                type: "text",
+                placeholder: "es. Via Ettore Ponti, 21",
+                name: "address",
+                id: "address"
+              },
               domProps: { value: _vm.fields.address },
               on: {
                 input: function($event) {
@@ -37947,7 +37933,12 @@ var render = function() {
                 }
               ],
               staticClass: "form-control",
-              attrs: { type: "text", name: "phone_number", id: "phone_number" },
+              attrs: {
+                type: "text",
+                placeholder: "+39 0230578330",
+                name: "phone_number",
+                id: "phone_number"
+              },
               domProps: { value: _vm.fields.phone_number },
               on: {
                 input: function($event) {
@@ -37955,6 +37946,40 @@ var render = function() {
                     return
                   }
                   _vm.$set(_vm.fields, "phone_number", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "details" } }, [
+              _vm._v("Istruzioni per il rider")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.fields.details,
+                  expression: "fields.details"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder:
+                  "es. È la porta nera vicino al negozio di animali. Per favore chiama quando arrivi.",
+                name: "details",
+                id: "details"
+              },
+              domProps: { value: _vm.fields.details },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.fields, "details", $event.target.value)
                 }
               }
             })
