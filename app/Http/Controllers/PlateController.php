@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Plate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PlateController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +20,9 @@ class PlateController extends Controller
      */
     public function index()
     {
-        //
+        $userId = Auth::id();
+        $plates = Plate::where('user_id', $userId)->get();
+        return view('plates.index', compact('plates'));
     }
 
     /**
@@ -34,7 +43,14 @@ class PlateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $plate = new Plate();
+
+        $this->fillAndSavePlate($plate, $data);
+        // viene salvato nel DB
+
+        return redirect()->route('plates.index', $plate->id);
     }
 
     /**
@@ -43,9 +59,9 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Plate $plate)
     {
-        //
+        return view('plates.show', compact('plate'));
     }
 
     /**
@@ -54,9 +70,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plate $plate)
     {
-        //
+        $categories = Category::all();
+        return view('plates.edit', compact('plate', 'categories')); 
     }
 
     /**
@@ -66,9 +83,12 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Plate $plate)
     {
-        //
+        $data=$request->all();
+        $this->fillAndSavePlate($plate, $data);
+        return redirect()->route('plates.show', $plate);
+        // return view('plates.show', compact('plate'));
     }
 
     /**
@@ -77,8 +97,29 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Plate $plate)
     {
-        //
+        $plate->delete();
+        return redirect()->route('plates.index');
+        // settare nell'index il collegamento alla route, nella form :
+        // {{  route('book.delete', $book}}
+        // e dopo il @csrf
+        // @method('DELETE') per cambiare il method 'POST' scritto necessariamente sopra nel form
+
+        // <form action="{{route('plates.destroy',$plate)}}" method="POST">
+        //     @csrf
+        //     @method('DELETE')
+        //     <button type="submit">Elimina</button>
+        // </form>
+    }
+
+    private function fillAndSavePlate(Plate $plate, $data)
+    {
+        $plate->name = $data['name'];
+        $plate->description = $data['description'];
+        $plate->available = key_exists('available', $data) ? true: false;
+        $plate->price = $data['price'];
+        $plate->picture = $data['picture'];
+        $plate->save();
     }
 }

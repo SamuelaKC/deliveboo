@@ -21,3 +21,5 @@ Route::resource('plates', 'PlateController');
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('orders', 'OrderController');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::resource('users', 'UserController');

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
-use App\Order;
+use Illuminate\Support\Facades\Storage;
 
-class OrderController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -36,20 +36,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $newOrder = new Order();
-        $newOrder->details = $data['details']; 
-        $newOrder->name_surname = $data['name_surname'];
-        $newOrder->address = $data['address'];
-        $newOrder->phone_number = $data['phone_number'];
-        $newOrder->total_price = $data['total_price'];
-        $newOrder->save();
-
-        // Creazione api:
-        return response()->json([
-            // Qui status serve per capire se va tutto a buon fine
-            'status' => 'success'
-        ]);
+        //
     }
 
     /**
@@ -58,9 +45,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show($id)
     {
-        return response()->json($order);
+        //
     }
 
     /**
@@ -69,9 +56,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        
+        return view('auth.edit', compact('user'));
     }
 
     /**
@@ -81,9 +68,23 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'address' => 'required|max:150',
+            'phone_number' => 'required|max:20',
+            'piva' => 'required|max:13',
+            'description' => 'nullable',
+            'pictureFile' => 'nullable|image',
+        ]);
+
+        $data = $request->all();
+        $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
+        $user->picture = $imgPath;
+        $user->update($data);
+
+        return redirect()->route('dashboard');
     }
 
     /**
