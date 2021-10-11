@@ -24,11 +24,8 @@ class OrderController extends Controller
     public function index()
     {
         $users = Auth::id();
-
         $plates = User::find($users)->plate;
-
         $ordersId = [];
-
         foreach ($plates as $plate)
         {
             foreach ($plate->order as $order)
@@ -38,7 +35,6 @@ class OrderController extends Controller
                 }
             }
         }
-
         $orders = Order::whereIn('id', $ordersId)->get();
         return view ('orders', compact('ordersId', 'orders'));     
     }
