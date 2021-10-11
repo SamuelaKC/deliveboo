@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Plate;
 use Illuminate\Http\Request;
+
 
 class PlateController extends Controller
 {
@@ -34,7 +36,14 @@ class PlateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $plate = new Plate();
+
+        $this->fillAndSavePlate($plate, $data);
+        // viene salvato nel DB
+
+        return redirect()->route('plates.index', $plate->id);
     }
 
     /**
@@ -80,5 +89,15 @@ class PlateController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function fillAndSavePlate(Plate $plate, $data)
+    {
+        $plate->name = $data['name'];
+        $plate->description = $data['description'];
+        $plate->available = $data['available'];
+        $plate->price = $data['price'];
+        $plate->picture = $data['picture'];
+        $plate->save();
     }
 }
