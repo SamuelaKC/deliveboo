@@ -53,9 +53,9 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Plate $plate)
     {
-        //
+        return view('plates.show', compact('plate'));
     }
 
     /**
@@ -82,6 +82,7 @@ class PlateController extends Controller
         $data=$request->all();
         $this->fillAndSavePlate($plate, $data);
         return redirect()->route('plates.show', $plate);
+        // return view('plates.show', compact('plate'));
     }
 
     /**
@@ -110,7 +111,7 @@ class PlateController extends Controller
     {
         $plate->name = $data['name'];
         $plate->description = $data['description'];
-        $plate->available = $data['available'];
+        $plate->available = key_exists('available', $data) ? true: false;
         $plate->price = $data['price'];
         $plate->picture = $data['picture'];
         $plate->save();

@@ -13,7 +13,7 @@
             </div>
         @endif
         
-        <form action="{{route('plates.update', $plate)}}" method="POST" class="">
+        <form action="{{route('plates.update', $plate)}}" method="POST" enctype="multipart/form-data">
     
             @csrf
             @method('PUT')
@@ -40,11 +40,14 @@
                 <input type="text" name="price" id="price" value="{{ $plate->price }}">
             </div>
 
-            <img src="{{ $plate->picture }}" alt="" >
-
             <div>
                 <span>Disponibilità: </span> 
-                <input type="checkbox" name="available" id="available" checked>
+                <input type="checkbox" name="available" id="available">
+            </div>
+
+            <div>
+                <span>Inserisci l'url della tua foto: </span> 
+                <input type="text" name="picture" id="picture">
             </div>
 
             <div>
