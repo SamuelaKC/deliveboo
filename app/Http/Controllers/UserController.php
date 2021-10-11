@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+
 
 class UserController extends Controller
 {
+
+
+        public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -58,7 +68,12 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('auth.edit', compact('user'));
+        $userId = Auth::id();
+            if ($userId === $user->id) {
+            return view('auth.edit', compact('user'));
+        } else {
+            return view('error.index');
+        }
     }
 
     /**

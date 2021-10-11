@@ -32,7 +32,7 @@ class PlateController extends Controller
      */
     public function create()
     {
-        //
+        return view('plates.create');
     }
 
     /**
@@ -44,12 +44,9 @@ class PlateController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
         $plate = new Plate();
-
         $this->fillAndSavePlate($plate, $data);
         // viene salvato nel DB
-
         return redirect()->route('plates.index', $plate->id);
     }
 
@@ -60,7 +57,7 @@ class PlateController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Plate $plate)
-    {
+    {        
         return view('plates.show', compact('plate'));
     }
 
@@ -72,8 +69,17 @@ class PlateController extends Controller
      */
     public function edit(Plate $plate)
     {
+
+
         $categories = Category::all();
+
+        $userId = Auth::id();
+            if ($userId === $plate->user_id) {
         return view('plates.edit', compact('plate', 'categories')); 
+            } else {
+            return view('error.index');
+        }
+
     }
 
     /**
