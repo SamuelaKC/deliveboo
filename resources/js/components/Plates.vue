@@ -1,4 +1,3 @@
-
 <template>
     <div class="container-fluid">
        <div class="row justify-content-center">
@@ -19,12 +18,10 @@
 
 
 <script>
- 
     export default {
-        name:Plates,
         data() {
             return {
-                plate: [],
+                  plate: [],
             }
         },
         created() {
@@ -35,3 +32,4 @@
         }
     }
 </script>
+
