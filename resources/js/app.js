@@ -20,7 +20,6 @@ window.Vue = require("vue");
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component("deliveboo", require("./components/Deliveboo.vue").default);
-Vue.component("user-detail", require("./components/DetailsUserPlate.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

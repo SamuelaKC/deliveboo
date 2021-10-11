@@ -4,9 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Order;
-use App\User; 
 
 class OrderController extends Controller
 {
@@ -17,8 +15,6 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $userName = DB::table('users')->value('name');
-        return response()->json($userName);
 
     }
 
@@ -46,7 +42,6 @@ class OrderController extends Controller
         $newOrder->name_surname = $data['name_surname'];
         $newOrder->address = $data['address'];
         $newOrder->phone_number = $data['phone_number'];
-        $newOrder->total_price = $data['total_price'];
         $newOrder->save();
 
         // Creazione api:

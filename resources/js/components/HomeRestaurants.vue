@@ -13,10 +13,6 @@
                 <div class="card-body">
                     <h5 class="card-title">{{users.name}}</h5>
                     <p class="card-text">{{users.description}}</p>
-                    <!-- Bottone per la show dei piatti ristorante -->
-                    <a href="/userDetail">
-                        <button type="button" class="btn btn-primary">Primary</button>
-                    </a>
                 </div>
                
             </div> 

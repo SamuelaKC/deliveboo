@@ -54,7 +54,7 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
-        return response()->json($plate);
+    
     }
 
     /**
