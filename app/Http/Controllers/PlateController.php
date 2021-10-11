@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Plate;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class PlateController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +20,9 @@ class PlateController extends Controller
      */
     public function index()
     {
-        //
+        $userId = Auth::id();
+        $plates = Plate::where('user_id', $userId);
+        return view('plates.index', compact('plates'));
     }
 
     /**
