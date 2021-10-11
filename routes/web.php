@@ -16,10 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::resource('plates', 'PlateController');
 
 Route::get('/', 'HomeController@index')->name('home');
-
-Route::resource('orders', 'OrderController');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::resource('orders', 'OrderController');
+Route::resource('plates', 'PlateController');
 Route::resource('users', 'UserController');

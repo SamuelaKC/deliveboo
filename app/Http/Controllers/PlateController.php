@@ -72,7 +72,6 @@ class PlateController extends Controller
 
 
         $categories = Category::all();
-
         $userId = Auth::id();
             if ($userId === $plate->user_id) {
         return view('plates.edit', compact('plate', 'categories')); 
@@ -93,7 +92,7 @@ class PlateController extends Controller
     {
         $data=$request->all();
         $this->fillAndSavePlate($plate, $data);
-        return redirect()->route('plates.show', $plate);
+        return redirect()->route('plates.index', $plate);
         // return view('plates.show', compact('plate'));
     }
 

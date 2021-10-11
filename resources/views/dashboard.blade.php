@@ -5,18 +5,21 @@
     <div class="col">
         <h1 class="dashboard-welcome">Benvenuto {{ $user->name }}</h1>
         <h4>Questa è la tua Dashboard per la gestione della tua attività</h4>
-        <a href="{{ route('users.edit', $user) }}">
-            <button class="btn btn-primary">Modifica i tuoi dati</button>
-        </a>
-        <a class="btn btn-link" href="{{ route('password.request') }}">
-            <button class="btn btn-primary">Resetta Password</button>
-        </a>
-        <a class="btn btn-link" href="{{ route('plates.index') }}">
-            <button class="btn btn-primary">I tuoi piatti</button>
-        </a>
-        <a class="btn btn-link" href="{{ route('orders.index') }}">
-            <button class="btn btn-primary">I tuoi ordini</button>
-        </a>
+
+        <div class="col-4">
+            <a class="dropdown-item" href="{{ route('users.edit', $user) }}">
+                <i class="bi bi-pencil"></i> Modifica i tuoi dati
+            </a>
+            <a class="dropdown-item" href="{{ route('plates.index') }}">
+                <i class="bi bi-list-ul"></i> I tuoi piatti
+            </a>
+            <a class="dropdown-item" href="{{ route('orders.index') }}">
+                <i class="bi bi-list-ul"></i> I tuoi ordini
+            </a>
+            <a class="dropdown-item" href="{{ route('password.request') }}">
+                <i class="bi bi-x-square"></i> Resetta Password
+            </a>
+        </div>
     </div>
     <aside class="col-2 d-none d-md-block">
         <!-- to do image -->

@@ -12358,3 +12358,8 @@ a.text-dark:focus {
   width: 100%;
 }
 
+* {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+

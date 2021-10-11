@@ -1,7 +1,17 @@
 @extends('layouts.app') @section('content')
 <div class="container">
+        <div class="row">
+        <div class="col">
+            <a href="{{ route('dashboard') }}">
+                <button type="button" class="btn btn-light">
+                    Pagina principale
+                </button>
+            </a>
+        </div>
+    </div>
+
     <div class="row">
-        sono gli ordini @foreach ($orders as $order)
+         @foreach ($orders as $order)
         <div class="col-4 order">
             <div class="card-body">
                 <div>Nome: {{ $order->name_surname }}</div>
