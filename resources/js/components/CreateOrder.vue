@@ -73,7 +73,7 @@
             }
         },
         created() {
-            
+            this.price();
         },
         methods: {
             // Ora mi serve la chiamata axios per salvare i dati nello store
@@ -81,8 +81,12 @@
                 axios.post('api/orders', this.fields).then((response)=>{
                     alert('ho salvato tutto');
                 });
+            },
+            // Per il prezzo fisso da rendere dinamico tramite il carello
+            price() {
+                this.fields.total_price = this.totalPrice; 
             }
-            
+
         }
         
     }

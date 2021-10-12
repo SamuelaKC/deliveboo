@@ -1981,13 +1981,19 @@ __webpack_require__.r(__webpack_exports__);
       totalPrice: 10.00
     };
   },
-  created: function created() {},
+  created: function created() {
+    this.price();
+  },
   methods: {
     // Ora mi serve la chiamata axios per salvare i dati nello store
     sendOrder: function sendOrder() {
       axios.post('api/orders', this.fields).then(function (response) {
         alert('ho salvato tutto');
       });
+    },
+    // Per il prezzo fisso da rendere dinamico tramite il carello
+    price: function price() {
+      this.fields.total_price = this.totalPrice;
     }
   }
 });
