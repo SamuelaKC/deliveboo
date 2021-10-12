@@ -58,11 +58,34 @@
                     </form>
                     
                     <h2>Metodo di pagamento</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>     
             </div>
             <!-- 2 -->
             <div class="col-lg-4">
-                <div class="form-content">
+                <div class="form-content carrello">
                     <h4>Carrello</h4>
                     <!-- 1 -->
                     <div class="items">
@@ -73,20 +96,30 @@
                         </div>
                         <div class="price">12,49 €</div>    
                     </div>
-                    <hr class="separator">
-                    <!-- 2 -->
-                    <div class="subtotale">
-                        <h5>Subtotale</h5>
-                        <div class="number">12,49</div>
+                    <hr class="separetor">
+                    <!-- subtotale -->
+                    <div class="box-carrello subtotale">
+                        <h6>Subtotale</h6>
+                        <div class="number">12,49 €</div>
                     </div>
-                    <!-- 3 -->
-                    <div class="spese-consegna">
-                        <h5>Spese di consegna</h5>
+                    <!-- spese-consegna -->
+                    <div class="box-carrello spese-consegna">
+                        <h6>Spese di consegna</h6>
                         <!-- Magari queste le facciamo standard -->
                         <div class="number">1,99 €</div>
                     </div>
-                    <!-- 4 -->
-                    
+                    <!-- spese-servizio -->
+                    <div class="box-carrello spese-servizio">
+                        <h6>Spese di servizio</h6>
+                        <!-- Magari queste le facciamo standard -->
+                        <div class="number">0,20 €</div>
+                    </div>
+                    <hr class="separetor">
+                    <div class="box-carrello totale">
+                        <h6>Totale</h6>
+                        <div class="final-price">14,68 €</div>
+                    </div>
+
                 </div> 
             </div>
 

@@ -2007,6 +2007,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
@@ -38045,7 +38078,53 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _c("h2", [_vm._v("Metodo di pagamento")])
+          _c("h2", [_vm._v("Metodo di pagamento")]),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br")
         ])
       ]),
       _vm._v(" "),
@@ -38059,7 +38138,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-lg-4" }, [
-      _c("div", { staticClass: "form-content" }, [
+      _c("div", { staticClass: "form-content carrello" }, [
         _c("h4", [_vm._v("Carrello")]),
         _vm._v(" "),
         _c("div", { staticClass: "items" }, [
@@ -38076,18 +38155,32 @@ var staticRenderFns = [
           _c("div", { staticClass: "price" }, [_vm._v("12,49 €")])
         ]),
         _vm._v(" "),
-        _c("hr", { staticClass: "separator" }),
+        _c("hr", { staticClass: "separetor" }),
         _vm._v(" "),
-        _c("div", { staticClass: "subtotale" }, [
-          _c("h5", [_vm._v("Subtotale")]),
+        _c("div", { staticClass: "box-carrello subtotale" }, [
+          _c("h6", [_vm._v("Subtotale")]),
           _vm._v(" "),
-          _c("div", { staticClass: "number" }, [_vm._v("12,49")])
+          _c("div", { staticClass: "number" }, [_vm._v("12,49 €")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "spese-consegna" }, [
-          _c("h5", [_vm._v("Spese di consegna")]),
+        _c("div", { staticClass: "box-carrello spese-consegna" }, [
+          _c("h6", [_vm._v("Spese di consegna")]),
           _vm._v(" "),
           _c("div", { staticClass: "number" }, [_vm._v("1,99 €")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "box-carrello spese-servizio" }, [
+          _c("h6", [_vm._v("Spese di servizio")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "number" }, [_vm._v("0,20 €")])
+        ]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "separetor" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "box-carrello totale" }, [
+          _c("h6", [_vm._v("Totale")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "final-price" }, [_vm._v("14,68 €")])
         ])
       ])
     ])

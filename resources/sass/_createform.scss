@@ -1,3 +1,8 @@
+.carrello {
+    position: -webkit-sticky; /* Safari */
+    position:sticky; 
+    top:0;
+}
 .form-content {
     background-color: white; 
     border-radius: 5px;
@@ -9,16 +14,20 @@
     h4 {
         font-weight: bold;
     }
+    h6 {
+        font-size:15px;
+        font-weight: bold;
+    }
     .items {
         display:flex;
         justify-content: space-between;
     }
-    .separator {
+    .separetor {
         border: 1px solid rgba(0, 0, 0, 0.08);
         border-width: 0 0 1px 0;
         margin-top: 10px;
     }
-    .subtotale {
+    .box-carrello {
         display: flex;
         justify-content: space-between;
     }
