@@ -37,11 +37,15 @@
                             <div class="col-md-6">
                                 <select
                                     class="form-control"
-                                    name="categories"
-                                    id="categories"
+                                    name="category"
+                                    id="category"
                                 >
-                                    <!-- DA VERIFICARE PERCHE' NON CI SONO LE CATEGORIE -->
                                     <option>Nessuna categoria</option>
+                                    @foreach($categories as $category)
+                                    <option value="{{$category->id}}">
+                                        {{ $category->name }}
+                                    </option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

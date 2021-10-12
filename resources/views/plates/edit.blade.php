@@ -44,7 +44,6 @@
                                     name="category"
                                     id="category"
                                 >
-                                    <!-- DA VERIFICARE PERCHE' NON SELEZIONE NE CAMBIA LA CATEGORIA -->
                                     <option>Nessuna categoria</option>
                                     @foreach($categories as $category)
                                     <option value="{{$category->id}}" {{ $category->id === $plate->category_id ? 'selected' : '' }}>
@@ -111,7 +110,6 @@
                                 />
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label
                                 for="available" class="col-md-4 col-form-label text-md-right"

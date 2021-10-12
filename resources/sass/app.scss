@@ -19,14 +19,36 @@
 @import "color";
 
 * {
-    background-color: $bg-color;
+    background-color: $bg-color-all;
 }
 
 body {
     font-family: $font-primary;
 }
 
+.font-login {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 36px;
+}
+
 .img-thumbnail {
     max-width: 200px;
     max-height: 200px;
+}
+
+.terms {
+    font-size: x-small;
+}
+
+.terms a {
+    text-decoration: underline;
+    font-weight: 700;
+    color: $link-color-terms;
+}
+
+.btn-bluegreen {
+    background-color: $button-blue-green;
+    color: $bg-color-all;
+    font-weight: 700;
 }

@@ -32,7 +32,8 @@ class PlateController extends Controller
      */
     public function create()
     {
-        return view('plates.create');
+        $categories = Category::all();
+        return view('plates.create',compact('categories') );
     }
 
     /**
@@ -125,7 +126,7 @@ class PlateController extends Controller
         $plate->available = key_exists('available', $data) ? true: false;
         $plate->price = $data['price'];
         $plate->picture = $data['picture'];
-        $plate->category_id = $data['category'];
+        $plate->category_id = $data['categories'];
         $plate->save();
     }
 }
