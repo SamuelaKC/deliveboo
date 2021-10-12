@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <Plates />
+        <!-- <Plates />
         <HomeRestaurants/>
-        <Restaurant/>
+        <Restaurant/> -->
         <CreateOrder />
     </div>
 </template>

@@ -1973,14 +1973,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
     return {
-      fields: {}
+      fields: {},
+      totalPrice: 10.00
     };
   },
   created: function created() {},
@@ -2084,15 +2082,15 @@ __webpack_require__.r(__webpack_exports__);
   name: 'HomeRestaurants',
   data: function data() {
     return {
-      user: []
+      users: []
     };
   },
   created: function created() {
     var _this = this;
 
     axios.get('/api/users').then(function (response) {
-      _this.user = response.data.data;
-      console.log(_this.user);
+      _this.users = response.data.data;
+      console.log(_this.users);
     });
   }
 });
@@ -37988,31 +37986,13 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "total_price" } }, [
-              _vm._v("Prezzo totale")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.fields.total_price,
-                  expression: "fields.total_price"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: { type: "text", name: "total_price", id: "total_price" },
-              domProps: { value: _vm.fields.total_price },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.fields, "total_price", $event.target.value)
-                }
-              }
-            })
+            _c("div", { staticClass: "prezzo-totale" }, [
+              _vm._v(
+                "\n                prezzo totale: " +
+                  _vm._s(_vm.totalPrice) +
+                  " €\n            "
+              )
+            ])
           ]),
           _vm._v(" "),
           _c(
@@ -38049,20 +38029,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [
-      _c("Plates"),
-      _vm._v(" "),
-      _c("HomeRestaurants"),
-      _vm._v(" "),
-      _c("Restaurant"),
-      _vm._v(" "),
-      _c("CreateOrder")
-    ],
-    1
-  )
+  return _c("div", { staticClass: "container" }, [_c("CreateOrder")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38089,42 +38056,38 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "row justify-content-center" },
-    _vm._l(_vm.user, function(users) {
-      return _c(
-        "div",
-        { key: _vm.user.id, staticClass: "card-group col-md-4" },
-        [
-          _c(
-            "div",
-            { staticClass: "card" },
-            _vm._l(users.tag, function(tag) {
-              return _c("div", { key: tag.id, staticClass: "card-body" }, [
-                _c("div", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(tag.name))
-                ])
-              ])
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: { src: users.picture, alt: "Card image cap" }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("h5", { staticClass: "card-title" }, [
-                _vm._v(_vm._s(users.name))
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(_vm._s(users.description))
+    _vm._l(_vm.users, function(user) {
+      return _c("div", { key: user.id, staticClass: "card-group col-md-4" }, [
+        _c(
+          "div",
+          { staticClass: "card" },
+          _vm._l(user.tag, function(tag) {
+            return _c("div", { key: tag.id, staticClass: "card-body" }, [
+              _c("div", { staticClass: "card-text" }, [
+                _vm._v(_vm._s(tag.name))
               ])
             ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card" }, [
+          _c("img", {
+            staticClass: "card-img-top",
+            attrs: { src: user.picture, alt: "Card image cap" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("h5", { staticClass: "card-title" }, [
+              _vm._v(_vm._s(user.name))
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(_vm._s(user.description))
+            ])
           ])
-        ]
-      )
+        ])
+      ])
     }),
     0
   )

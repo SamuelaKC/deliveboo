@@ -47,12 +47,9 @@
           </div>
           <!-- prezzo totale -->
           <div class="form-group">
-              <label for="total_price">Prezzo totale</label>
-              <input type="text" 
-              class="form-control" 
-              name="total_price" 
-              id="total_price"
-              v-model="fields.total_price" />
+              <div class="prezzo-totale">
+                  prezzo totale: {{ totalPrice }} €
+              </div>
           </div>
 
           <button type="submit" class="btn btn-primary">Send message</button>
@@ -71,7 +68,8 @@
         name: 'CreateOrder',
         data() {
             return {
-                fields:{}, 
+                fields:{},
+                totalPrice: 10.00,
             }
         },
         created() {
@@ -84,6 +82,7 @@
                     alert('ho salvato tutto');
                 });
             }
+            
         }
         
     }
