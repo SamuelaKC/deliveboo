@@ -2030,9 +2030,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
@@ -2042,6 +2039,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
+    // Parte del pagamento solo view:
     var button = document.querySelector('#submit-button');
     braintree.dropin.create({
       authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
@@ -2062,7 +2060,8 @@ __webpack_require__.r(__webpack_exports__);
 
         });
       });
-    });
+    }); // ---------------------------------------------------------------
+
     this.price();
   },
   methods: {
@@ -38158,9 +38157,9 @@ var render = function() {
           _c("div", { staticClass: "form-group" }, [
             _c("div", { staticClass: "prezzo-totale" }, [
               _vm._v(
-                "\n                prezzo totale: " +
+                "\n                    prezzo totale: " +
                   _vm._s(_vm.totalPrice) +
-                  " €\n            "
+                  " €\n                "
               )
             ])
           ]),
