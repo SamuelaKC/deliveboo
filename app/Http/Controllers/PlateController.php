@@ -74,10 +74,10 @@ class PlateController extends Controller
         $categories = Category::all();
         $userId = Auth::id();
             if ($userId === $plate->user_id) {
-        return view('plates.edit', compact('plate', 'categories')); 
+                return view('plates.edit', compact('plate', 'categories')); 
             } else {
-            return view('error.index');
-        }
+                return view('error.index');
+            }
 
     }
 

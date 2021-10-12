@@ -32,11 +32,13 @@
                             Modifica
                         </button>
                     </a>
-                    <a href="{{ route('plates.destroy', $plate) }}">
+                    <form action="{{ route('plates.destroy', $plate) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
                         <button class="btn btn-danger">
                             Cancella
                         </button>
-                    </a>
+                    </form>
                 </div>
                 <div class="col-2"></div>
             </div>
