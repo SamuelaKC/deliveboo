@@ -1,9 +1,12 @@
 <template>
     <div class="container">
+        <div class="row">
+            <CreateOrder />
+            <Cart />
+        </div>
         <!-- <Plates />
         <HomeRestaurants/>
         <Restaurant/> -->
-        <CreateOrder />
     </div>
 </template>
 
@@ -12,12 +15,14 @@ import Plates from './Plates.vue';
 import HomeRestaurants from './HomeRestaurants.vue';
 import CreateOrder from './CreateOrder.vue';
 import Restaurant from './Restaurant.vue';
+import Cart from './Cart.vue';
     export default {
         components : {
             Plates,
             HomeRestaurants,
             CreateOrder,
-            Restaurant
+            Restaurant,
+            Cart,
         },
         data() {
             return {
