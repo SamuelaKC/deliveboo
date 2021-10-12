@@ -2,7 +2,7 @@
   
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-8">
                 <div class="form-content">
                     <h1>Dettagli dell'ordine</h1>
                     <form @submit.prevent="sendOrder">
@@ -60,7 +60,35 @@
                     <h2>Metodo di pagamento</h2>
                 </div>     
             </div>
-
+            <!-- 2 -->
+            <div class="col-lg-4">
+                <div class="form-content">
+                    <h4>Carrello</h4>
+                    <!-- 1 -->
+                    <div class="items">
+                        <div class="quantity">1x</div>
+                        <div class="name-plate">
+                            El Burrito de Philadelphia <br>
+                            descrizione...
+                        </div>
+                        <div class="price">12,49 €</div>    
+                    </div>
+                    <hr class="separator">
+                    <!-- 2 -->
+                    <div class="subtotale">
+                        <h5>Subtotale</h5>
+                        <div class="number">12,49</div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="spese-consegna">
+                        <h5>Spese di consegna</h5>
+                        <!-- Magari queste le facciamo standard -->
+                        <div class="number">1,99 €</div>
+                    </div>
+                    <!-- 4 -->
+                    
+                </div> 
+            </div>
 
 
         </div>
