@@ -2019,27 +2019,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
@@ -2049,6 +2028,27 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
+    var button = document.querySelector('#submit-button');
+    braintree.dropin.create({
+      authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
+      selector: '#dropin-container'
+    }, function (err, instance) {
+      if (err) {
+        // An error in the create call is likely due to
+        // incorrect configuration values or network issues
+        return;
+      }
+
+      button.addEventListener('click', function () {
+        instance.requestPaymentMethod(function (err, payload) {
+          if (err) {
+            // An appropriate error will be shown in the UI
+            return;
+          } // Submit payload.nonce to your server
+
+        });
+      });
+    });
     this.price();
   },
   methods: {
@@ -38080,51 +38080,16 @@ var render = function() {
           _vm._v(" "),
           _c("h2", [_vm._v("Metodo di pagamento")]),
           _vm._v(" "),
-          _c("br"),
+          _c("div", { attrs: { id: "dropin-container" } }),
           _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("br")
+          _c(
+            "button",
+            {
+              staticClass: "button button--small button--green",
+              attrs: { id: "submit-button" }
+            },
+            [_vm._v("Purchase")]
+          )
         ])
       ]),
       _vm._v(" "),
