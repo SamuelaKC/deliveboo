@@ -33,7 +33,7 @@
                         @csrf @method('PUT')
                         <div class="form-group row">
                             <label
-                                for="categoria"
+                                for="category"
                                 class="col-md-4 col-form-label text-md-right"
                             >
                                 Categoria:
@@ -41,13 +41,13 @@
                             <div class="col-md-6">
                                 <select
                                     class="form-control"
-                                    name="categories"
-                                    id="categories"
+                                    name="category"
+                                    id="category"
                                 >
                                     <!-- DA VERIFICARE PERCHE' NON SELEZIONE NE CAMBIA LA CATEGORIA -->
                                     <option>Nessuna categoria</option>
                                     @foreach($categories as $category)
-                                    <option value="{{$category->id}}">
+                                    <option value="{{$category->id}}" {{ $category->id === $plate->category_id ? 'selected' : '' }}>
                                         {{ $category->name }}
                                     </option>
                                     @endforeach

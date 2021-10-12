@@ -125,6 +125,7 @@ class PlateController extends Controller
         $plate->available = key_exists('available', $data) ? true: false;
         $plate->price = $data['price'];
         $plate->picture = $data['picture'];
+        $plate->category_id = $data['category'];
         $plate->save();
     }
 }
