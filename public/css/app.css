@@ -12358,3 +12358,14 @@ a.text-dark:focus {
   width: 100%;
 }
 
+.form-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+}
+
+.form-content h2 {
+  margin-top: 20px;
+}
+

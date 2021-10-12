@@ -1972,6 +1972,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
@@ -37838,7 +37842,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "container form-content" }, [
       _c("h1", [_vm._v("Dettagli dell'ordine")]),
       _vm._v(" "),
       _c(
@@ -38017,7 +38021,9 @@ var render = function() {
             [_vm._v("Send message")]
           )
         ]
-      )
+      ),
+      _vm._v(" "),
+      _c("h2", [_vm._v("Metodo di pagamento")])
     ])
   ])
 }

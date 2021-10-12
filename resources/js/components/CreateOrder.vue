@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="container">
+      <div class="container form-content">
         
         
         <h1>Dettagli dell'ordine</h1>
@@ -58,6 +58,10 @@
           <button type="submit" class="btn btn-primary">Send message</button>
 
         </form>
+        
+        <h2>Metodo di pagamento</h2>
+
+
       </div>
 
   </div>
