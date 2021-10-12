@@ -12360,7 +12360,10 @@ a.text-dark:focus {
 
 * {
   background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
 }
 
 .img-thumbnail {
