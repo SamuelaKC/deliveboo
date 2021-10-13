@@ -1,11 +1,8 @@
-@extends('layouts.app') 
-
-
-@section('content')
+@extends('layouts.app') @section('content')
 <div class="dashboard">
     <aside class="col-2 d-none d-md-block">a</aside>
     <div class="col">
-        <h1 class="dashboard-welcome">Benvenuto {{ $user->name }}</h1>
+        <h1 class="font-header">Benvenuto {{ $user->name }}</h1>
         <h4>Questa è la tua Dashboard per la gestione della tua attività</h4>
 
         <div class="col-4">
@@ -14,6 +11,9 @@
             </a>
             <a class="dropdown-item" href="{{ route('plates.index') }}">
                 <i class="bi bi-list-ul"></i> I tuoi piatti
+            </a>
+            <a class="dropdown-item" href="{{ route('plates.create') }}">
+                <i class="bi bi-file-earmark-plus"></i> Aggiungi un piatto
             </a>
             <a class="dropdown-item" href="{{ route('orders.index') }}">
                 <i class="bi bi-list-ul"></i> I tuoi ordini

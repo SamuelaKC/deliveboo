@@ -17,22 +17,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue&family=IBM+Plex+Sans&display=swap");
 
 //partials
+@import "color";
+@import "navbar";
+@import "footer";
+
 @import "formuser";
 @import "dashboard";
-@import "color";
-@import "footer";
-@import "createform"; 
-@import "errorPage"; 
+
+@import "createform";
+@import "errorPage";
 
 body {
     font-family: $font-primary;
     background-color: #fff;
 }
 
-.font-login {
+.font-header {
     font-family: $font-secondary;
     font-weight: 700;
-    font-size: 36px;
 }
 
 .img-thumbnail {
@@ -54,4 +56,8 @@ body {
     background-color: $button-blue-green;
     color: $bg-color-all;
     font-weight: 700;
+}
+
+.link-bluegreen {
+    color: $button-blue-green;
 }
