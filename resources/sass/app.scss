@@ -1,3 +1,6 @@
+//font-awesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
@@ -52,3 +55,4 @@ body {
     color: $bg-color-all;
     font-weight: 700;
 }
+@import "footer";
