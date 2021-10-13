@@ -4,7 +4,6 @@
     <div class="col">
         <h1 class="font-header">Benvenuto {{ $user->name }}</h1>
         <h4>Questa è la tua Dashboard per la gestione della tua attività</h4>
-
         <div class="col-4">
             <a class="dropdown-item" href="{{ route('users.edit', $user) }}">
                 <i class="bi bi-pencil"></i> Modifica i tuoi dati
