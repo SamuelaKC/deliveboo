@@ -1,4 +1,14 @@
 @extends('layouts.app') @section('content')
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -127,16 +137,22 @@
                                 class="col-md-4 col-form-label text-md-right"
                             >
                             <!-- Qui ci va l'upload dell'immagine -->
-                                Inserisci l'url della tua foto:
+                                Inserisci la foto del tuo piatto:
                             </label>
-                            <div class="col-md-6">
-                                <input
-                                    class="form-control"
-                                    type="file"
-                                    name="picture"
-                                    id="picture"
-                                />
-                            </div>
+                            
+                            @if($flag == true)
+                                <button class="btn btn-light" type="button">ciao</button>
+                            @else
+                                <div class="col-md-6">
+                                    <input
+                                        class="form-control"
+                                        type="file"
+                                        name="picture"
+                                        id="picture"
+                                    />
+                                </div>
+                            @endif
+                            
                         </div>
 
                         <div class="form-group row mb-0">

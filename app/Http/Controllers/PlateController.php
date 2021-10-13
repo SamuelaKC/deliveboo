@@ -7,6 +7,7 @@ use App\Plate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 
 class PlateController extends Controller
 {
@@ -34,7 +35,8 @@ class PlateController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('plates.create',compact('categories') );
+        $flag = false;
+        return view('plates.create',compact('categories', 'flag'));
     }
 
     /**
@@ -45,6 +47,11 @@ class PlateController extends Controller
      */
     public function store(Request $request)
     {
+        // Validazione
+        $request->validate([
+            'picture' => 'nullable|image',
+        ]);
+
         $data = $request->all();
         $plate = new Plate();
         $this->fillAndSavePlate($plate, $data);
@@ -134,4 +141,6 @@ class PlateController extends Controller
         $plate->user_id = Auth::id();
         $plate->save();
     }
+
+     
 }
