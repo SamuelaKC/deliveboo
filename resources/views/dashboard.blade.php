@@ -1,5 +1,7 @@
-@extends('layouts.app') @section('content')
+@extends('layouts.app') 
 
+
+@section('content')
 <div class="dashboard">
     <aside class="col-2 d-none d-md-block">a</aside>
     <div class="col">
