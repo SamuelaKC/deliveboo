@@ -20,6 +20,9 @@
 @import "formuser";
 @import "dashboard";
 @import "color";
+@import "footer";
+@import "createform"; 
+@import "errorPage"; 
 
 * {
     background-color: $bg-color-all;
@@ -55,6 +58,3 @@ body {
     color: $bg-color-all;
     font-weight: 700;
 }
-@import "footer";
-@import "createform"; 
-@import "errorPage"; 
