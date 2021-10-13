@@ -12358,3 +12358,16 @@ a.text-dark:focus {
   width: 100%;
 }
 
+* {
+  background-color: #fff;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+.img-thumbnail {
+  max-width: 200px;
+  max-height: 200px;
+}
+

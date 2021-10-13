@@ -11,8 +11,44 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 //font Epilogue e Plex
-@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=IBM+Plex+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue&family=IBM+Plex+Sans&display=swap");
 
 //partials
 @import "formuser";
 @import "dashboard";
+@import "color";
+
+* {
+    background-color: $bg-color-all;
+}
+
+body {
+    font-family: $font-primary;
+}
+
+.font-login {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.img-thumbnail {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.terms {
+    font-size: x-small;
+}
+
+.terms a {
+    text-decoration: underline;
+    font-weight: 700;
+    color: $link-color-terms;
+}
+
+.btn-bluegreen {
+    background-color: $button-blue-green;
+    color: $bg-color-all;
+    font-weight: 700;
+}

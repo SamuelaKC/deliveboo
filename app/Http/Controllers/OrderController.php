@@ -36,7 +36,7 @@ class OrderController extends Controller
             }
         }
         $orders = Order::whereIn('id', $ordersId)->get();
-        return view ('orders', compact('ordersId', 'orders'));     
+        return view ('orders.index', compact('ordersId', 'orders'));     
     }
 
     /**

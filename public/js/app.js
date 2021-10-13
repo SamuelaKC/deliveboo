@@ -1970,6 +1970,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateOrder',
   data: function data() {
@@ -37947,7 +37954,7 @@ var render = function() {
                 }
               ],
               staticClass: "form-control",
-              attrs: { type: "text", name: "phone_number", id: "phone_number" },
+              attrs: { type: "tel", name: "phone_number", id: "phone_number" },
               domProps: { value: _vm.fields.phone_number },
               on: {
                 input: function($event) {
@@ -37990,8 +37997,8 @@ var render = function() {
           _vm._v(" "),
           _c(
             "button",
-            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-            [_vm._v("Send message")]
+            { staticClass: "btn btn-light", attrs: { type: "submit" } },
+            [_vm._v("Invia ordine")]
           )
         ]
       )
@@ -50858,8 +50865,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /Users/massimobergantin/Documents/BOOLEAN/LARAVEL/deliveboo/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/massimobergantin/Documents/BOOLEAN/LARAVEL/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! /Users/vincenzo/Desktop/Boolean classe #37/progetto finale/deliveboo/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/vincenzo/Desktop/Boolean classe #37/progetto finale/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
+>>>>>>> 67058edbf48121024f22470b268c25367ef0cc98
 
 
 /***/ })

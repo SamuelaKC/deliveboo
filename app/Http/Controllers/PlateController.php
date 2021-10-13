@@ -32,7 +32,8 @@ class PlateController extends Controller
      */
     public function create()
     {
-        return view('plates.create');
+        $categories = Category::all();
+        return view('plates.create',compact('categories') );
     }
 
     /**
@@ -72,13 +73,12 @@ class PlateController extends Controller
 
 
         $categories = Category::all();
-
         $userId = Auth::id();
             if ($userId === $plate->user_id) {
-        return view('plates.edit', compact('plate', 'categories')); 
+                return view('plates.edit', compact('plate', 'categories')); 
             } else {
-            return view('error.index');
-        }
+                return view('error.index');
+            }
 
     }
 
@@ -93,7 +93,7 @@ class PlateController extends Controller
     {
         $data=$request->all();
         $this->fillAndSavePlate($plate, $data);
-        return redirect()->route('plates.show', $plate);
+        return redirect()->route('plates.index', $plate);
         // return view('plates.show', compact('plate'));
     }
 
@@ -126,6 +126,7 @@ class PlateController extends Controller
         $plate->available = key_exists('available', $data) ? true: false;
         $plate->price = $data['price'];
         $plate->picture = $data['picture'];
+        $plate->category_id = $data['categories'];
         $plate->save();
     }
 }
