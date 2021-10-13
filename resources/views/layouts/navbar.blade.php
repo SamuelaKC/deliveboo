@@ -96,13 +96,3 @@
     </div>
 </nav>
 
-<script>
-    export default {
-        name: 'Header',
-        data() {
-            return{
-                searchString: "",
-            }
-        },
-    }
-</script>

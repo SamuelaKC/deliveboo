@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
        <div class="row justify-content-center">
-        <div v-for="plates in plate" :key="plate.id" class="card-group col-1 col-md-3">
+        <div v-for="plates in plate" :key="plates.id" class="card-group col-1 col-md-3">
            <div style="border-radius: 25px" class="card">
                 <img  style="border-radius: 25px" class="card-img-top" :src="plates.picture" alt="Card image cap">
                 <div class="card-body">
