@@ -5,12 +5,15 @@
       <!-- 1 -->
       <div v-for="(plate, index) in cart" :key="plate.id" class="items">
         <div class="quantity">
-          <span @click="$emit('plusCartQuantity', index)">+</span>
+          <span @click="$emit('plusCartQuantity', index)"><i class="fa fa-plus-circle"></i></span>
           {{ plate.quantity }}x
-          <span @click="$emit('minusCartQuantity', index)">-</span>
+          <span @click="$emit('minusCartQuantity', index)"><i class="fa fa-minus-circle"></i></span>
         </div>
         <div class="name-plate">
           {{ plate.name }}
+        </div>
+        <div class="name-plate">
+          {{ plate.details }}
         </div>
         <div class="price">{{ plate.price }} €</div>
       </div>

@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
-        <div class="row">
+    <div class="">
+        <div class="container">
             <!-- <CreateOrder />
             <Cart /> -->
-        <Restaurant/>
+            <Restaurant/>
         </div>
         
         <!-- <HomeRestaurants/> -->
@@ -11,7 +11,6 @@
 
     <!-- <HomeRestaurants/>
         <Restaurant/> -->
-  </div>
 </template>
 
 <script>

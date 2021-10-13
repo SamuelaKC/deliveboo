@@ -20,9 +20,9 @@
       </div>
     </div>
     <div>
-      <div @click="$emit('plusQuantity')">+</div>
+      <div @click="$emit('plusQuantity')"><i class="fa fa-plus-circle"></i></div>
       <input type="text" v-model="quantityOfPlate" />
-      <div @click="$emit('minusQuantity')">-</div>
+      <div @click="$emit('minusQuantity')"><i class="fa fa-minus-circle"></i></div>
     </div>
     <button @click="$emit('sendIn', plateId)">Aggiungi al Carrello</button>
 

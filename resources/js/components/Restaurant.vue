@@ -1,11 +1,5 @@
 <template>
-  <div class="restaurant">
-    <Cart
-      :cart="cart"
-      :totalPrice="totalPrice"
-      @plusCartQuantity="addCartQuantity"
-      @minusCartQuantity="removeCartQuantity"
-    />
+  <div class="restaurant row">
     <Ingredient
       v-if="showIngredient"
       :ingredients="ingredients"
@@ -22,6 +16,12 @@
       :key="plate.id"
       :plate="plate"
       @viewIngredient="viewIngredient"
+    />
+    <Cart
+      :cart="cart"
+      :totalPrice="totalPrice"
+      @plusCartQuantity="addCartQuantity"
+      @minusCartQuantity="removeCartQuantity"
     />
   </div>
 </template>
@@ -74,7 +74,7 @@ export default {
       let stringDetails = "";
       if (this.addingToCart.length > 0) {
         this.addingToCart.forEach((adding) => {
-          stringDetails += `Aggiunta di: ${adding.name} `;
+          stringDetails += `${adding.name}, `;
         });
       }
       return stringDetails;
@@ -94,15 +94,20 @@ export default {
     sendInCart(plateId) {
       let selectedPlates = [];
       this.restaurant.plates.forEach((plate) => {
-        if (plateId === plate.id) {
-          this.cart.push({
-            id: plate.id,
-            name: plate.name,
-            details: this.addDetails,
-            price: plate.price + this.priceAddPlate,
-            quantity: this.quantityOfPlate,
-          });
-        }
+        
+          
+
+            if (plateId === plate.id) {
+              this.cart.push({
+                id: plate.id,
+                name: plate.name,
+                details: this.addDetails,
+                price: plate.price + this.priceAddPlate,
+                quantity: this.quantityOfPlate,
+              });
+            }
+                    
+       
       });
       //pusho l'id del piatto nel carrello
       //this.cart.push(id);
@@ -138,29 +143,6 @@ export default {
         }
       });
       return quantity;
-    },
-    sendToFormOrder() {
-      let selectedPlates = [];
-      this.simpleCart.forEach((plateId) => {
-        this.restaurant.plates.forEach((plate) => {
-          if (plateId === plate.id) {
-            selectedPlates.push({
-              plate: plate,
-              quantity: this.countQuantity(plateId),
-            });
-          }
-        });
-      });
-      this.platesInOrder = selectedPlates;
-    },
-    reduceCart() {
-      let arraySingleId = [];
-      this.cart.forEach((id) => {
-        if (!arraySingleId.includes(id)) {
-          arraySingleId.push(id);
-        }
-      });
-      this.simpleCart = arraySingleId;
     },
     getLocalStore() {
       //leggo il carrello dal local storage

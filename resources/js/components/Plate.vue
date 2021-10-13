@@ -1,7 +1,7 @@
 <template>
-    <div class="col-lg-8">
+    <div class="col-lg-8 plate">
 
-        <div class="plate" @click="$emit('viewIngredient', plate.id)">
+        <div class="" @click="$emit('viewIngredient', plate.id)">
         {{ plate.name }}
     </div>
     
