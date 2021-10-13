@@ -24,12 +24,9 @@
 @import "createform"; 
 @import "errorPage"; 
 
-* {
-    background-color: $bg-color-all;
-}
-
 body {
     font-family: $font-primary;
+    background-color: #fff;
 }
 
 .font-login {
