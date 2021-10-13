@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="font-login">
+                    <h1 class="font-header">
                         Registrati o accedi
-                    </div>
+                    </h1>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -54,13 +54,13 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-bluegreen">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                    <a class="btn link-bluegreen" href="{{ route('password.request') }}">
+                                        {{ __('Password dimentica?') }}
                                     </a>
                                 @endif
                             </div>

@@ -20,22 +20,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-2 text-center">
-                    <a href="{{ route('plates.create') }}">
-                        <button class="btn btn-bluegreen">
-                            Aggiungi
-                        </button>
-                    </a>
-                </div>
-                <div class="col-2 text-center">
+                <div class="col-md-3 col-lg-3"></div>
+                <div class="col-12 col-md-3 col-lg-3 text-center">
                     <a href="{{ route('plates.edit', $plate) }}">
                         <button class="btn btn-bluegreen">
                             Modifica
                         </button>
                     </a>
                 </div>
-                <div class="col-2 text-center">
+                <div class="col-12 col-md-3 col-lg-3 text-center">
                     <form action="{{ route('plates.destroy', $plate) }}" method="POST">
                         @csrf
                         @method('DELETE')
@@ -44,7 +37,7 @@
                         </button>
                     </form>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-md-3 col-lg-3"></div>
             </div>
             <hr />
             @endforeach

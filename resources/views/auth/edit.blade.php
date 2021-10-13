@@ -1,116 +1,170 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('layouts.app') @section('content')
 <div class="container">
-            <div class="row">
-        <div class="col">
-            <a href="{{ route('dashboard') }}">
-                <button type="button" class="btn btn-light">
-                    Pagina principale
-                </button>
-            </a>
-        </div>
-    </div>
-
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Inserisci i tuoi dati</div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="row">
+                <div class="col">
+                    <h1 class="font-header">Modifica i tuoi dati</h1>
+                    <form
+                        method="POST"
+                        action="{{ route('users.update', $user) }}"
+                        enctype="multipart/form-data"
+                    >
+                        @csrf @method('PUT')
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('users.update', $user) }}" enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Nome della tua Attività</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
+                        <div class="">
+                            <label for="name" class="text-md-right"></label>
+                            <div class="col">
+                                <input
+                                    id="name"
+                                    type="text"
+                                    class="form-control @error('name') is-invalid @enderror"
+                                    name="name"
+                                    value="{{ $user->name }}"
+                                    required
+                                    autocomplete="name"
+                                    autofocus
+                                />
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="address" class="col-md-4 col-form-label text-md-right">il tuo Indirizzo</label>
+                        <div class="">
+                            <label for="address" class="text-md-right"></label>
 
-                            <div class="col-md-6">
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ $user->address }}" required autocomplete="address" autofocus>
+                            <div class="col">
+                                <input
+                                    id="address"
+                                    type="text"
+                                    class="form-control @error('address') is-invalid @enderror"
+                                    name="address"
+                                    value="{{ $user->address }}"
+                                    required
+                                    autocomplete="address"
+                                    autofocus
+                                />
 
                                 @error('address')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="phone_number" class="col-md-4 col-form-label text-md-right">il tuo Numero di Telefono</label>
+                        <div class="">
+                            <label
+                                for="phone_number"
+                                class="text-md-right"
+                            ></label>
 
-                            <div class="col-md-6">
-                                <input id="phone_number" type="tel" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ $user->phone_number }}" required autocomplete="phone_number" autofocus>
+                            <div class="col">
+                                <input
+                                    id="phone_number"
+                                    type="tel"
+                                    class="form-control @error('phone_number') is-invalid @enderror"
+                                    name="phone_number"
+                                    value="{{ $user->phone_number }}"
+                                    required
+                                    autocomplete="phone_number"
+                                    autofocus
+                                />
 
                                 @error('phone_number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="piva" class="col-md-4 col-form-label text-md-right">P.Iva</label>
+                        <div class="">
+                            <label for="piva" class="text-md-right"></label>
 
-                            <div class="col-md-6">
-                                <input id="piva" type="text" class="form-control @error('piva') is-invalid @enderror" name="piva" value="{{ $user->piva }}" required autocomplete="piva" autofocus>
+                            <div class="col">
+                                <input
+                                    id="piva"
+                                    type="text"
+                                    class="form-control @error('piva') is-invalid @enderror"
+                                    name="piva"
+                                    value="{{ $user->piva }}"
+                                    required
+                                    autocomplete="piva"
+                                    autofocus
+                                />
 
                                 @error('piva')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="description" class="col-md-4 col-form-label text-md-right">Descriviti</label>
+                        <div class="">
+                            <label
+                                for="description"
+                                class="text-md-right"
+                            ></label>
 
-                            <div class="col-md-6">
-                                <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>{{ $user->description }}</textarea>
+                            <div class="col">
+                                <textarea
+                                    id="description"
+                                    type="text"
+                                    class="form-control @error('description') is-invalid @enderror"
+                                    name="description"
+                                    required
+                                    autocomplete="description"
+                                    autofocus
+                                    >{{ $user->description }}</textarea
+                                >
 
                                 @error('description')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="pictureFile" class="col-md-4 col-form-label text-md-right">carica la tua Foto</label>
-
-                            <div class="col-md-6">
-                                <input id="pictureFile" type="file" class="form-control @error('pictureFile') is-invalid @enderror" name="pictureFile" required autocomplete="pictureFile" autofocus>
+                        <div class="">
+                            <div class="col">
+                                <label
+                                    for="pictureFile"
+                                    class="text-md-right"
+                                ></label>
+                                <input
+                                    id="pictureFile"
+                                    type="file"
+                                    class="form-control @error('pictureFile') is-invalid @enderror"
+                                    name="pictureFile"
+                                    required
+                                    autocomplete="pictureFile"
+                                    autofocus
+                                />
 
                                 @error('pictureFile')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-light">
-                                    Modifica
-                                </button>
+                        <div class="container">
+                            <div class="row py-2">
+                                <div class="col">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-bluegreen"
+                                    >
+                                        Modifica
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </form>

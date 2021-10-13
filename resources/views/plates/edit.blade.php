@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col">
             <a href="{{ route('plates.index') }}">
-                <button type="button" class="btn btn-light">
+                <button type="button" class="btn btn-bluegreen">
                     <- Torna indietro
                 </button>
             </a>
