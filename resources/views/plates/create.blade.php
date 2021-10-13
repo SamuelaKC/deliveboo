@@ -126,6 +126,7 @@
                                 for="picture"
                                 class="col-md-4 col-form-label text-md-right"
                             >
+                            <!-- Qui ci va l'upload dell'immagine -->
                                 Inserisci l'url della tua foto:
                             </label>
                             <div class="col-md-6">

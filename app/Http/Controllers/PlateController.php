@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Plate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
 class PlateController extends Controller
