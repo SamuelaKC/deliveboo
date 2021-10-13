@@ -25,7 +25,7 @@
                 </div>
                 @endif
                 <div class="card-body">
-                    <form action="{{ route('plates.store') }}" method="POST">
+                    <form action="{{ route('plates.store') }}" enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="form-group row">
                             <label
@@ -132,7 +132,7 @@
                             <div class="col-md-6">
                                 <input
                                     class="form-control"
-                                    type="text"
+                                    type="file"
                                     name="picture"
                                     id="picture"
                                 />
