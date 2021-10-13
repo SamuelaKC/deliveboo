@@ -23,7 +23,7 @@
                 <input style="padding: 20px" type="search" class="form-control rounded" placeholder="Cerca qui i tuoi ristoranti preferiti 🍕 🍔 🍣 " aria-label="Search"
                 aria-describedby="search-addon" />
                 <span style="padding-left: 20px;">
-                    <button style="background-color: rgb(0, 198, 182); color: white; padding: 8px" type="button" class="btn primary"  v-model="searchString" @keyup.enter="$emit('search', searchString)">CERCA</button>
+                    <button style="background-color: rgb(0, 198, 182); color: white; padding: 8px" type="button" class="btn primary">CERCA</button>
                 </span>
               </div>
 
@@ -95,4 +95,7 @@
         </div>
     </div>
 </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 249d4c6d6b4f9549056d0934011cdac32e628934
