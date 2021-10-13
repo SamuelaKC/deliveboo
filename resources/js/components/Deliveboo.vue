@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <Plates />
-        <HomeRestaurants/>
+        <!-- <Plates /> -->
+        <!-- <HomeRestaurants/> -->
         <Restaurant/>
-        <CreateOrder />
+        <!-- <CreateOrder /> -->
     </div>
 </template>
 

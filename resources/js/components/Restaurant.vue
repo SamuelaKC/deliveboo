@@ -1,21 +1,19 @@
 <template>
   <div class="restaurant">
-    <div></div>
+    <!-- <Plates /> -->
+    <Ingredient />
   </div>
 </template>
 
 <script>
-export default {
+import Plates from './Plates.vue';
+import Ingredient from './Ingredient.vue';
+
+  export default {
     name: 'Restaurant',
-  created() {
-      axios.get('/api/users/11').then((response) => {
-        this.restaurant = response.data;
-      })
-  },
-  data() {
-    return {
-        restaurant: [],
-    };
-  },
-};
+    components: {
+      Plates,
+      Ingredient
+    }
+  };
 </script>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+// use App\Ingredient;
 use App\Plate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +21,7 @@ class PlateController extends Controller
      */
     public function index()
     {
+        // $ingredients = Ingredient::all();
         $userId = Auth::id();
         $plates = Plate::where('user_id', $userId)->get();
         return view('plates.index', compact('plates'));
