@@ -15,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -42,7 +42,7 @@ class OrderController extends Controller
         $newOrder->name_surname = $data['name_surname'];
         $newOrder->address = $data['address'];
         $newOrder->phone_number = $data['phone_number'];
-        $newOrder->total_price = $data['total_price'];
+        $newOrder->total_price = $data['total_price']; 
         $newOrder->save();
 
         // Creazione api:

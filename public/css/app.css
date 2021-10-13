@@ -15402,6 +15402,7 @@ a.text-dark:focus {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * {
   background-color: #fff;
 }
@@ -15584,5 +15585,82 @@ body {
   height: 100%;
   padding: 13px;
 >>>>>>> footer
+=======
+.carrello {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 24px;
+}
+
+.form-content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  margin-left: 0;
+}
+
+.form-content h2 {
+  margin-top: 20px;
+}
+
+.form-content h4 {
+  font-weight: bold;
+}
+
+.form-content h6 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-content .items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-content .separetor {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-width: 0 0 1px 0;
+  margin-top: 10px;
+}
+
+.form-content .box-carrello {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  cursor: pointer;
+  font-weight: 500;
+  left: 3px;
+  line-height: inherit;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+}
+
+.button--small {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+}
+
+.button--green {
+  outline: none;
+  background-color: #64d18a;
+  border-color: #64d18a;
+  color: white;
+  transition: all 200ms ease;
+}
+
+.button--green:hover {
+  background-color: #8bdda8;
+  color: white;
+>>>>>>> create_order
 }
 
