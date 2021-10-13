@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config("app.name", "Laravel") }}
+            <img style="width: 200px" src="/image/logo/deliveboo.png" alt="">
         </a>
         <button
             class="navbar-toggler"
@@ -18,6 +18,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto"></ul>
+
+            <div class="input-group col-8">
+                <input style="padding: 20px" type="search" class="form-control rounded" placeholder="Cerca qui i tuoi ristoranti preferiti 🍕 🍔 🍣 " aria-label="Search"
+                aria-describedby="search-addon" />
+                <span style="padding-left: 20px;">
+                    <button style="background-color: rgb(0, 198, 182); color: white; padding: 8px" type="button" class="btn primary"  v-model="searchString" @keyup.enter="$emit('search', searchString)">CERCA</button>
+                </span>
+              </div>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
@@ -60,14 +68,17 @@
                             Dashboard
                         </a>
 
-                        <a
-                            class="dropdown-item"
-                            href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"
-                        >
-                            {{ __("Logout") }}
-                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                Dashboard
+                            </a>
+
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
                         <form
                             id="logout-form"
@@ -84,3 +95,14 @@
         </div>
     </div>
 </nav>
+
+<script>
+    export default {
+        name: 'Header',
+        data() {
+            return{
+                searchString: "",
+            }
+        },
+    }
+</script>

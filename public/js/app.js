@@ -50867,6 +50867,7 @@ __webpack_require__.r(__webpack_exports__);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 __webpack_require__(/*! /Users/massimobergantin/Documents/BOOLEAN/LARAVEL/deliveboo/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/massimobergantin/Documents/BOOLEAN/LARAVEL/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
 =======
@@ -50881,6 +50882,10 @@ __webpack_require__(/*! C:\Users\39370\deliveboo\resources\js\app.js */"./resour
 module.exports = __webpack_require__(/*! C:\Users\39370\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
 >>>>>>> footer
 >>>>>>> 2220644fd885668ae2b32f6d7a92301920c240e7
+=======
+__webpack_require__(/*! /Users/massimobergantin/Documents/BOOLEAN/LARAVEL/deliveboo/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/massimobergantin/Documents/BOOLEAN/LARAVEL/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
+>>>>>>> navbar
 
 
 /***/ })
