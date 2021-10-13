@@ -3,9 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\PlateResource;
 
-class UserResource extends JsonResource
+class PlateResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -18,13 +17,13 @@ class UserResource extends JsonResource
         return [
             'id'=>$this -> id,
             'name'=>$this -> name, 
-            'address'=>$this -> address,
-            'phone_number' =>$this -> phone_number,
             'description'=>$this -> description,
+            'price'=>$this -> price,
+            'available'=>$this -> available,
             'picture'=>$this -> picture,
-            'tag'=>$this -> tag,
-            'plates' => PlateResource::collection($this->plate),
-
+            'user_id' =>$this -> user_id,
+            'category_id' =>$this -> category_id,
+            'ingredients' =>$this -> ingredient,
         ];
     }
 }

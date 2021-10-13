@@ -1,60 +1,25 @@
 <template>
 <div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Aggiungi gli ingredienti al tuo piatto!
-</button>
-
-<!-- Modal -->
-<!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> -->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Ingredienti</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      
-      <div class="modal-body">   
-        <img src="" alt="">    
-        <div>Descrizione Piatto</div>   
-        <!-- <div v-for="ingredients in ingredient" :key="ingredient.id" class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">{{ ingredient.name }}</label>
-        </div> -->
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Ingredient</label>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Aggiungi al carrello</button>
-      </div>
-
+    <img src="" alt="">  
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">Ingredient</label>
     </div>
-  </div>
-<!-- </div> -->
+    <button v-on:click="viewIngredient()" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Chiudi
+    </button>
 
 </div>
 </template>
 
 <script>
- 
+    
     export default {
         name: 'Ingredient',
         data() {
-            return {
-                ingredients: [],
-            }
+
         },
-        created() {
-            axios.get('/api/ingredients').then((response)=>{
-                this.ingredients = response.data.name;
-                // console.log(response.data);
-            });
-        },
+        
         methods: {
 
         }
