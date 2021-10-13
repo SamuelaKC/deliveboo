@@ -1,12 +1,12 @@
 <template>
     <div class="container">
         <div class="row">
-            <CreateOrder />
-            <Cart />
+            <!-- <CreateOrder />
+            <Cart /> -->
+        <Restaurant/>
         </div>
         
-        <!-- <HomeRestaurants/>
-        <Restaurant/> -->
+        <!-- <HomeRestaurants/> -->
     </div>
 </template>
 
