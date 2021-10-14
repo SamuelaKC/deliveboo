@@ -3,7 +3,7 @@
     <div class="container">
       <button @click="showHomeRestaurant" class="btn btn-secondary">HOME</button>
       <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home"/>
-      <Restaurant v-else :resaturantId="restaurantId" :restaurant="restaurant"/>
+      <Restaurant v-else :restaurant="restaurant"/>
     </div>
   </div>
 

@@ -13,7 +13,13 @@
       @closeModal="closeIngredient"
     />
     <div class="row">
-    <div class="col-lg-8">
+    <Create-order 
+      :cart="cart"
+      :totalPrice="totalPrice"
+      v-if="showPayment"
+    />
+    
+    <div class="col-lg-8" v-else>
       <div class="row">
         <Plate
           v-for="plate in restaurant.plates"
@@ -23,13 +29,14 @@
         />
       </div>
     </div>
+
     <Cart
       :cart="cart"
       :totalPrice="totalPrice"
       @plusCartQuantity="addCartQuantity"
       @minusCartQuantity="removeCartQuantity"
+      @getCreateOrder="getCreateOrder"
     />
-      
     </div>
   </div>
 </template>
@@ -38,6 +45,7 @@
 import Plate from "./Plate.vue";
 import Ingredient from "./Ingredient.vue";
 import Cart from "./Cart.vue";
+import CreateOrder from "./CreateOrder.vue";
 
 export default {
   name: "Restaurant",
@@ -45,6 +53,7 @@ export default {
     Plate,
     Ingredient,
     Cart,
+    CreateOrder,
   },
   data() {
     return {
@@ -56,21 +65,22 @@ export default {
       addingToCart: [],
       quantityOfPlate: 1,
       plateImg: '',
+      showPayment: false
     };
   },
 
   props: {
-    restaurantId: Number,
     restaurant: Object,
   },
 
   created() {
     // console.log(`/api/users/${restautantId}`)
-    axios.get(`/api/users/${restaurantId}`).then((response) => {
-      this.restaurant = response.data.data;
-      console.log(response.data);
-      this.getLocalStore();
-    });
+    // axios.get(`/api/users/${restaurantId}`).then((response) => {
+    //   this.restaurant = response.data.data;
+    //   console.log(response.data);
+    //   this.getLocalStore();
+    // });
+    this.getLocalStore();
   },
 
   computed: {
@@ -218,6 +228,11 @@ export default {
     },
 
     closeIngredient() {
+      this.showIngredient = false;
+    },
+
+    getCreateOrder() {
+      this.showPayment = true;
       this.showIngredient = false;
     },
   },

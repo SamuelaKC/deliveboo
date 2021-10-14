@@ -39,7 +39,7 @@
             <i class="fa fa-minus-circle"></i>
           </span>
         </div>
-        <button @click="$emit('sendIn', plateId)" class="btn btn-primary">
+        <button @click="$emit('sendIn', plateId)" class="btn btn-bluegreen">
           Aggiungi al Carrello
         </button>
       </div>

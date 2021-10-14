@@ -12,7 +12,7 @@
             class="form-control"
             name="name_surname"
             id="name_surname"
-            v-model="fields.name_surname"
+            v-model="order.name_surname"
           />
         </div>
         <!-- address(via di casa) -->
@@ -24,7 +24,7 @@
             class="form-control"
             name="address"
             id="address"
-            v-model="fields.address"
+            v-model="order.address"
           />
         </div>
         <!-- numero del telefono -->
@@ -36,7 +36,7 @@
             class="form-control"
             name="phone_number"
             id="phone_number"
-            v-model="fields.phone_number"
+            v-model="order.phone_number"
           />
         </div>
         <!-- dettagli -->
@@ -48,7 +48,7 @@
             class="form-control"
             name="details"
             id="details"
-            v-model="fields.details"
+            v-model="order.details"
           />
         </div>
         <!-- prezzo totale -->
@@ -62,9 +62,7 @@
       <br />
       <h3 class="font-header">Metodo di pagamento</h3>
       <div id="dropin-container"></div>
-      <button id="submit-button" class="btn btn-bluegreen">
-        Compra
-      </button>
+      <button id="submit-button" class="btn btn-bluegreen">Compra</button>
     </div>
   </div>
   <!-- Carrello... -->
@@ -72,55 +70,73 @@
 
 <script>
 export default {
-  name: 'CreateOrder',
+  name: "CreateOrder",
   data() {
     return {
-      fields: {},
-      totalPrice: 10.0,
-    }
+      order: {},
+    };
+  },
+  computed: {
+    apiOrder() {
+      return {
+        name_surname: this.order.name_surname,
+        details: this.order.details,
+        address: this.order.address,
+        phone_number: this.order.phone_number,
+        plates: this.cart,
+        total_price: this.totalPrice,
+      };
+    },
+  },
+  props: {
+    cart: Array,
+    totalPrice: Number,
   },
   created() {
     // Parte del pagamento solo view:
-    var button = document.querySelector('#submit-button')
+    var button = document.querySelector("#submit-button");
 
     braintree.dropin.create(
       {
-        authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
-        selector: '#dropin-container',
+        authorization: "sandbox_g42y39zw_348pk9cgf3bgyw2b",
+        selector: "#dropin-container",
       },
       function (err, instance) {
         if (err) {
           // An error in the create call is likely due to
           // incorrect configuration values or network issues
-          return
+          return;
         }
 
-        button.addEventListener('click', function () {
+        button.addEventListener("click", function () {
           instance.requestPaymentMethod(function (err, payload) {
             if (err) {
               // An appropriate error will be shown in the UI
-              return
+              return;
             }
 
             // Submit payload.nonce to your server
-          })
-        })
-      },
-    )
+          });
+        });
+      }
+    );
     // ---------------------------------------------------------------
-    this.price()
+    this.price();
   },
   methods: {
     // Ora mi serve la chiamata axios per salvare i dati nello store
     sendOrder() {
-      axios.post('api/orders', this.fields).then((response) => {
-        alert('ho salvato tutto')
-      })
-    },
-    // Per il prezzo fisso da rendere dinamico tramite il carello
-    price() {
-      this.fields.total_price = this.totalPrice
+      console.log("invio");
+      axios
+        .post("api/orders", this.apiOrder)
+        .then((response) => {
+          console.log(response.data);
+          alert("ho salvato tutto");
+        })
+        .catch((e) => {
+          console.error(e);
+        });
     },
   },
-}
+};
 </script>
