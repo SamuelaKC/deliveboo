@@ -13,15 +13,12 @@
 
 <script>
 import HomeRestaurants from "./HomeRestaurants.vue";
-import CreateOrder from "./CreateOrder.vue";
 import Restaurant from "./Restaurant.vue";
-import Cart from "./Cart.vue";
+
 export default {
   components: {
     HomeRestaurants,
-    CreateOrder,
     Restaurant,
-    Cart,
   },
   data() {
     return {

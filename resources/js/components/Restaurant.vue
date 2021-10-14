@@ -1,6 +1,5 @@
 <template>
-  <div class="row">
-    
+  <div class="">
     <Ingredient
       v-if="showIngredient"
       :ingredients="ingredients"
@@ -12,6 +11,7 @@
       @flagAddToCart="addToCart"
       @closeModal="closeIngredient"
     />
+    <div class="row">
     <div class="col-lg-8">
       <div class="row">
         <Plate
@@ -28,6 +28,8 @@
       @plusCartQuantity="addCartQuantity"
       @minusCartQuantity="removeCartQuantity"
     />
+      
+    </div>
   </div>
 </template>
 
