@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    
     <Ingredient
       v-if="showIngredient"
       :ingredients="ingredients"
@@ -44,10 +45,8 @@ export default {
   },
   data() {
     return {
-      restaurant: [],
+      //restaurant: [],
       cart: [],
-      platesInOrder: [],
-      simpleCart: [],
       ingredients: [],
       showIngredient: false,
       plateId: null,
@@ -56,8 +55,14 @@ export default {
     };
   },
 
+  props: {
+    restaurantId: Number,
+    restaurant: Object,
+  },
+
   created() {
-    axios.get("/api/users/13").then((response) => {
+    // console.log(`/api/users/${restautantId}`)
+    axios.get(`/api/users/${restaurantId}`).then((response) => {
       this.restaurant = response.data.data;
       console.log(response.data);
       this.getLocalStore();
