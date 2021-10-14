@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img style="width: 200px" src="/image/logo/deliveboo.png" alt="">
+            <img style="width: 200px" src="/image/logo/deliveboo.svg" alt="">
         </a>
         <button
             class="navbar-toggler"
@@ -23,30 +23,35 @@
                 <input style="padding: 20px" type="search" class="form-control rounded" placeholder="Cerca qui i tuoi ristoranti preferiti 🍕 🍔 🍣 " aria-label="Search"
                 aria-describedby="search-addon" />
                 <span style="padding-left: 20px;">
-                    <button style="background-color: rgb(0, 198, 182); color: white; padding: 8px" type="button" class="btn primary">CERCA</button>
+                    <button type="button" class="btn btn-bluegreen">CERCA</button>
                 </span>
-              </div>
+            </div>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{
+                    <a class="nav-link"  href="{{ route('login') }}">
+                    <button class="btn btn-nav">
+                    {{
                         __("Login")
-                    }}</a>
+                    }}
+                    </button></a>
                 </li>
                 @if (Route::has('register'))
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{
-                        __("Register")
-                    }}</a>
+                    <a class="nav-link" href="{{ route('register') }}">
+                    <button class="btn btn-nav">
+                    {{__("Registra Ristorante")}}
+                    </button></a>
                 </li>
                 @endif @else
                 <li class="nav-item dropdown">
+                <button class="btn btn-nav ">
                     <a
                         id="navbarDropdown"
-                        class="nav-link dropdown-toggle"
+                        class="btn link-bluegreen dropdown-toggle"
                         href="#"
                         role="button"
                         data-toggle="dropdown"
@@ -89,6 +94,7 @@
                             @csrf
                         </form>
                     </div>
+                </button>
                 </li>
                 @endguest
             </ul>

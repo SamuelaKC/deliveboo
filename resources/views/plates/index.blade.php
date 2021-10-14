@@ -20,22 +20,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-2 text-center">
-                    <a href="{{ route('plates.create') }}">
-                        <button class="btn btn-bluegreen">
-                            Aggiungi
-                        </button>
-                    </a>
-                </div>
-                <div class="col-2 text-center">
+                <div class="col-md-3 col-lg-3"></div>
+                <div class="col-12 col-md-3 col-lg-3 text-center">
                     <a href="{{ route('plates.edit', $plate) }}">
                         <button class="btn btn-bluegreen">
                             Modifica
                         </button>
                     </a>
                 </div>
-                <div class="col-2 text-center">
+                <div class="col-12 col-md-3 col-lg-3 text-center">
                     <form action="{{ route('plates.destroy', $plate) }}" method="POST">
                         @csrf
                         @method('DELETE')
@@ -44,10 +37,29 @@
                         </button>
                     </form>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-md-3 col-lg-3"></div>
             </div>
             <hr />
             @endforeach
+        </div>
+        @endforeach
+
+        <img src="/image/add.jpg" width="80px" height="80px" style="cursor:zoom-in" onclick="document.getElementById('box').style.display='block'">
+        <div id="box" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container w3-red">
+                    <span onclick="document.getElementById('box').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Ingredienti</h2>
+                </header>
+                <div class="w3-container">
+                {{-- @foreach ($ingredients as $ingredient)
+                    <div>{{ $ingredient->name }}</div>
+                @endforeach --}}
+                </div>
+                {{-- <footer class="w3-container w3-red">
+                    <p>Copyright 2019</p>
+                </footer> --}}
+            </div>
         </div>
     </div>
 </div>

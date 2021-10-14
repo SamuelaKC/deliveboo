@@ -6,7 +6,7 @@
             <div class="card">
              <div v-for="tag in user.tag" :key="tag.id" class="card-body">
                     <div class="card-text">{{tag.name}}</div>
-             </div>
+                </div>
             </div> 
            <div class="card">
                 <img class="card-img-top" :src="user.picture" alt="Card image cap">

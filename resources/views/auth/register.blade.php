@@ -4,9 +4,9 @@
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div class="row">
                 <div class="col">
-                    <div class="font-login">
+                    <h1 class="font-header">
                         Diventa subito partner di Deliveboo
-                    </div>
+                    </h1>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="">
