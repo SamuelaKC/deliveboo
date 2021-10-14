@@ -4,6 +4,7 @@
       v-if="showIngredient"
       :ingredients="ingredients"
       :plateId="plateId"
+      :plateImg="plateImg"
       :quantityOfPlate="quantityOfPlate"
       @sendIn="sendInCart"
       @plusQuantity="addQuantity"
@@ -54,6 +55,7 @@ export default {
       plateId: null,
       addingToCart: [],
       quantityOfPlate: 1,
+      plateImg: '',
     };
   },
 
@@ -168,14 +170,14 @@ export default {
         }
       }
     },
-    viewIngredient(plateId) {
-      console.log("entro");
+    viewIngredient(plateData) {
+      this.plateImg = plateData.img;
       this.restaurant.plates.forEach((plate) => {
-        if (plateId === plate.id) {
+        if (plateData.id === plate.id) {
           console.log(plate.ingredients);
           this.ingredients = plate.ingredients;
         }
-        this.plateId = plateId;
+        this.plateId = plateData.id;
       });
       this.showIngredient = true;
     },

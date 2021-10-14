@@ -5,7 +5,7 @@
         <i class="fa fa-times"></i>
       </button>
       <div class="img-container">
-        <img src="" alt="" />
+        <img :src="{{ plateImg }}" alt="" /> <!--ToDO da sistemare l'src-->
       </div>
       <div v-if="ingredients.length > 0">
         <div
@@ -51,6 +51,7 @@ export default {
     ingredients: Array,
     plateId: Number,
     quantityOfPlate: Number,
+    plateImg: String,
   },
 };
 </script>
