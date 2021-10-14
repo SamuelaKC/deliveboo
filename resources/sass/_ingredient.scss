@@ -6,15 +6,49 @@
     top: 0;
     left: 0;
     z-index: 3;
-    display: flex;
     justify-content: center;
     align-items: center;
 
     .ingredient-box {
-        padding: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .input-quantity {
             width: 20%;
+        }
+
+        .img-container {
+            margin-bottom: 12px;
+            width: 300px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .button-close {
+            align-self: flex-end;
+            margin-bottom: 12px;
+        }
+
+        .quantity-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+
+            span {
+                margin: 0 12px;
+                color: $button-blue-green;
+                font-size: 24px;
+            }
+        }
+
+        .check-ingredient {
+            margin-bottom: 12px;
         }
     }
 }
