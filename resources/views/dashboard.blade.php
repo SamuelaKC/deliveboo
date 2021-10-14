@@ -17,9 +17,13 @@
             <a class="dropdown-item" href="{{ route('orders.index') }}">
                 <i class="bi bi-list-ul"></i> I tuoi ordini
             </a>
+            {{-- <a class="dropdown-item" href="{{ route('plates.static') }}">
+                <i class="bi bi-bar-chart-line"></i> Statistiche ristorante
+            </a> --}}
             <a class="dropdown-item" href="{{ route('password.request') }}">
                 <i class="bi bi-x-square"></i> Resetta Password
             </a>
+            
         </div>
     </div>
     <aside class="col-2 d-none d-md-block">
