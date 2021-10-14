@@ -13,30 +13,26 @@
       @closeModal="closeIngredient"
     />
     <div class="row">
-    <Create-order 
-      :cart="cart"
-      :totalPrice="totalPrice"
-      v-if="showPayment"
-    />
-    
-    <div class="col-lg-8" v-else>
-      <div class="row">
-        <Plate
-          v-for="plate in restaurant.plates"
-          :key="plate.id"
-          :plate="plate"
-          @viewIngredient="viewIngredient"
-        />
-      </div>
-    </div>
+      <Create-order :cart="cart" :totalPrice="totalPrice" v-if="showPayment" />
 
-    <Cart
-      :cart="cart"
-      :totalPrice="totalPrice"
-      @plusCartQuantity="addCartQuantity"
-      @minusCartQuantity="removeCartQuantity"
-      @getCreateOrder="getCreateOrder"
-    />
+      <div class="col-lg-8" v-else>
+        <div class="row">
+          <Plate
+            v-for="plate in restaurant.plates"
+            :key="plate.id"
+            :plate="plate"
+            @viewIngredient="viewIngredient"
+          />
+        </div>
+      </div>
+
+      <Cart
+        :cart="cart"
+        :totalPrice="totalPrice"
+        @plusCartQuantity="addCartQuantity"
+        @minusCartQuantity="removeCartQuantity"
+        @getCreateOrder="getCreateOrder"
+      />
     </div>
   </div>
 </template>
@@ -64,8 +60,8 @@ export default {
       plateId: null,
       addingToCart: [],
       quantityOfPlate: 1,
-      plateImg: '',
-      showPayment: false
+      plateImg: "",
+      showPayment: false,
     };
   },
 
@@ -96,8 +92,15 @@ export default {
     addDetails() {
       let stringDetails = "";
       if (this.addingToCart.length > 0) {
-        this.addingToCart.forEach((adding) => {
-          stringDetails += `${adding.name}, `;
+
+        this.addingToCart.forEach((adding, index) => {
+
+          if((index + 1) === this.addingToCart.length ) {
+            stringDetails += `${adding.name}`;
+          } else {
+            stringDetails += `${adding.name}, `;
+          }
+          
         });
       }
       return stringDetails;
@@ -115,26 +118,28 @@ export default {
 
   methods: {
     sendInCart(plateId) {
-      let selectedPlates = [];
-      this.restaurant.plates.forEach((plate) => {
-        
-          
+      const flagId = this.verificationPlateId(plateId);
+      const flagAdding= this.verificationPlateAdding();
 
-            if (plateId === plate.id) {
-              this.cart.push({
-                id: plate.id,
-                name: plate.name,
-                details: this.addDetails,
-                price: plate.price + this.priceAddPlate,
-                quantity: this.quantityOfPlate,
-              });
+      if (!flagId) {
+        console.log(plateId)
+        if (!flagAdding) {
+          this.cart.forEach(cartPlate => {
+            if (plateId === cartPlate.id && this.addDetails === cartPlate.details) {
+              cartPlate.quantity++;
             }
-                    
-       
-      });
+          });
+        } else {
+          this.pushInCart(plateId);
+        }
+      } else {
+        this.pushInCart(plateId);
+      }
+
       //pusho l'id del piatto nel carrello
       //this.cart.push(id);
       //salvo nel local storage
+
       this.saveCart();
       this.addingToCart = [];
       this.quantityOfPlate = 1;
@@ -234,6 +239,45 @@ export default {
     getCreateOrder() {
       this.showPayment = true;
       this.showIngredient = false;
+    },
+
+    verificationPlateId(plateId) {
+      console.log('ciao')
+      let flagPlate = true;
+
+      this.cart.forEach((plate) => {
+        if (plateId === plate.id) {
+          flagPlate = false;
+        }
+      });
+
+      return flagPlate;
+    },
+
+    verificationPlateAdding() {
+      let flagPlate = true;
+
+      this.cart.forEach((plate) => {
+        if (this.addDetails === plate.details) {
+          flagPlate = false;
+        }
+      });
+
+      return flagPlate;
+    },
+
+    pushInCart(plateId) {
+      this.restaurant.plates.forEach((plate) => {
+        if (plateId === plate.id) {
+          this.cart.push({
+            id: plate.id,
+            name: plate.name,
+            details: this.addDetails,
+            price: plate.price + this.priceAddPlate,
+            quantity: this.quantityOfPlate,
+          });
+        }
+      });
     },
   },
 };
