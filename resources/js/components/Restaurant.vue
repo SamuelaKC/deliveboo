@@ -53,7 +53,7 @@ export default {
   },
 
   created() {
-    axios.get("/api/users/13").then((response) => {
+    axios.get("/api/users/10").then((response) => {
       this.restaurant = response.data.data;
       console.log(response.data);
       this.getLocalStore();

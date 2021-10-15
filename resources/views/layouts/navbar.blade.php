@@ -1,4 +1,4 @@
-<nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
+{{-- <nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img style="width: 200px" src="/image/logo/deliveboo.svg" alt="">
@@ -25,7 +25,7 @@
                 <span style="padding-left: 20px;">
                     <button type="button" class="btn btn-bluegreen">CERCA</button>
                 </span>
-            </div>
+            </div> 
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
@@ -94,4 +94,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> --}}

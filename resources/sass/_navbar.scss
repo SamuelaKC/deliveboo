@@ -1,9 +1,14 @@
-.bg-navbar {
+.container-navbar{
     background: linear-gradient(
         170deg,
         $button-blue-green 50%,
         $button-green-olive 50%
     );
+
+}
+
+.bg-navbar {
+    height: 100px;
 }
 
 .btn-nav {
