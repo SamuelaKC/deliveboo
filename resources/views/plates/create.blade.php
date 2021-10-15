@@ -13,18 +13,18 @@
     <div class="row">
         <div class="col">
             <a href="{{ route('plates.index') }}">
-                <button type="button" class="btn btn-light">
+                <button type="button" class="btn btn-bluegreen">
                     <- Torna indietro
                 </button>
             </a>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="row">
+                <h1 class="font-header">
                     Stai aggiungendo un nuovo piatto
-                </div>
+                </h1>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -37,18 +37,19 @@
                 <div class="card-body">
                     <form action="{{ route('plates.store') }}" enctype="multipart/form-data" method="POST">
                         @csrf
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="categoria"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=""
                             >
-                                Categoria:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <select
                                     class="form-control"
                                     name="category"
                                     id="category"
+                                    placeholder=""
                                 >
                                     <option>Nessuna categoria</option>
                                     @foreach($categories as $category)
@@ -59,47 +60,48 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="name"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=""
                             >
-                                Nome:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <input
                                     class="form-control"
                                     type="text"
                                     name="name"
                                     id="name"
+                                    placeholder="Nome"
                                 />
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="description"
-                                class="col-md-4 col-form-label text-md-right"
+                                class="text-md-right ml-3 mt-3"
                             >
-                                Descrizione:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <textarea
                                     class="form-control"
                                     type="text"
                                     name="description"
                                     id="description"
-                                    placeholder="Descrizione del piatto"
+                                    placeholder="Descrizione"
                                 ></textarea>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="price"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=""
                             >
-                                Prezzo:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <input
                                     class="form-control"
                                     type="number"
@@ -107,18 +109,19 @@
                                     min="0"
                                     name="price"
                                     id="price"
+                                    placeholder="Prezzo"
                                 />
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="available"
-                                class="col-md-4 col-form-label text-md-right"
+                                class="text-md-right ml-3 mt-3"
                             >
-                                Disponibilità:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <div class="form-check">
                                     <input
                                         class="form-check-input"
@@ -126,24 +129,25 @@
                                         id="available"
                                         name="available"
                                         checked
+                                        placeholder="Disponibilità"
                                     />
                                 </div>
                             </div>
                         </div>
                         <!-- DA VERIFICARE SE E' CON INDIRIZZO O CARICAMENTO LA FOTO -->
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="picture"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=""
                             >
                             <!-- Qui ci va l'upload dell'immagine -->
-                                Inserisci la foto del tuo piatto:
+                                
                             </label>
                             
                             @if($flag == true)
                                 <button class="btn btn-light" type="button">ciao</button>
                             @else
-                                <div class="col-md-6">
+                                <div class="col">
                                     <input
                                         class="form-control"
                                         type="file"
@@ -155,14 +159,17 @@
                             
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <input
-                                    class="btn btn-light"
-                                    type="submit"
-                                    value="Crea"
-                                />
+                        <div class="container">
+                            <div class="row py-2">
+                                <div class="col mt-3 ">
+                                    <input
+                                        class="btn btn-bluegreen"
+                                        type="submit"
+                                        value="Creaa"
+                                    />
+                                </div>    
                             </div>
+                            
                         </div>
                     </form>
                 </div>
