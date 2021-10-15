@@ -23,6 +23,8 @@
         <h6>Totale</h6>
         <div class="final-price">{{ totalPrice }} €</div>
       </div>
+
+      <button class="btn btn-bluegreen" @click="$emit('getCreateOrder')">Vai alla Cassa</button>
     </div>
   </div>
 </template>

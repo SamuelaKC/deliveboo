@@ -36,15 +36,21 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+
         $data = $request->all();
         $newOrder = new Order();
         $newOrder->details = $data['details']; 
         $newOrder->name_surname = $data['name_surname'];
         $newOrder->address = $data['address'];
         $newOrder->phone_number = $data['phone_number'];
-        $newOrder->total_price = $data['total_price']; 
+        $newOrder->total_price = $data['total_price'];
         $newOrder->save();
 
+        foreach ($data['plates'] as $plate) {
+            $plateId = $plate['id'];
+            $quantityPlate = $plate['quantity'];
+            $newOrder->plate()->attach($plateId, ['quantity' => $quantityPlate]);
+        }
         // Creazione api:
         return response()->json([
             // Qui status serve per capire se va tutto a buon fine

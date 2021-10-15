@@ -21,8 +21,7 @@ class PlateResource extends JsonResource
             'price'=>$this -> price,
             'available'=>$this -> available,
             'picture'=>$this -> picture,
-            'user_id' =>$this -> user_id,
-            'category_id' =>$this -> category_id,
+            'category_id' =>$this -> category,
             'ingredients' =>$this -> ingredient,
         ];
     }

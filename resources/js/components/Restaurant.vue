@@ -1,9 +1,10 @@
 <template>
-  <div class="row">
+  <div class="">
     <Ingredient
       v-if="showIngredient"
       :ingredients="ingredients"
       :plateId="plateId"
+      :plateImg="plateImg"
       :quantityOfPlate="quantityOfPlate"
       @sendIn="sendInCart"
       @plusQuantity="addQuantity"
@@ -11,22 +12,28 @@
       @flagAddToCart="addToCart"
       @closeModal="closeIngredient"
     />
-    <div class="col-lg-8">
-      <div class="row">
-        <Plate
-          v-for="plate in restaurant.plates"
-          :key="plate.id"
-          :plate="plate"
-          @viewIngredient="viewIngredient"
-        />
+    <div class="row">
+      <Create-order :cart="cart" :totalPrice="totalPrice" v-if="showPayment" />
+
+      <div class="col-lg-8" v-else>
+        <div class="row">
+          <Plate
+            v-for="plate in restaurant.plates"
+            :key="plate.id"
+            :plate="plate"
+            @viewIngredient="viewIngredient"
+          />
+        </div>
       </div>
+
+      <Cart
+        :cart="cart"
+        :totalPrice="totalPrice"
+        @plusCartQuantity="addCartQuantity"
+        @minusCartQuantity="removeCartQuantity"
+        @getCreateOrder="getCreateOrder"
+      />
     </div>
-    <Cart
-      :cart="cart"
-      :totalPrice="totalPrice"
-      @plusCartQuantity="addCartQuantity"
-      @minusCartQuantity="removeCartQuantity"
-    />
   </div>
 </template>
 
@@ -34,6 +41,7 @@
 import Plate from "./Plate.vue";
 import Ingredient from "./Ingredient.vue";
 import Cart from "./Cart.vue";
+import CreateOrder from "./CreateOrder.vue";
 
 export default {
   name: "Restaurant",
@@ -41,27 +49,34 @@ export default {
     Plate,
     Ingredient,
     Cart,
+    CreateOrder,
   },
   data() {
     return {
-      restaurant: [],
+      //restaurant: [],
       cart: [],
-      platesInOrder: [],
-      simpleCart: [],
       ingredients: [],
       showIngredient: false,
       plateId: null,
       addingToCart: [],
       quantityOfPlate: 1,
+      plateImg: "",
+      showPayment: false,
     };
   },
 
+  props: {
+    restaurant: Object,
+  },
+
   created() {
-    axios.get("/api/users/10").then((response) => {
-      this.restaurant = response.data.data;
-      console.log(response.data);
-      this.getLocalStore();
-    });
+    // console.log(`/api/users/${restautantId}`)
+    // axios.get(`/api/users/${restaurantId}`).then((response) => {
+    //   this.restaurant = response.data.data;
+    //   console.log(response.data);
+    //   this.getLocalStore();
+    // });
+    this.getLocalStore();
   },
 
   computed: {
@@ -77,8 +92,15 @@ export default {
     addDetails() {
       let stringDetails = "";
       if (this.addingToCart.length > 0) {
-        this.addingToCart.forEach((adding) => {
-          stringDetails += `${adding.name}, `;
+
+        this.addingToCart.forEach((adding, index) => {
+
+          if((index + 1) === this.addingToCart.length ) {
+            stringDetails += `${adding.name}`;
+          } else {
+            stringDetails += `${adding.name}, `;
+          }
+          
         });
       }
       return stringDetails;
@@ -96,26 +118,28 @@ export default {
 
   methods: {
     sendInCart(plateId) {
-      let selectedPlates = [];
-      this.restaurant.plates.forEach((plate) => {
-        
-          
+      const flagId = this.verificationPlateId(plateId);
+      const flagAdding= this.verificationPlateAdding();
 
-            if (plateId === plate.id) {
-              this.cart.push({
-                id: plate.id,
-                name: plate.name,
-                details: this.addDetails,
-                price: plate.price + this.priceAddPlate,
-                quantity: this.quantityOfPlate,
-              });
+      if (!flagId) {
+        console.log(plateId)
+        if (!flagAdding) {
+          this.cart.forEach(cartPlate => {
+            if (plateId === cartPlate.id && this.addDetails === cartPlate.details) {
+              cartPlate.quantity++;
             }
-                    
-       
-      });
+          });
+        } else {
+          this.pushInCart(plateId);
+        }
+      } else {
+        this.pushInCart(plateId);
+      }
+
       //pusho l'id del piatto nel carrello
       //this.cart.push(id);
       //salvo nel local storage
+
       this.saveCart();
       this.addingToCart = [];
       this.quantityOfPlate = 1;
@@ -161,14 +185,14 @@ export default {
         }
       }
     },
-    viewIngredient(plateId) {
-      console.log("entro");
+    viewIngredient(plateData) {
+      this.plateImg = plateData.img;
       this.restaurant.plates.forEach((plate) => {
-        if (plateId === plate.id) {
+        if (plateData.id === plate.id) {
           console.log(plate.ingredients);
           this.ingredients = plate.ingredients;
         }
-        this.plateId = plateId;
+        this.plateId = plateData.id;
       });
       this.showIngredient = true;
     },
@@ -210,6 +234,50 @@ export default {
 
     closeIngredient() {
       this.showIngredient = false;
+    },
+
+    getCreateOrder() {
+      this.showPayment = true;
+      this.showIngredient = false;
+    },
+
+    verificationPlateId(plateId) {
+      console.log('ciao')
+      let flagPlate = true;
+
+      this.cart.forEach((plate) => {
+        if (plateId === plate.id) {
+          flagPlate = false;
+        }
+      });
+
+      return flagPlate;
+    },
+
+    verificationPlateAdding() {
+      let flagPlate = true;
+
+      this.cart.forEach((plate) => {
+        if (this.addDetails === plate.details) {
+          flagPlate = false;
+        }
+      });
+
+      return flagPlate;
+    },
+
+    pushInCart(plateId) {
+      this.restaurant.plates.forEach((plate) => {
+        if (plateId === plate.id) {
+          this.cart.push({
+            id: plate.id,
+            name: plate.name,
+            details: this.addDetails,
+            price: plate.price + this.priceAddPlate,
+            quantity: this.quantityOfPlate,
+          });
+        }
+      });
     },
   },
 };

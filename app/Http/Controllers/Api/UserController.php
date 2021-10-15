@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RestaurantResource;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\UserResource;
@@ -53,7 +54,7 @@ class UserController extends Controller
         //$idUser = $user->id;
         //$userNow = User::find($idUser);
         //dd($idUser);
-        return new UserResource($user);
+        return new RestaurantResource($user);
     }
 
     /**

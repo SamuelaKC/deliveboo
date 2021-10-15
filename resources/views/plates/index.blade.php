@@ -42,7 +42,6 @@
             <hr />
             @endforeach
         </div>
-        @endforeach
 
         <img src="/image/add.jpg" width="80px" height="80px" style="cursor:zoom-in" onclick="document.getElementById('box').style.display='block'">
         <div id="box" class="w3-modal">
