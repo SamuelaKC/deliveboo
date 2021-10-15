@@ -21,14 +21,15 @@
 @import "navbar";
 @import "footer";
 
-@import "formuser";
 @import "dashboard";
+@import "formuser";
 
 @import "createform";
 @import "errorPage";
 @import "plate";
 @import "home";
 @import "ingredient";
+@import "order";
 
 body {
     font-family: $font-primary;
