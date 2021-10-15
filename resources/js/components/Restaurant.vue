@@ -1,5 +1,5 @@
 <template>
-  <div class="restaurant row">
+  <div class="row">
     <Ingredient
       v-if="showIngredient"
       :ingredients="ingredients"
@@ -11,12 +11,16 @@
       @flagAddToCart="addToCart"
       @closeModal="closeIngredient"
     />
-    <Plate
-      v-for="plate in restaurant.plates"
-      :key="plate.id"
-      :plate="plate"
-      @viewIngredient="viewIngredient"
-    />
+    <div class="col-lg-8">
+      <div class="row">
+        <Plate
+          v-for="plate in restaurant.plates"
+          :key="plate.id"
+          :plate="plate"
+          @viewIngredient="viewIngredient"
+        />
+      </div>
+    </div>
     <Cart
       :cart="cart"
       :totalPrice="totalPrice"

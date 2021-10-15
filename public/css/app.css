@@ -15401,20 +15401,6 @@ a.text-dark:focus {
   width: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-* {
-  background-color: #fff;
-}
-
-body {
-  font-family: "Epilogue", sans-serif;
-}
-
-.img-thumbnail {
-  max-width: 200px;
-  max-height: 200px;
-=======
 .site-footer {
   background-color: #26272b;
   padding: 45px 0 20px;
@@ -15584,8 +15570,8 @@ body {
   background-color: #434848;
   height: 100%;
   padding: 13px;
->>>>>>> footer
-=======
+}
+
 .carrello {
   position: -webkit-sticky;
   /* Safari */
@@ -15661,6 +15647,37 @@ body {
 .button--green:hover {
   background-color: #8bdda8;
   color: white;
->>>>>>> create_order
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: #fff;
+}
+
+.font-login {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.img-thumbnail {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.terms {
+  font-size: x-small;
+}
+
+.terms a {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #757878;
+}
+
+.btn-bluegreen {
+  background-color: #12ccbc;
+  color: #fff;
+  font-weight: 700;
 }
 
