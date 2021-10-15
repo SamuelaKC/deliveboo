@@ -1,79 +1,98 @@
 <template>
   <div>
     <div id="dropin-container"></div>
-    <button class="btn btn-bluegreen" @click="sendPayment">
-      Invia Pagamento
+
+    <button
+      type="submit"
+      class="btn btn-bluegreen"
+      id="submitTransaction"
+      @click="dropinRequestPaymentMethod"
+    >
+      Drop-in Test
     </button>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Braintree",
+
   created() {
-    // Parte del pagamento solo view:
     axios.get("/api/payment/generate").then((response) => {
       this.authorization = response.data.token;
-      this.dropIn();
+      this.dropinCreate();
     });
+
+    // this.$parent.$on("tokenize", () => {
+    //   this.dropinRequestPaymentMethod();
+    // });
   },
 
-  //   props: {
-  //     authorization: String,
-  //   },
+  data() {
+    return {
+      errorMessage: "",
+      dropinInstance: "",
+      paymentPayload: "",
+      authorization: "",
+    };
+  },
 
   methods: {
-    sendPayment(instance) {
-      instance.requestPaymentMethod(function (err, payload) {
-        if (err) {
-          // An appropriate error will be shown in the UI
-          return;
-        }
-        // Submit payload.nonce to your server
-      });
-    },
+    dropinCreate() {
+      const dropin = require("braintree-web-drop-in");
 
-    dropIn() {
-      braintree.dropin.create(
-        {
-          authorization: this.authorization,
-          container: "#dropin-container",
-          locale: "it_IT",
-          card: {
-            overrides: {
-              fields: {
-                number: {
-                  placeholder: "1111 1111 1111 1111", // Update the number field placeholder
-                },
-                postalCode: {
-                  minlength: 5, // Set the minimum length of the postal code field
-                },
-                cvv: {
-                    maskInput: true,
-                    placeholder: "XXX"
-                } 
-              },
-              styles: {
-                input: {
-                  "font-size": "18px", // Change the font size for all inputs
-                },
-                ":focus": {
-                  color: "red", // Change the focus color to red for all inputs
-                },
+      const dropinOptions = {
+        authorization: this.authorization,
+        container: "#dropin-container",
+        locale: "it_IT",
+        card: {
+          overrides: {
+            fields: {
+              cvv: {
+                maskInput: true,
               },
             },
           },
         },
-        function (err, instance) {
-          this.sendPayment(instance);
-          if (err) {
-            // An error in the create call is likely due to
-            // incorrect configuration values or network issues
-            return;
-          }
+      };
+
+      dropin.create(dropinOptions, (dropinError, dropinInstance) => {
+        if (dropinError) {
+          this.errorMessage =
+            "There was an error setting up the client instance. Message: " +
+            dropinError.message;
+          this.$emit("bt.error", this.errorMessage);
+          return;
         }
-      );
+        this.dropinInstance = dropinInstance;
+      });
+    },
+
+    dropinRequestPaymentMethod() {
+      this.dropinInstance.requestPaymentMethod((requestError, payload) => {
+        if (requestError) {
+          this.errorMessage =
+            "There was an error setting up the client instance. Message: " +
+            requestError.message;
+          this.$emit("bt.error", this.errorMessage);
+          return;
+        }
+
+        let token = payload.nonce;
+
+        let data = {
+          token: token,
+          plates: 2,
+        };
+
+        axios.post('/api/payment/make_payment', data).then((response) => {
+          let message = response.message
+          alert(message)
+        })
+        console.log(payload.nonce);
+        this.paymentPayload = payload;
+      });
     },
   },
 };
 </script>
-
