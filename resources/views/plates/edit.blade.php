@@ -10,11 +10,11 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="row">
+                <h1 class="font-header">
                     Stai modificando: {{ $plate->name }}
-                </div>
+                </h1>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -31,18 +31,18 @@
                         enctype="multipart/form-data"
                     >
                         @csrf @method('PUT')
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="category"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=""
                             >
-                                Categoria:
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <select
                                     class="form-control"
                                     name="category"
                                     id="category"
+                                   
                                 >
                                     <option>Nessuna categoria</option>
                                     @foreach($categories as $category)
@@ -53,32 +53,33 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="name"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=""
                                 > 
-                                Nome:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <input
                                     class="form-control"
                                     type="text"
                                     name="name"
                                     id="name"
                                     value="{{ $plate->name }}"
+                                    placeholder="Nome"
                                 />
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="description"
-                                class="col-md-4 col-form-label text-md-right"
+                                class=" text-md-right ml-3 mt-3"
                                 > 
-                                Descrizione:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <textarea
                                     class="form-control"
                                     type="text"
@@ -90,14 +91,14 @@
                                 >
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="">
                             <label
                                 for="price"
-                                class="col-md-4 col-form-label text-md-right"
+                                class="text-md-right ml-3 mt-3"
                                 >
-                                Prezzo:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <input
                                     class="form-control"
                                     type="number"
@@ -105,17 +106,18 @@
                                     min="0"
                                     name="price"
                                     id="price"
+                                    placeholder="Prezzo"
                                     value="{{ $plate->price
                                 }}"
                                 />
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="">
                             <label
-                                for="available" class="col-md-4 col-form-label text-md-right"
-                                > Disponibilità:
+                                for="available" class=""
+                                > 
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <div class="form-check">
                                     <input
                                         class="form-check-input"
@@ -123,17 +125,18 @@
                                         name="available"
                                         id="available flexCheckDefault"
                                         checked
+                                        placeholder="Disponibilità"
                                     />
                                 </div>
                             </div>
                         </div>
                         <!-- DA VERIFICARE SE E' CON INDIRIZZO O CARICAMENTO LA FOTO -->
-                        <div class="form-group row">
-                            <label for="picture" class="col-md-4 col-form-label text-md-right"
+                        <div class="">
+                            <label for="picture" class="col-md-4  text-md-right"
                                 > 
-                                Inserisci l'url della tua foto:
+                                
                             </label>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <input
                                     class="form-control"
                                     type="text"
@@ -145,14 +148,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <input
-                                    class="btn btn-light"
-                                    type="submit"
-                                    value="Invia"
-                                />
+                        <div class="container">
+                            <div class="row py-2">
+                                <div class="col ">
+                                    <input
+                                        class="btn btn-bluegreen"
+                                        type="submit"
+                                        value="Invia"
+                                    />
+                                </div>    
                             </div>
+                            
                         </div>
                     </form>
                 </div>

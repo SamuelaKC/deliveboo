@@ -15377,28 +15377,12 @@ a.text-dark:focus {
   }
 }
 
-.title-form-container {
-  display: flex;
-  justify-content: space-between;
+.bg-navbar {
+  background: linear-gradient(170deg, #12ccbc 50%, #d0eb99 50%);
 }
 
-.title-form-container .image-user {
-  width: 40px;
-  height: 40px;
-  border: 1px solid grey;
-  border-radius: 3px;
-}
-
-.title-form-container .image-user img {
-  width: 100%;
-}
-
-.dashboard {
-  display: flex;
-}
-
-.dashboard img {
-  width: 100%;
+.btn-nav {
+  background-color: #fff;
 }
 
 .site-footer {
@@ -15421,7 +15405,7 @@ a.text-dark:focus {
 .site-footer h6 {
   color: #fff;
   font-size: 16px;
-  text-transform: uppercase;
+  font-weight: 700;
   margin-top: 5px;
   letter-spacing: 2px;
 }
@@ -15431,11 +15415,12 @@ a.text-dark:focus {
 }
 
 .site-footer a:hover {
-  color: #3366cc;
+  color: #43bae2;
   text-decoration: none;
 }
 
 .footer-links {
+  font-size: 12px;
   padding-left: 0;
   list-style: none;
 }
@@ -15452,7 +15437,7 @@ a.text-dark:focus {
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #349FA9;
+  color: #43bae2;
   text-decoration: none;
 }
 
@@ -15464,18 +15449,8 @@ a.text-dark:focus {
   text-align: right;
 }
 
-.site-footer .social-icons a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: 6px;
-  margin-right: 0;
-  border-radius: 100%;
-  background-color: #33353d;
-}
-
 .copyright-text {
-  margin: 0;
+  font-size: 10px;
 }
 
 @media (max-width: 991px) {
@@ -15506,17 +15481,8 @@ a.text-dark:focus {
   margin-bottom: 4px;
 }
 
-.social-icons1 li.title {
-  margin-right: 15px;
-  text-transform: uppercase;
-  color: #96a2b2;
-  font-weight: 700;
-  font-size: 13px;
-}
-
 .social-icons1 a {
-  background-color: #eceeef;
-  color: #818a91;
+  color: #fff;
   font-size: 16px;
   display: inline-block;
   line-height: 44px;
@@ -15532,7 +15498,7 @@ a.text-dark:focus {
 .social-icons a:focus,
 .social-icons a:hover {
   color: #fff;
-  background-color: #29aafe;
+  background-color: #43bae2;
 }
 
 .social-icons.size-sm a {
@@ -15543,19 +15509,15 @@ a.text-dark:focus {
 }
 
 .social-icons a.facebook:hover {
-  background-color: #3b5998;
+  background-color: #fff;
 }
 
 .social-icons a.twitter:hover {
-  background-color: #00aced;
+  background-color: #fff;
 }
 
-.social-icons a.linkedin:hover {
-  background-color: #007bb6;
-}
-
-.social-icons a.dribbble:hover {
-  background-color: #ea4c89;
+.social-icons a.instagram:hover {
+  background-color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -15570,6 +15532,35 @@ a.text-dark:focus {
   background-color: #434848;
   height: 100%;
   padding: 13px;
+}
+
+.title-form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-form-container .image-user {
+  width: 40px;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.title-form-container .image-user img {
+  width: 100%;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.dashboard img {
+  width: 100%;
+}
+
+.dashboard i {
+  font-size: 20px;
+  padding: 0 10px 0 0;
 }
 
 .carrello {
@@ -15649,15 +15640,21 @@ a.text-dark:focus {
   color: white;
 }
 
+.plate {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+}
+
 body {
   font-family: "Epilogue", sans-serif;
   background-color: #fff;
 }
 
-.font-login {
+.font-header {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
-  font-size: 36px;
 }
 
 .img-thumbnail {
@@ -15679,5 +15676,9 @@ body {
   background-color: #12ccbc;
   color: #fff;
   font-weight: 700;
+}
+
+.link-bluegreen {
+  color: #12ccbc;
 }
 
