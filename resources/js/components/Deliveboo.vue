@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       show: {
-        home: true,
+        home: false,
         //restaurantId: null,
       },
       restaurant: [],

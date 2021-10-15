@@ -13,7 +13,8 @@
       @closeModal="closeIngredient"
     />
     <div class="row">
-      <Create-order :cart="cart" :totalPrice="totalPrice" v-if="showPayment" />
+      <Create-order :cart="cart" :totalPrice="totalPrice" />
+      <!-- <Create-order :cart="cart" :totalPrice="totalPrice" v-if="showPayment" />
 
       <div class="col-lg-8" v-else>
         <div class="row">
@@ -24,7 +25,7 @@
             @viewIngredient="viewIngredient"
           />
         </div>
-      </div>
+      </div> -->
 
       <Cart
         :cart="cart"

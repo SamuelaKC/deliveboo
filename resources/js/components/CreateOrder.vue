@@ -59,10 +59,7 @@
         <button type="submit" class="btn btn-bluegreen">Invia ordine</button>
       </form>
       <!-- Parte del pagamento solo view al momento...  -->
-      <br />
-      <h3 class="font-header">Metodo di pagamento</h3>
-      <div id="dropin-container"></div>
-      <button id="submit-button" class="btn btn-bluegreen">Compra</button>
+      
     </div>
   </div>
   <!-- Carrello... -->
