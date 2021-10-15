@@ -59,18 +59,21 @@
         <button type="submit" class="btn btn-bluegreen">Invia ordine</button>
       </form>
       <!-- Parte del pagamento solo view al momento...  -->
-      
+      <Braintree />
     </div>
   </div>
   <!-- Carrello... -->
 </template>
 
 <script>
+import Braintree from "./Braintree.vue";
 export default {
+  components: { Braintree },
   name: "CreateOrder",
   data() {
     return {
       order: {},
+      authorization: "",
     };
   },
   computed: {
@@ -89,37 +92,18 @@ export default {
     cart: Array,
     totalPrice: Number,
   },
-  created() {
-    // Parte del pagamento solo view:
-    var button = document.querySelector("#submit-button");
+  // created() {
+  //   axios.get("/api/payment/generate").then((response) => {
+  //     this.authorization = response.data.token;
+  //     console.log(this.authorization);
+  //   });
+  // },
+  // async mounted() {
+  //   let response = await axios.get("/api/payment/generate");
+  //   this.authorization = response.data.token;
+  //     console.log(this.authorization);
 
-    braintree.dropin.create(
-      {
-        authorization: "sandbox_g42y39zw_348pk9cgf3bgyw2b",
-        selector: "#dropin-container",
-      },
-      function (err, instance) {
-        if (err) {
-          // An error in the create call is likely due to
-          // incorrect configuration values or network issues
-          return;
-        }
-
-        button.addEventListener("click", function () {
-          instance.requestPaymentMethod(function (err, payload) {
-            if (err) {
-              // An appropriate error will be shown in the UI
-              return;
-            }
-
-            // Submit payload.nonce to your server
-          });
-        });
-      }
-    );
-    // ---------------------------------------------------------------
-    this.price();
-  },
+  // },
   methods: {
     // Ora mi serve la chiamata axios per salvare i dati nello store
     sendOrder() {
