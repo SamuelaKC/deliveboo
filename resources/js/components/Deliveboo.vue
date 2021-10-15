@@ -1,10 +1,7 @@
 <template>
   <div class="">
-    <Header />
+    <Header @viewHomeRestaurant="showHomeRestaurant"/>
     <div class="container">
-      <button @click="showHomeRestaurant" class="btn btn-secondary">
-        HOME
-      </button>
       <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" />
       <Restaurant v-else :restaurant="restaurant" />
     </div>

@@ -3,7 +3,7 @@
 
         <div class="container row bg-navbar align-items-center">
             
-            <div class="col-4">
+            <div class="col-4" @click="$emit('viewHomeRestaurant')">
                 <img style="width: 200px" src="/image/logo/deliveboo.svg" alt="" />
             </div>
 
