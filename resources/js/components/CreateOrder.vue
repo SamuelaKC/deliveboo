@@ -59,7 +59,7 @@
         <button type="submit" class="btn btn-bluegreen">Invia ordine</button>
       </form>
       <!-- Parte del pagamento solo view al momento...  -->
-      <Braintree />
+      <Braintree :newOrderId="newOrderId"/>
     </div>
   </div>
   <!-- Carrello... -->
@@ -74,6 +74,7 @@ export default {
     return {
       order: {},
       authorization: "",
+      newOrderId: null,
     };
   },
   computed: {
@@ -83,10 +84,25 @@ export default {
         details: this.order.details,
         address: this.order.address,
         phone_number: this.order.phone_number,
-        plates: this.cart,
+        plates: this.platesData,
         total_price: this.totalPrice,
       };
     },
+
+    platesData() {
+
+      let arrayPlate = [];
+
+      this.cart.forEach(plate => {
+        arrayPlate.push(
+          {
+            id: plate.id,
+            quantity: plate.quantity,
+          }
+        );
+      });
+      return arrayPlate;
+    }
   },
   props: {
     cart: Array,
@@ -111,7 +127,7 @@ export default {
       axios
         .post("api/orders", this.apiOrder)
         .then((response) => {
-          console.log(response.data);
+          this.newOrderId = response.data.order;
           alert("ho salvato tutto");
         })
         .catch((e) => {

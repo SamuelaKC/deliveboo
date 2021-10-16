@@ -37,6 +37,10 @@ export default {
     };
   },
 
+  props: {
+    newOrderId: Number,
+  },
+
   methods: {
     dropinCreate() {
       const dropin = require("braintree-web-drop-in");
@@ -78,14 +82,9 @@ export default {
           return;
         }
 
-        let token = payload.nonce;
+        let paymentData = this.getPaymentData(payload.once)
 
-        let data = {
-          token: token,
-          plates: 2,
-        };
-
-        axios.post('/api/payment/make_payment', data).then((response) => {
+        axios.post('/api/payment/make_payment', paymentData).then((response) => {
           let message = response.message
           alert(message)
         })
@@ -93,6 +92,13 @@ export default {
         this.paymentPayload = payload;
       });
     },
+
+    getPaymentData(token) {
+      return {
+        token: token,
+        plates: this.newOrderId,
+      }
+    }
   },
 };
 </script>

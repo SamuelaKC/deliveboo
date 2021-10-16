@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use App\Plate;
+use App\Order;
 use Illuminate\Contracts\Validation\Rule;
 
 class ValidPlate implements Rule
@@ -25,8 +25,9 @@ class ValidPlate implements Rule
      * @return bool
      */
     public function passes($attribute, $value)
-    {
-        if(Plate::find($value)){
+    { 
+        
+        if(Order::find($value)){
             return true;
         }
 

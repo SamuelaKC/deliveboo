@@ -54,7 +54,8 @@ class OrderController extends Controller
         // Creazione api:
         return response()->json([
             // Qui status serve per capire se va tutto a buon fine
-            'status' => 'success'
+            'status' => 'success',
+            'order' => $newOrder->id
         ]);
     }
 
