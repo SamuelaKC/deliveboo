@@ -1,8 +1,10 @@
 <template>
   <div class="col-lg-8">
     <div class="form-content">
-      <h1 class="font-header">Dettagli dell'ordine</h1>
-      <form @submit.prevent="sendOrder">
+      <Braintree v-if="showPayment" :newOrderId="newOrderId" />
+
+      <form v-else @submit.prevent="sendOrder">
+        <h1 class="font-header">Dettagli dell'ordine</h1>
         <!-- nome e cognome -->
         <div class="form-group">
           <label for="name_surname"></label>
@@ -56,10 +58,11 @@
           <div class="prezzo-totale">Totale: {{ totalPrice }} €</div>
         </div>
 
-        <button type="submit" class="btn btn-bluegreen">Invia ordine</button>
+        <button type="submit" class="btn btn-bluegreen">
+          Vai al Pagamento
+        </button>
       </form>
       <!-- Parte del pagamento solo view al momento...  -->
-      <Braintree :newOrderId="newOrderId"/>
     </div>
   </div>
   <!-- Carrello... -->
@@ -67,13 +70,15 @@
 
 <script>
 import Braintree from "./Braintree.vue";
+
 export default {
-  components: { Braintree },
   name: "CreateOrder",
+  components: {
+    Braintree,
+  },
   data() {
     return {
       order: {},
-      authorization: "",
       newOrderId: null,
     };
   },
@@ -90,23 +95,21 @@ export default {
     },
 
     platesData() {
-
       let arrayPlate = [];
 
-      this.cart.forEach(plate => {
-        arrayPlate.push(
-          {
-            id: plate.id,
-            quantity: plate.quantity,
-          }
-        );
+      this.cart.forEach((plate) => {
+        arrayPlate.push({
+          id: plate.id,
+          quantity: plate.quantity,
+        });
       });
       return arrayPlate;
-    }
+    },
   },
   props: {
     cart: Array,
     totalPrice: Number,
+    showPayment: Boolean,
   },
   // created() {
   //   axios.get("/api/payment/generate").then((response) => {
@@ -128,7 +131,7 @@ export default {
         .post("api/orders", this.apiOrder)
         .then((response) => {
           this.newOrderId = response.data.order;
-          alert("ho salvato tutto");
+          this.$emit("viewPayment");
         })
         .catch((e) => {
           console.error(e);

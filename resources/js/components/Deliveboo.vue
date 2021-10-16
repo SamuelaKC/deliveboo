@@ -1,14 +1,18 @@
 <template>
   <div class="">
-    <Header @viewHomeRestaurant="showHomeRestaurant"/>
+    <Header @viewHomeRestaurant="showHomeRestaurant" />
     <div class="container">
       <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" />
-      <Restaurant v-else :restaurant="restaurant" />
+      <Restaurant
+        v-else
+        :restaurant="restaurant"
+        :showOrder="show.order"
+        :showPayment="show.payment"
+        @viewOrder="viewOrder"
+        @viewPayment="viewPayment"
+      />
     </div>
   </div>
-
-  <!-- <HomeRestaurants/>
-        <Restaurant/> -->
 </template>
 
 <script>
@@ -25,7 +29,8 @@ export default {
     return {
       show: {
         home: true,
-        //restaurantId: null,
+        order: false,
+        payment: false,
       },
       restaurant: [],
     };
@@ -42,6 +47,16 @@ export default {
         this.saveRestaurant();
       });
       //this.restaurantId = restaurantId;
+    },
+
+    viewOrder() {
+      this.show.order = true;
+      this.saveShow();
+    },
+
+    viewPayment() {
+      this.show.payment = true;
+      this.saveShow();
     },
 
     showHomeRestaurant() {

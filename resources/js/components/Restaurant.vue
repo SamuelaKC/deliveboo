@@ -13,8 +13,14 @@
       @closeModal="closeIngredient"
     />
     <div class="row">
-      <Create-order :cart="cart" :totalPrice="totalPrice" />
-      <!-- <Create-order :cart="cart" :totalPrice="totalPrice" v-if="showPayment" />
+      <Create-order
+        v-if="showOrder"
+        :cart="cart"
+        :totalPrice="totalPrice"
+        :showPayment="showPayment"
+        @newOrder="newOrder"
+        @viewPayment="viewPayment"
+      />
 
       <div class="col-lg-8" v-else>
         <div class="row">
@@ -25,7 +31,7 @@
             @viewIngredient="viewIngredient"
           />
         </div>
-      </div> -->
+      </div>
 
       <Cart
         :cart="cart"
@@ -62,12 +68,13 @@ export default {
       addingToCart: [],
       quantityOfPlate: 1,
       plateImg: "",
-      showPayment: false,
     };
   },
 
   props: {
     restaurant: Object,
+    showPayment: Boolean,
+    showOrder: Boolean,
   },
 
   created() {
@@ -93,15 +100,12 @@ export default {
     addDetails() {
       let stringDetails = "";
       if (this.addingToCart.length > 0) {
-
         this.addingToCart.forEach((adding, index) => {
-
-          if((index + 1) === this.addingToCart.length ) {
+          if (index + 1 === this.addingToCart.length) {
             stringDetails += `${adding.name}`;
           } else {
             stringDetails += `${adding.name}, `;
           }
-          
         });
       }
       return stringDetails;
@@ -120,13 +124,16 @@ export default {
   methods: {
     sendInCart(plateId) {
       const flagId = this.verificationPlateId(plateId);
-      const flagAdding= this.verificationPlateAdding();
+      const flagAdding = this.verificationPlateAdding();
 
       if (!flagId) {
-        console.log(plateId)
+        console.log(plateId);
         if (!flagAdding) {
-          this.cart.forEach(cartPlate => {
-            if (plateId === cartPlate.id && this.addDetails === cartPlate.details) {
+          this.cart.forEach((cartPlate) => {
+            if (
+              plateId === cartPlate.id &&
+              this.addDetails === cartPlate.details
+            ) {
               cartPlate.quantity++;
             }
           });
@@ -238,12 +245,13 @@ export default {
     },
 
     getCreateOrder() {
-      this.showPayment = true;
+      //this.showPayment = true;
+      this.$emit("viewOrder");
       this.showIngredient = false;
     },
 
     verificationPlateId(plateId) {
-      console.log('ciao')
+      console.log("ciao");
       let flagPlate = true;
 
       this.cart.forEach((plate) => {
@@ -279,6 +287,10 @@ export default {
           });
         }
       });
+    },
+
+    viewPayment() {
+      this.$emit("viewPayment");
     },
   },
 };

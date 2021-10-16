@@ -8,7 +8,7 @@
       id="submitTransaction"
       @click="dropinRequestPaymentMethod"
     >
-      Drop-in Test
+      Paga
     </button>
   </div>
 </template>
