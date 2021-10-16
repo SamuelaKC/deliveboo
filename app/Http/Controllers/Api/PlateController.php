@@ -15,7 +15,7 @@ class PlateController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -25,7 +25,6 @@ class PlateController extends Controller
      */
     public function create()
     {
-        return view('create');
     }
 
     /**
@@ -36,14 +35,7 @@ class PlateController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
 
-        $plate = new Plate();
-
-        $this->fillAndSavePlate($plate, $data);
-         // viene salvato nel DB
-
-        return redirect()->route('plates.index', $plate->id);
     }
 
     /**
@@ -54,7 +46,7 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
-    
+        return response()->json($plate->user_id);
     }
 
     /**
@@ -89,14 +81,5 @@ class PlateController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    private function fillAndSavePlate(Plate $plate, $data) {
-        $plate->name = $data['name'];
-        $plate->description = $data['description'];
-        $plate->avaiable = $data['avaiable'];
-        $plate->price = $data['price'];
-        $plate->picture = $data['picture'];
-        $plate->save();
     }
 }

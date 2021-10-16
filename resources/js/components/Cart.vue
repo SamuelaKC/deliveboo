@@ -15,13 +15,13 @@
         <div class="name-plate">
           {{ plate.details }}
         </div>
-        <div class="price">{{ plate.price }} €</div>
+        <div class="price">{{ (plate.price * plate.quantity).toFixed(2) }} €</div>
       </div>
       <hr class="separetor" />
 
       <div class="box-carrello totale">
         <h6>Totale</h6>
-        <div class="final-price">{{ totalPrice }} €</div>
+        <div class="final-price">{{ totalPrice.toFixed(2) }} €</div>
       </div>
 
       <button class="btn btn-bluegreen" @click="$emit('getCreateOrder')">Vai alla Cassa</button>

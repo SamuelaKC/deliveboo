@@ -60,7 +60,11 @@ export default {
     },
 
     showHomeRestaurant() {
-      this.show.home = true;
+      this.show = {
+        home: true,
+        order: false,
+        payment: false,
+      };
       this.saveShow();
     },
 
