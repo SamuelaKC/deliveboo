@@ -131,6 +131,14 @@
                                 @enderror
                             </div>
                         </div>
+                        <!-- Scelta tag: -->
+                        <div>
+                        <label
+                            for="description"
+                            class="text-md-right"
+                        ></label>
+
+                        </div>
 
                         <div class="">
                             <div class="col">
@@ -164,6 +172,7 @@
                                     >
                                         Modifica
                                     </button>
+                                    
                                 </div>
                             </div>
                         </div>

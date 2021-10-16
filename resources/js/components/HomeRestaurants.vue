@@ -11,6 +11,9 @@
         <div class="card-body">
           <h5 class="card-title">{{ user.name }}</h5>
           <p class="card-text">{{ user.description }}</p>
+          <div v-for="(tag, index) in user.tag" :key="index">
+            <p class="card-text">{{ tag.name }}</p>
+          </div>
         </div>
       </div>
     </div>
