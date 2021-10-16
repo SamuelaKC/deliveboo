@@ -74,7 +74,7 @@
                                     autocomplete="phone_number"
                                     autofocus
                                 />
-
+                                
                                 @error('phone_number')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -133,11 +133,17 @@
                         </div>
                         <!-- Scelta tag: -->
                         <div>
-                        <label
-                            for="description"
-                            class="text-md-right"
-                        ></label>
-
+                            <label
+                                for="tag"
+                                class="text-md-right"
+                            ></label>
+                            <div class="col">
+                                <select name="tag" id="tag">
+                                    @foreach($user->tag as $tag)
+                                        <option value="">{{ $tag->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
 
                         <div class="">
