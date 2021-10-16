@@ -67,11 +67,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user, Tag $tag)
+    public function edit(User $user)
     {
         $userId = Auth::id();
+        $tags = Tag::all();
             if ($userId === $user->id) {
-            return view('auth.edit', compact('user'));
+            return view('auth.edit', compact('user', 'tags'));
         } else {
             return view('error.index');
         }

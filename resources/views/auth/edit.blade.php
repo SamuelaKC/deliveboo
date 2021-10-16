@@ -136,13 +136,14 @@
                             <label
                                 for="tag"
                                 class="text-md-right"
-                            ></label>
+                            >Scegli i tui tag:</label>
                             <div class="col">
-                                <select name="tag" id="tag">
-                                    @foreach($user->tag as $tag)
-                                        <option value="">{{ $tag->name }}</option>
-                                    @endforeach
-                                </select>
+                               
+                                @foreach($tags as $tag)
+                                    <input name="tag" id="tag" type="checkbox"> {{ $tag->name }} <br>
+                                    
+                                @endforeach
+                                
                             </div>
                         </div>
 
