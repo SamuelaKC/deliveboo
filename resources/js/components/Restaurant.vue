@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="restaurant container">
     <Ingredient
       v-if="showIngredient"
       :ingredients="ingredients"
@@ -13,6 +13,29 @@
       @closeModal="closeIngredient"
     />
     <div class="row">
+      <div class="col-12 mb-4">
+        <div class="row">
+          <div class="restaurant-info col-8">
+            <h1 class="restaurant-title">{{ restaurant.name }}</h1>
+            <div class="restaurant-description">
+              {{ restaurant.description }}
+            </div>
+            <div class="restaurant-address">
+              Indirizzo: {{ restaurant.address }}
+            </div>
+            <div class="restaurant-number">
+              Indirizzo: {{ restaurant.phone_number }}
+            </div>
+          </div>
+          <div class="restaurant-img col-4">
+            <img
+              :src="restaurant.picture"
+              :alt="`Immagine profilo ${restaurant.name}`"
+            />
+          </div>
+        </div>
+      </div>
+
       <Create-order
         v-if="showOrder"
         :cart="cart"
@@ -276,23 +299,21 @@ export default {
     },
 
     verificationRestaurant(plateId) {
-
-      if(this.cart.length > 0) {
-        console.log('carrello pieno')
+      if (this.cart.length > 0) {
+        console.log("carrello pieno");
         let plateInCartId = this.cart[0].id;
         axios.get(`/api/plates/${plateInCartId}`).then((res) => {
           let restaurantId = res.data;
-          if(restaurantId !== this.restaurant.id) {
+          if (restaurantId !== this.restaurant.id) {
             this.removeAllToCart();
-            this.sendInCart(plateId)
+            this.sendInCart(plateId);
           } else {
-            this.sendInCart(plateId)
+            this.sendInCart(plateId);
           }
         });
       } else {
-        this.sendInCart(plateId)
+        this.sendInCart(plateId);
       }
-
     },
 
     pushInCart(plateId) {

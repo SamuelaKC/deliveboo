@@ -1,17 +1,16 @@
 <template>
   <div class="">
     <Header @viewHomeRestaurant="showHomeRestaurant" />
-    <div class="container">
-      <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" />
-      <Restaurant
-        v-else
-        :restaurant="restaurant"
-        :showOrder="show.order"
-        :showPayment="show.payment"
-        @viewOrder="viewOrder"
-        @viewPayment="viewPayment"
-      />
-    </div>
+
+    <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" />
+    <Restaurant
+      v-else
+      :restaurant="restaurant"
+      :showOrder="show.order"
+      :showPayment="show.payment"
+      @viewOrder="viewOrder"
+      @viewPayment="viewPayment"
+    />
   </div>
 </template>
 

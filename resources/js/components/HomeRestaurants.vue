@@ -1,4 +1,6 @@
 <template>
+<div class="container">
+
   <div class="row justify-content-center home-row">
     <div
       v-for="user in users"
@@ -25,6 +27,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
