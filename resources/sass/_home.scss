@@ -1,6 +1,49 @@
-.deliveboo-card {
-    background-color: $bg-color-all;
-    border: 1px solid $border-grey;
-    word-wrap: break-word;
-    box-shadow: 0 0 6px gray;
+.home-row {
+    margin-top: 24px;
+}
+.deliveboo {
+    &-card {
+        background-color: $bg-color-all;
+        border: 1px solid $border-grey;
+        word-wrap: break-word;
+        box-shadow: 0 0 6px gray;
+        overflow: hidden;
+        height: 100%;
+
+        &-img {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-body {
+            padding: 24px 12px;
+        }
+
+        &-text {
+            font-family: $font-secondary;
+        }
+    }
+
+    &-tag {
+        padding: 24px 12px;
+
+        &-text {
+            color: $bg-color-all;
+            background-color: $button-blue-green;
+            border: 1px solid $button-blue-green;
+            border-radius: 3px;
+            padding: 3px 6px;
+            margin: 6px;
+        }
+    }
 }

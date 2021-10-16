@@ -1,16 +1,26 @@
 <template>
-  <div class="row justify-content-center">
-    <div v-for="user in users" :key="user.id" class="card-group col-md-4" @click="$emit('viewRestaurant', user.id)">
-      <!-- <div class="card">
-        <div v-for="tag in user.tag" :key="tag.id" class="card-body">
-          <div class="card-text">{{ tag.name }}</div>
+  <div class="row justify-content-center home-row">
+    <div
+      v-for="user in users"
+      :key="user.id"
+      class="col-6 col-md-4 col-lg-3 mb-4"
+      @click="$emit('viewRestaurant', user.id)"
+    >
+      <div class="deliveboo-card">
+        <div class="deliveboo-card-img">
+          <img
+            :src="user.picture"
+            :alt="`Immagine profilo ${user.name}`"
+          />
         </div>
-      </div> -->
-      <div class="card">
-        <img class="card-img-top" :src="user.picture" alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">{{ user.name }}</h5>
-          <p class="card-text">{{ user.description }}</p>
+        <div class="deliveboo-card-body">
+          <h5 class="deliveboo-card-title">{{ user.name }}</h5>
+          <p class="deliveboo-card-text">{{ user.description }}</p>
+        </div>
+        <div class="deliveboo-tag">
+          <span v-for="tag in user.tag" :key="tag.id" class="deliveboo-tag-text">
+           #{{ tag.name.toLowerCase() }}
+          </span>
         </div>
       </div>
     </div>
