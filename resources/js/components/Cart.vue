@@ -24,7 +24,7 @@
         <div class="final-price">{{ totalPrice.toFixed(2) }} €</div>
       </div>
 
-      <button class="btn btn-bluegreen" @click="$emit('getCreateOrder')">Vai alla Cassa</button>
+      <button v-if="nextToOrder" class="btn btn-bluegreen" @click="$emit('getCreateOrder')">Vai alla Cassa</button>
     </div>
   </div>
 </template>
@@ -35,6 +35,7 @@ export default {
   props: {
     cart: Array,
     totalPrice: Number,
+    nextToOrder: Boolean,
   },
 };
 </script>

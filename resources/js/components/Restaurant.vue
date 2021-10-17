@@ -59,6 +59,7 @@
       <Cart
         :cart="cart"
         :totalPrice="totalPrice"
+        :nextToOrder="nextToOrder"
         @plusCartQuantity="addCartQuantity"
         @minusCartQuantity="removeCartQuantity"
         @getCreateOrder="getCreateOrder"
@@ -91,6 +92,7 @@ export default {
       addingToCart: [],
       quantityOfPlate: 1,
       plateImg: "",
+      nextToOrder: true,
     };
   },
 
@@ -107,7 +109,7 @@ export default {
     //   console.log(response.data);
     //   this.getLocalStore();
     // });
-    this.getLocalStore();
+    this.getLocalStore();ear();
   },
 
   computed: {
@@ -271,6 +273,7 @@ export default {
       //this.showPayment = true;
       this.$emit("viewOrder");
       this.showIngredient = false;
+      this.nextToOrder = false;
     },
 
     verificationPlateId(plateId) {

@@ -3,6 +3,7 @@
     <div id="dropin-container"></div>
 
     <button
+      v-if="viewDropIn"
       type="submit"
       class="btn btn-bluegreen"
       id="submitTransaction"
@@ -10,6 +11,7 @@
     >
       Paga
     </button>
+    <button v-else class="btn btn-bluegreen opacity">Paga</button>
   </div>
 </template>
 
@@ -34,6 +36,7 @@ export default {
       dropinInstance: "",
       paymentPayload: "",
       authorization: "",
+      viewDropIn: false,
     };
   },
 
@@ -69,6 +72,7 @@ export default {
           return;
         }
         this.dropinInstance = dropinInstance;
+        this.viewDropIn = true;
       });
     },
 

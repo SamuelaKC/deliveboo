@@ -46,7 +46,7 @@
           <label for="details"></label>
           <input
             type="text"
-            placeholder="Istruzioni per il rider"
+            placeholder="Dettagli dell'ordine"
             class="form-control"
             name="details"
             id="details"
