@@ -25,8 +25,9 @@ class PlateController extends Controller
     {
         // $ingredients = Ingredient::all();
         $userId = Auth::id();
-        $plates = Plate::where('user_id', $userId)->get();
-        return view('plates.index', compact('plates'));
+        $plates = Plate::where('user_id', $userId)->get()->groupBy('category_id');
+        $categories = Category::all();
+        return view('plates.index', compact('plates', 'categories'));
     }
 
     /**

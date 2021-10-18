@@ -36,7 +36,7 @@
                             @foreach ($order->plate as $plate )
                             <div class="col text-right">
                                 <div>
-                                    {{ number_format ( $plate->price, 2) }}
+                                € {{ number_format ( $plate->price, 2) }}
                                 </div>
                             </div>
                             @endforeach
