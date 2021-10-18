@@ -40,7 +40,7 @@ export default {
           title: {
             display: true,
             fontSize: 22,
-            text: 'Example',
+            text: 'Ricavato',
           },
         },
       })

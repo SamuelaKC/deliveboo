@@ -36,11 +36,11 @@ class ChartController extends Controller
         $month_no = $order->created_at->format('m');
         $month_name = $order->created_at->format('d M, Y');
         $monthsName[]=$month_name;
-        $monthsNo[]=$month_no;
+        // $monthsNo[]=$month_no;
         $price = $order->total_price;
         $priceAll[] = $price; 
 }                    
-        return view ('static.index', compact('ordersId', 'orders', 'monthsName', 'monthsNo', 'priceAll'));     
+        return view ('static.index', compact('ordersId', 'orders', 'monthsName', 'priceAll'));     
     }
 
     /**
