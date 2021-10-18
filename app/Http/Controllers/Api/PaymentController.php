@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PaymentRequest;
+use App\Mail\RestaurantMail;
 use App\Order;
 use App\Plate;
+use App\User;
 use Braintree\Gateway;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PaymentController extends Controller
 {
@@ -27,13 +30,18 @@ class PaymentController extends Controller
     {
         $order = Order::find($request->order);
 
+
         $totalPrice = 0;
 
         foreach ($order->plate as $plate) {
 
             $totalPrice += ($plate->price * $plate->pivot->quantity);
-
+            $plateId = $plate->id;
         }
+
+        $searchPlate = Plate::find($plateId);
+        $userId = $searchPlate->user_id;
+        $userToSend = User::find($userId);
 
         $result = $gateway->transaction()->sale(
             [
@@ -53,6 +61,8 @@ class PaymentController extends Controller
 
             $order->total_price = $totalPrice;
             $order->save();
+
+            //Mail::to('prova@io.com')->send(new RestaurantMail($userToSend));
 
             return response()->json($data);
         } else {

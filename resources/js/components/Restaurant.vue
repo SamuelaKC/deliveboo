@@ -95,13 +95,12 @@ export default {
       plateImg: "",
       nextToOrder: true,
       showAdvisor: false,
+      showOrder: false,
     };
   },
 
   props: {
     restaurant: Object,
-    showPayment: Boolean,
-    showOrder: Boolean,
   },
 
   created() {
@@ -273,7 +272,7 @@ export default {
 
     getCreateOrder() {
       //this.showPayment = true;
-      this.$emit("viewOrder");
+      this.showOrder = true;
       this.showIngredient = false;
       this.nextToOrder = false;
     },

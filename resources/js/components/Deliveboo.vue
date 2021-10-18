@@ -6,8 +6,6 @@
     <Restaurant
       v-else
       :restaurant="restaurant"
-      :showOrder="show.order"
-      :showPayment="show.payment"
       @viewOrder="viewOrder"
       @viewPayment="viewPayment"
     />
@@ -28,8 +26,6 @@ export default {
     return {
       show: {
         home: true,
-        order: false,
-        payment: false,
       },
       users: [],
       restaurant: [],

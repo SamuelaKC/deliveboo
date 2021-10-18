@@ -5,7 +5,7 @@
         {{messageSuccess}}
         </div>
 
-        <button class="btn btn-bluegreen">Torna alla Home</button>
+        <button class="btn btn-bluegreen" @click="goToHome">Torna alla Home</button>
     </div>
 </template>
 
@@ -15,6 +15,12 @@ export default {
     name: 'Success',
     props: {
         messageSuccess: String,
+    },
+    methods: {
+        goToHome() {
+            localStorage.clear();
+            window.location.reload();
+        }
     }
 
 }
