@@ -19,10 +19,9 @@ class TagController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $tags = Tag::all();
-
-        return TagResource::collection($users, $tags);
+        // Prende tutti i tag e li va a stampare
+        $tags = Tag::whereIn('id', [4, 6, 8, 17])->get();
+        return TagResource::collection($tags);
     }
 
     /**
