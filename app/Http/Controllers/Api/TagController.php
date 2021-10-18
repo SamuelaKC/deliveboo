@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RestaurantResource;
+use App\Http\Resources\TagResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User;
+use App\Tag;
 
 class TagController extends Controller
 {
@@ -14,7 +19,10 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        $tags = Tag::all();
+
+        return TagResource::collection($users, $tags);
     }
 
     /**
@@ -46,7 +54,9 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        //
+        // $userId = User::find(1);
+        // dd($userId);
+        return new TagResource(Tag::find($id));      
     }
 
     /**
