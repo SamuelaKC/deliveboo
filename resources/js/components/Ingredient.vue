@@ -39,16 +39,20 @@
             <i class="fa fa-minus-circle"></i>
           </span>
         </div>
-        <button @click="$emit('sendIn', plateId)" class="btn btn-bluegreen">
+        <button v-if="!showAdvisor" @click="$emit('sendIn', plateId)" class="btn btn-bluegreen">
           Aggiungi al Carrello
         </button>
+
+        <Advisor v-if="showAdvisor" @closeAdvisor="closeAdvisor"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Advisor from './Advisor.vue';
 export default {
+  components: { Advisor },
   name: "Ingredient",
   mounted() {
     this.ingredients.forEach((ingredient) => {
@@ -60,6 +64,7 @@ export default {
     plateId: Number,
     quantityOfPlate: Number,
     plateImg: String,
+    showAdvisor: Boolean,
   },
 };
 </script>

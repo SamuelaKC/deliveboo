@@ -6,6 +6,7 @@
       :plateId="plateId"
       :plateImg="plateImg"
       :quantityOfPlate="quantityOfPlate"
+      :showAdvisor="showAdvisor"
       @sendIn="verificationRestaurant"
       @plusQuantity="addQuantity"
       @minusQuantity="removeQuantity"
@@ -93,6 +94,7 @@ export default {
       quantityOfPlate: 1,
       plateImg: "",
       nextToOrder: true,
+      showAdvison: false,
     };
   },
 
@@ -303,13 +305,14 @@ export default {
 
     verificationRestaurant(plateId) {
       if (this.cart.length > 0) {
-        console.log("carrello pieno");
+
         let plateInCartId = this.cart[0].id;
         axios.get(`/api/plates/${plateInCartId}`).then((res) => {
           let restaurantId = res.data;
           if (restaurantId !== this.restaurant.id) {
-            this.removeAllToCart();
-            this.sendInCart(plateId);
+            // this.removeAllToCart();
+            // this.sendInCart(plateId);
+            this.showAdvisor = true;
           } else {
             this.sendInCart(plateId);
           }
