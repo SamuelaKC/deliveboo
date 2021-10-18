@@ -29,12 +29,12 @@ class ChartController extends Controller
                 }
             }
         }
-        $orders = Order::whereIn('id', $ordersId)->get(['id', 'created_at', 'total_price']);
+        $orders = Order::whereIn('id', $ordersId)->orderBy('created_at', 'ASC')->get(['id', 'created_at', 'total_price']);
 
 
         foreach($orders as $order){
         $month_no = $order->created_at->format('m');
-        $month_name = $order->created_at->format('M');
+        $month_name = $order->created_at->format('d M, Y');
         $monthsName[]=$month_name;
         $monthsNo[]=$month_no;
         $price = $order->total_price;

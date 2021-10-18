@@ -1,52 +1,53 @@
 <template>
   <div>
-    prova dashboard
     <canvas id="myChart" width="400" height="400"></canvas>
   </div>
 </template>
 
 <script>
+import Chart from 'chart.js/auto'
 export default {
-  name: 'Chart',
-  created() {
-    const Chart = require('chart.js')
-    var ctx = document.getElementById('canvas').getContext('2d')
-    var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [
-          {
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1,
+  props: {
+    labels: String,
+    dataProp: String,
+  },
+  methods: {
+    renderChart() {
+      new Chart(document.getElementById('myChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: JSON.parse(this.labels),
+          datasets: [
+            {
+              label: 'Ricavato',
+              data: JSON.parse(this.dataProp),
+              backgroundColor: [
+                '#2ecc71',
+                '#e74c3c',
+                '#8e44ad',
+                '#d35400',
+                '#16a085',
+              ],
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
           },
-        ],
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
+          title: {
+            display: true,
+            fontSize: 22,
+            text: 'Example',
           },
         },
-      },
-    })
+      })
+    },
+  },
+  mounted() {
+    this.renderChart()
   },
 }
 </script>

@@ -1,6 +1,11 @@
 <template>
   <div class="row justify-content-center">
-    <div v-for="user in users" :key="user.id" class="card-group col-md-4" @click="$emit('viewRestaurant', user.id)">
+    <div
+      v-for="user in users"
+      :key="user.id"
+      class="card-group col-md-4"
+      @click="$emit('viewRestaurant', user.id)"
+    >
       <!-- <div class="card">
         <div v-for="tag in user.tag" :key="tag.id" class="card-body">
           <div class="card-text">{{ tag.name }}</div>
@@ -19,17 +24,17 @@
 
 <script>
 export default {
-  name: "HomeRestaurants",
+  name: 'HomeRestaurants',
   data() {
     return {
       users: [],
-    };
+    }
   },
   created() {
-    axios.get("/api/users").then((response) => {
-      this.users = response.data.data;
-      console.log(this.users);
-    });
+    axios.get('/api/users').then((response) => {
+      this.users = response.data.data
+      console.log(this.users)
+    })
   },
-};
+}
 </script>

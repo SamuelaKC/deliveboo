@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 <div class="container">
     <div class="row">
-                    {{-- @dd($monthsName) 
+        {{-- @dd($monthsName) 
                     @dd($monthsNo) 
                     @dd($priceAll)  --}}
 
@@ -10,7 +10,11 @@
                 <div class="panel-heading">Dashboard prova</div>
                 <div class="panel-body">
                     <div id="container" style="width: 75%;">
-                        <chart />
+                        <chart
+                            labels="{{ json_encode($monthsName) }}"
+                            data-prop="{{ json_encode($priceAll) }}"
+                        >
+                        </chart>
                     </div>
                 </div>
             </div>
