@@ -8,13 +8,15 @@
             </div>
 
             <div class="input-group col-8">
-                <input
+                <input 
                     style="padding: 20px"
                     type="search"
                     class="form-control rounded"
                     placeholder="Cerca qui i tuoi ristoranti preferiti 🍕 🍔 🍣 "
                     aria-label="Search"
                     aria-describedby="search-addon"
+                    v-model="searchRestaurant"
+                    @keyup.enter="getSearch()"
                 />
                 <span style="padding-left: 20px;">
                     <button type="button" class="btn btn-bluegreen">CERCA</button>
@@ -27,6 +29,16 @@
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    data(){
+        return {
+            searchRestaurant: ''
+        }
+    },
+    methods:{
+        getSearch(){
+            
+        }
+    } 
 };
 </script>
