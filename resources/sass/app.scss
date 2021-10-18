@@ -73,3 +73,16 @@ body {
 .link-bluegreen {
     color: $button-blue-green;
 }
+
+.ul-navbar {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+    li {
+        margin-right: 6px;
+    }
+    a {
+        color: $button-blue-green;
+    }
+}

@@ -1,18 +1,18 @@
-<div style="background-color: black;display: inline-block" class="container-fluid">
+<div class="container-fluid">
     <!-- Right Side Of Navbar -->
-    <ul style="color: white;" class="navbar-nav ml-auto">
+    <ul class="navbar ul-navbar">
         <!-- Authentication Links -->
         @guest
         <li>
-            <a class="nav-link"  href="{{ route('login') }}">
+            <a class=""  href="{{ route('login') }}">
             {{
-                __("Login")
+                __("Accedi come Ristorante")
             }}
             </a>
         </li>
         @if (Route::has('register'))
         <li>
-            <a class="nav-link" href="{{ route('register') }}">
+            <a class="" href="{{ route('register') }}">
             {{__("Registra Ristorante")}}
             </a>
         </li>
@@ -32,19 +32,11 @@
                 {{ Auth::user()->name }}
             </a>
 
-            <div
-                class="dropdown-menu dropdown-menu-right"
-                aria-labelledby="navbarDropdown"
-            >
-                <a
-                    class="dropdown-item"
-                    href="{{ route('dashboard') }}"
-                >
-                    Dashboard
-                </a>
-
-
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                    <a class="dropdown-item" href="{{ route('home') }}">
+                        Home
+                    </a>
 
                     <a class="dropdown-item" href="{{ route('dashboard') }}">
                         Dashboard
