@@ -19,8 +19,7 @@
                     </ul>
                 </div>
             </div>
-
-
+            
             <div class="col-xs-6 col-md-3 ">
                 <div class="bkg-categories-footer">
                     <h6>Note legali</h6>
@@ -64,10 +63,11 @@
                 <ul class="social-icons1">
                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2021 Deliveboo</p>
+                <p class="copyright-text">&copy; 2021 Deliveboo</p>
             </div>
         </div>
     </div>
