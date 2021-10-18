@@ -1,8 +1,8 @@
 <template>
 <div class="container">
   <div class="row">
-    <div class="col-6">
-      <div v-for="tag in tags" :key="tag.id" class="card">
+    <div v-for="tag in tags" :key="tag.id" class="col-6 mt-3">
+      <div @click="restaurantTag" class="card">
         <img
           :src="tag.picture"
           class="card-img-top"
@@ -71,6 +71,11 @@ export default {
       this.tags = response.data.data;
       console.log(this.tags);
     });
+  },
+  methods: {
+    restaurantTag() {
+      alert('ciao');
+    }
   },
 };
 </script>
