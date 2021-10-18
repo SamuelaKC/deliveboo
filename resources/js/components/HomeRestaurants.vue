@@ -1,9 +1,9 @@
 <template>
 <div class="container">
   <Loading v-if="!allRestaurant"/>
-  <TagRestourant :restaurantOfTag="restaurantOfTag" v-else-if="flagTag" />
+ 
   <div v-else class="row justify-content-center home-row">
-     <div v-for="tag in tags" :key="tag.id" class="col-2 mt-3">
+     <div v-for="(tag, index) in tags" :key="`${index} ${tag.id}`" class="col-2 mt-3">
       <div @click="restaurantTag(tag.id)" class="deliveboo-card">
         <img
           :src="tag.picture"
@@ -78,8 +78,8 @@ export default {
   methods: {
     restaurantTag(tagId) {
       axios.get(`/api/tag/${tagId}`).then((response) => {
-        this.restaurantOfTag = response.data.data;
-        this.flagTag = true; 
+        this.users = response.data.data.user;
+        //this.flagTag = true; 
       });
     }
   },
