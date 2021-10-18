@@ -23,6 +23,9 @@
 <body>
     <div id="app">
 
+        <div>
+            @include('layouts.topnav')
+        </div>
         @include('layouts.navbar')
 
 
