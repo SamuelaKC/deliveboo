@@ -64,6 +64,10 @@ export default {
       flagTag:false, 
     };
   },
+  props: {
+    users: Array,
+    allRestaurant: Boolean,
+  },
   created() {
     axios.get("/api/users").then((response) => {
       this.users = response.data.data;

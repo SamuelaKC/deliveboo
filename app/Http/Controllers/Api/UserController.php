@@ -18,10 +18,47 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $tags = Tag::all();
-        //dd($userNow);
-        return UserResource::collection($users, $tags);
+        if(!key_exists('query', $_GET)) {
+            $restaurants = User::all();
+
+        } else {
+
+            $query = $_GET['query'];
+            $searchUsers = User::pluck('name', 'id');
+            $searchTags = Tag::pluck('name', 'id');
+    
+            $dataSearchUsers = [];
+            $dataSearchTags = [];
+            foreach($searchUsers as $key => $user){
+    
+                if(strpos(strtolower($user), strtolower($query)) !== false){
+                    $dataSearchUsers[] = $key;
+                }
+            };
+    
+            foreach ($searchTags as $key => $tag) {
+                
+                if (strpos(strtolower($tag), strtolower($query)) !== false) {
+                    $dataSearchTags[] = $key;
+                }
+            };
+
+            foreach($dataSearchTags as $tagId) {
+                $tag = Tag::find($tagId);
+                foreach ($tag->user as $user) {
+                    if(!in_array($user->pivot->user_id, $dataSearchUsers)){
+
+                        $dataSearchUsers[] = $user->pivot->user_id;
+                    }
+                }
+            }
+    
+            $restaurants = User::whereIn('id', $dataSearchUsers)->get();
+        }
+
+      
+        return UserResource::collection($restaurants);
+        
     }
 
     /**
