@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <Header @viewHomeRestaurant="showHomeRestaurant" />
+    <Header @viewHomeRestaurant="showHomeRestaurant" @search="searchItem"/>
 
-    <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" />
+    <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" :users="users" :allRestaurant="allRestaurant"/>
     <Restaurant
       v-else
       :restaurant="restaurant"
@@ -31,10 +31,17 @@ export default {
         order: false,
         payment: false,
       },
+      users: [],
       restaurant: [],
+      allRestaurant: false,
     };
   },
   created() {
+    axios.get("/api/users").then((response) => {
+      this.users = response.data.data;
+      this.allRestaurant = true;
+      console.log(this.users);
+    });
     this.getLocalStore();
   },
   methods: {
@@ -46,6 +53,12 @@ export default {
         this.saveRestaurant();
       });
       //this.restaurantId = restaurantId;
+    },
+
+    searchItem(string) {
+      axios.get(`/api/users?query=${string}`).then((res) => {
+        this.users = res.data.data;
+      });
     },
 
     viewOrder() {

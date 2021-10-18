@@ -38,6 +38,11 @@ body {
     position: relative;
 }
 
+.cart-icon {
+    color: $link-color-terms;
+    font-size: 20px;
+}
+
 .font-header {
     font-family: $font-secondary;
     font-weight: 700;

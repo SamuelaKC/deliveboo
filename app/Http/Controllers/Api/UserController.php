@@ -42,13 +42,21 @@ class UserController extends Controller
                     $dataSearchTags[] = $key;
                 }
             };
+
+            foreach($dataSearchTags as $tagId) {
+                $tag = Tag::find($tagId);
+                foreach ($tag->user as $user) {
+                    if(!in_array($user->pivot->user_id, $dataSearchUsers)){
+
+                        $dataSearchUsers[] = $user->pivot->user_id;
+                    }
+                }
+            }
     
-            $users = User::whereIn('id', $dataSearchUsers)->get();
-            $tags = Tag::whereIn('id', $dataSearchTags)->get();
-            dump($users);
-            dd($tags);
+            $restaurants = User::whereIn('id', $dataSearchUsers)->get();
         }
 
+      
         return UserResource::collection($restaurants);
         
     }

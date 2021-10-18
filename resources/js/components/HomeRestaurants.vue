@@ -39,15 +39,15 @@ export default {
   name: "HomeRestaurants",
   data() {
     return {
-      users: [],
-      allRestaurant: false,
+      
     };
   },
+  props: {
+    users: Array,
+    allRestaurant: Boolean,
+  },
   created() {
-    axios.get("/api/users").then((response) => {
-      this.users = response.data.data;
-      this.allRestaurant = true;
-    });
+    //console.log(this.users);
   },
 };
 </script>
