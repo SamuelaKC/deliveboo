@@ -18,7 +18,7 @@ class TagController extends Controller
     public function index()
     {
         // Prende tutti i tag e li va a stampare
-        $tags = Tag::whereIn('id', [4, 6, 8, 17])->get();
+        $tags = Tag::whereIn('id', [4, 6, 8, 17, 2, 9])->get();
         return TagResource::collection($tags);
     }
 

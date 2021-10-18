@@ -1,8 +1,10 @@
 <template>
 <div class="container">
-  <div class="row">
-    <div v-for="tag in tags" :key="tag.id" class="col-2 mt-3">
-      <div @click="restaurantTag" class="card">
+  <Loading v-if="!allRestaurant"/>
+  <TagRestourant :restaurantOfTag="restaurantOfTag" v-else-if="flagTag" />
+  <div v-else class="row justify-content-center home-row">
+     <div v-for="tag in tags" :key="tag.id" class="col-2 mt-3">
+      <div @click="restaurantTag(tag.id)" class="deliveboo-card">
         <img
           :src="tag.picture"
           class="card-img-top"
@@ -14,12 +16,7 @@
       </div>
 
     </div> 
-  </div>
-
-  <div class="row justify-content-center home-row">
-    <Loading v-if="!allRestaurant"/>
     <div
-      v-else
       v-for="user in users"
       :key="user.id"
       class="col-6 col-md-4 col-lg-3 mb-4"
@@ -51,14 +48,20 @@
 
 <script>
 import Loading from './Loading.vue';
+import TagRestourant from './TagRestourant.vue';
 export default {
-  components: { Loading },
+  components: { 
+    Loading,
+    TagRestourant
+  },
   name: "HomeRestaurants",
   data() {
     return {
       users: [],
       allRestaurant: false,
       tags: [],
+      restaurantOfTag:[],
+      flagTag:false, 
     };
   },
   created() {
@@ -73,8 +76,11 @@ export default {
     });
   },
   methods: {
-    restaurantTag() {
-      alert('ciao');
+    restaurantTag(tagId) {
+      axios.get(`/api/tag/${tagId}`).then((response) => {
+        this.restaurantOfTag = response.data.data;
+        this.flagTag = true; 
+      });
     }
   },
 };
