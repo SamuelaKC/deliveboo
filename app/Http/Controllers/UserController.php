@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -66,11 +67,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User $user, Tag $tag)
     {
         $userId = Auth::id();
+        $tags = Tag::all();
             if ($userId === $user->id) {
-            return view('auth.edit', compact('user'));
+            return view('auth.edit', compact('user', 'tags'));
         } else {
             return view('error.index');
         }
@@ -98,6 +100,7 @@ class UserController extends Controller
         $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
         $user->picture = $imgPath;
         $user->update($data);
+        $user->tag()->sync($data['tags']);
 
         return redirect()->route('dashboard');
     }

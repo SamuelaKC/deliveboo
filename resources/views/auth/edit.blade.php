@@ -74,7 +74,7 @@
                                     autocomplete="phone_number"
                                     autofocus
                                 />
-
+                                
                                 @error('phone_number')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -131,6 +131,21 @@
                                 @enderror
                             </div>
                         </div>
+                        <!-- Scelta tag: -->
+                        <div>
+                            <label
+                                for="tag[]"
+                                class="text-md-right"
+                            >Scegli i tui tag:</label>
+                            <div class="col">
+                               
+                                @foreach($tags as $tag)
+                                    <input name="tags[]" id="tag" value="{{ $tag->id }}" type="checkbox"> {{ $tag->name }} <br>
+                                    
+                                @endforeach
+                                
+                            </div>
+                        </div>
 
                         <div class="">
                             <div class="col">
@@ -164,6 +179,7 @@
                                     >
                                         Modifica
                                     </button>
+                                    
                                 </div>
                             </div>
                         </div>
