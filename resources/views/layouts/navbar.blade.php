@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {{-- <nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
+=======
+<nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
+>>>>>>> navbar_search
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img style="width: 200px" src="/image/logo/deliveboo.svg" alt="">
@@ -23,9 +27,22 @@
                 <input style="padding: 20px" type="search" class="form-control rounded" placeholder="Cerca qui i tuoi ristoranti preferiti 🍕 🍔 🍣 " aria-label="Search"
                 aria-describedby="search-addon" />
                 <span style="padding-left: 20px;">
+<<<<<<< HEAD
                     <button type="button" class="btn btn-bluegreen">CERCA</button>
                 </span>
             </div> 
+=======
+                        <form action="/search" method="get">
+                            <div class="form-grup">
+                             <input type="search" class="search" class="form-control">
+                             <span class="form-group-btn">
+                                 <button type="submit" class="btn btn-primary">CERCA</button>
+                             </span>
+                            </div>
+                        </form>
+                </span>
+            </div>
+>>>>>>> navbar_search
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
@@ -72,6 +89,13 @@
                         >
                             Dashboard
                         </a>
+
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                Dashboard
+                            </a>
 
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

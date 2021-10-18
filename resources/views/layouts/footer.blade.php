@@ -19,8 +19,7 @@
                     </ul>
                 </div>
             </div>
-
-
+            
             <div class="col-xs-6 col-md-3 ">
                 <div class="bkg-categories-footer">
                     <h6>Note legali</h6>
