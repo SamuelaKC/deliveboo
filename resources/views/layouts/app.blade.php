@@ -20,6 +20,7 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+        <script src="path/to/chartjs/dist/chart.js"></script>
     </head>
     <body>
         <div id="app">
