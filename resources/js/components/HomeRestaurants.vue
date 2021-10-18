@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <div class="row">
-    <div v-for="tag in tags" :key="tag.id" class="col-6 mt-3">
+    <div v-for="tag in tags" :key="tag.id" class="col-2 mt-3">
       <div @click="restaurantTag" class="card">
         <img
           :src="tag.picture"
