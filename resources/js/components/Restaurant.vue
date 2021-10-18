@@ -43,7 +43,6 @@
         v-if="showOrder"
         :cart="cart"
         :totalPrice="totalPrice"
-        :showPayment="showPayment"
         @viewPayment="viewPayment"
       />
 

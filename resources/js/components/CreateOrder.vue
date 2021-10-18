@@ -1,9 +1,10 @@
 <template>
   <div class="col-lg-8">
     <div class="form-content">
-      <Braintree v-if="showPayment" :newOrderId="newOrderId" />
+      <Braintree v-if="showPayment" :newOrderId="newOrderId" @successPayment="successPayment"/>
+      <Success v-if="showSuccess" :messageSuccess="messageSuccess"/>
 
-      <form v-else @submit.prevent="sendOrder">
+      <form v-if="showOrder" @submit.prevent="sendOrder">
         <h1 class="font-header">Dettagli dell'ordine</h1>
         <!-- nome e cognome -->
         <div class="form-group">
@@ -72,11 +73,13 @@
 
 <script>
 import Braintree from "./Braintree.vue";
+import Success from './Success.vue';
 
 export default {
   name: "CreateOrder",
   components: {
     Braintree,
+    Success,
   },
   data() {
     return {
@@ -87,6 +90,10 @@ export default {
         address: "",
         phone: "",
       },
+      showOrder: true,
+      showSuccess: false,
+      showPayment: false,
+      messageSuccess: '',
     };
   },
   computed: {
@@ -116,7 +123,6 @@ export default {
   props: {
     cart: Array,
     totalPrice: Number,
-    showPayment: Boolean,
   },
   // created() {
   //   axios.get("/api/payment/generate").then((response) => {
@@ -137,6 +143,12 @@ export default {
         address: "",
         phone: "",
       }
+    },
+
+    successPayment(message) {
+      this.messageSuccess = message;
+      this.showPayment = false;
+      this.showSuccess = true;
     },
     // Ora mi serve la chiamata axios per salvare i dati nello store
     sendOrder() {
@@ -172,7 +184,8 @@ export default {
           .post("api/orders", this.apiOrder)
           .then((response) => {
             this.newOrderId = response.data.order;
-            this.$emit("viewPayment");
+            this.showPayment = true;
+            this.showOrder = false;
           })
           .catch((e) => {
             console.error(e);

@@ -91,8 +91,8 @@ export default {
         let paymentData = this.getPaymentData(payload.nonce);
         console.log('payment', paymentData);
         axios.post('/api/payment/make_payment', paymentData).then((response) => {
-          let message = response.message
-          alert(message)
+          let message = response.data.message
+          this.$emit('successPayment', message);
           localStorage.clear();
         })
         this.paymentPayload = payload;
