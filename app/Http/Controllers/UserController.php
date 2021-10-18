@@ -85,7 +85,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user, Tag $tag)
+    public function update(Request $request, User $user)
     {
         $request->validate([
             'name' => 'required|max:255',
@@ -99,9 +99,8 @@ class UserController extends Controller
         $data = $request->all();
         $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
         $user->picture = $imgPath;
-        $tag->tag_id = $data['tag'];
-        $tag->update($data); 
         $user->update($data);
+        $user->tag()->sync($data['tags']);
 
         return redirect()->route('dashboard');
     }

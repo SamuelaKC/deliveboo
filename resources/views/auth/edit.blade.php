@@ -134,13 +134,13 @@
                         <!-- Scelta tag: -->
                         <div>
                             <label
-                                for="tag"
+                                for="tag[]"
                                 class="text-md-right"
                             >Scegli i tui tag:</label>
                             <div class="col">
                                
                                 @foreach($tags as $tag)
-                                    <input name="tag" id="tag" type="checkbox"> {{ $tag->name }} <br>
+                                    <input name="tags[]" id="tag" value="{{ $tag->id }}" type="checkbox"> {{ $tag->name }} <br>
                                     
                                 @endforeach
                                 
