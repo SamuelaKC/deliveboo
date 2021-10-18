@@ -18,23 +18,39 @@ class UserController extends Controller
      */
     public function index()
     {
-        $query = $_GET['query'];
-        $users = User::pluck('name');
-        // $tags = Tag::pluck('name');
-        dd($users);
-        $data = [];
-        // foreach($users as $user){
-        //     if(strpos(strtolower($user), strtolower($query))){
-        //         $data[] = $user;
-        //     }
-        // };
+        if(!key_exists('query', $_GET)) {
+            $restaurants = User::all();
 
-        dd($data);
-        // return response()->json($query);
-        // $users = User::all();
-        // $tags = Tag::all();
-        //dd($userNow);
-        // return UserResource::collection($users, $tags);
+        } else {
+
+            $query = $_GET['query'];
+            $searchUsers = User::pluck('name', 'id');
+            $searchTags = Tag::pluck('name', 'id');
+    
+            $dataSearchUsers = [];
+            $dataSearchTags = [];
+            foreach($searchUsers as $key => $user){
+    
+                if(strpos(strtolower($user), strtolower($query)) !== false){
+                    $dataSearchUsers[] = $key;
+                }
+            };
+    
+            foreach ($searchTags as $key => $tag) {
+                
+                if (strpos(strtolower($tag), strtolower($query)) !== false) {
+                    $dataSearchTags[] = $key;
+                }
+            };
+    
+            $users = User::whereIn('id', $dataSearchUsers)->get();
+            $tags = Tag::whereIn('id', $dataSearchTags)->get();
+            dump($users);
+            dd($tags);
+        }
+
+        return UserResource::collection($restaurants);
+        
     }
 
     /**
