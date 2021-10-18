@@ -2,7 +2,7 @@
   <div class="">
     <Header @viewHomeRestaurant="showHomeRestaurant" @search="searchItem"/>
 
-    <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" :users="users" :allRestaurant="allRestaurant"/>
+    <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" :users="users" :allRestaurant="allRestaurant" @restaurantTag="restaurantTag"/>
     <Restaurant
       v-else
       :restaurant="restaurant"
@@ -119,6 +119,13 @@ export default {
         }
       }
     },
+
+    restaurantTag(tagId) {
+      axios.get(`/api/tag/${tagId}`).then((response) => {
+        this.users = response.data.data.user;
+        //this.flagTag = true; 
+      });
+    }
   },
 };
 </script>

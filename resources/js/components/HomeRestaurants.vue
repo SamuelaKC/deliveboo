@@ -4,7 +4,7 @@
  
   <div v-else class="row justify-content-center home-row">
      <div v-for="(tag, index) in tags" :key="`${index} ${tag.id}`" class="col-2 mt-3">
-      <div @click="restaurantTag(tag.id)" class="deliveboo-card">
+      <div @click="$emit('restaurantTag', tag.id)" class="deliveboo-card">
         <img
           :src="tag.picture"
           class="card-img-top"
@@ -48,17 +48,13 @@
 
 <script>
 import Loading from './Loading.vue';
-import TagRestourant from './TagRestourant.vue';
 export default {
   components: { 
     Loading,
-    TagRestourant
   },
   name: "HomeRestaurants",
   data() {
     return {
-      users: [],
-      allRestaurant: false,
       tags: [],
       restaurantOfTag:[],
       flagTag:false, 
@@ -69,10 +65,6 @@ export default {
     allRestaurant: Boolean,
   },
   created() {
-    axios.get("/api/users").then((response) => {
-      this.users = response.data.data;
-      this.allRestaurant = true;
-    });
     // Chiamata axios per i tag:
     axios.get("/api/tag").then((response) => {
       this.tags = response.data.data;
@@ -80,12 +72,6 @@ export default {
     });
   },
   methods: {
-    restaurantTag(tagId) {
-      axios.get(`/api/tag/${tagId}`).then((response) => {
-        this.users = response.data.data.user;
-        //this.flagTag = true; 
-      });
-    }
   },
 }
 </script>

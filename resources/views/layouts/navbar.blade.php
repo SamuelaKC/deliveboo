@@ -1,4 +1,4 @@
-<nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
+{{-- <nav class="jumbotron navbar navbar-expand-md navbar-light bg-navbar shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img style="width: 200px" src="/image/logo/deliveboo.svg" alt="">
@@ -93,4 +93,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> --}}

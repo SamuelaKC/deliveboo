@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import Advisor from "./Advisor.vue";
+
 export default {
-  components: { Advisor },
+
   name: "Ingredient",
   mounted() {
     this.ingredients.forEach((ingredient) => {
