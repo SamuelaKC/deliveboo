@@ -60,12 +60,18 @@ export default {
     return {
       users: [],
       allRestaurant: false,
+      tags: [],
     };
   },
   created() {
     axios.get("/api/users").then((response) => {
       this.users = response.data.data;
       this.allRestaurant = true;
+    });
+    // Chiamata axios per i tag:
+    axios.get("/api/tag").then((response) => {
+      this.tags = response.data.data;
+      console.log(this.tags);
     });
   },
 };
