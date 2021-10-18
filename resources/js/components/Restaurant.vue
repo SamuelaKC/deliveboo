@@ -41,7 +41,7 @@
         :cart="cart"
         :totalPrice="totalPrice"
         :showPayment="showPayment"
-        @newOrder="newOrder"
+       
         @viewPayment="viewPayment"
       />
 
@@ -109,7 +109,7 @@ export default {
     //   console.log(response.data);
     //   this.getLocalStore();
     // });
-    this.getLocalStore();ear();
+    this.getLocalStore();
   },
 
   computed: {

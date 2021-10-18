@@ -78,6 +78,7 @@ export default {
 
     dropinRequestPaymentMethod() {
       this.dropinInstance.requestPaymentMethod((requestError, payload) => {
+
         if (requestError) {
           this.errorMessage =
             "There was an error setting up the client instance. Message: " +
@@ -86,13 +87,14 @@ export default {
           return;
         }
 
-        let paymentData = this.getPaymentData(payload.once)
-
+        console.log('payload', payload.nonce);
+        let paymentData = this.getPaymentData(payload.nonce);
+        console.log('payment', paymentData);
         axios.post('/api/payment/make_payment', paymentData).then((response) => {
           let message = response.message
           alert(message)
+          localStorage.clear();
         })
-        console.log(payload.nonce);
         this.paymentPayload = payload;
       });
     },
@@ -100,7 +102,7 @@ export default {
     getPaymentData(token) {
       return {
         token: token,
-        plates: this.newOrderId,
+        order: this.newOrderId,
       }
     }
   },

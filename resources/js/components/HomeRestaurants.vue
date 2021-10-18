@@ -2,7 +2,9 @@
 <div class="container">
 
   <div class="row justify-content-center home-row">
+    <Loading v-if="!allRestaurant"/>
     <div
+      v-else
       v-for="user in users"
       :key="user.id"
       class="col-6 col-md-4 col-lg-3 mb-4"
@@ -31,17 +33,20 @@
 </template>
 
 <script>
+import Loading from './Loading.vue';
 export default {
+  components: { Loading },
   name: "HomeRestaurants",
   data() {
     return {
       users: [],
+      allRestaurant: false,
     };
   },
   created() {
     axios.get("/api/users").then((response) => {
       this.users = response.data.data;
-      console.log(this.users);
+      this.allRestaurant = true;
     });
   },
 };

@@ -7,8 +7,9 @@
         <h1 class="font-header">Dettagli dell'ordine</h1>
         <!-- nome e cognome -->
         <div class="form-group">
-          <label for="name_surname"></label>
           <input
+            :class="validation.name"
+            @focus="noError"
             type="text"
             placeholder="Nome e Cognome"
             class="form-control"
@@ -19,8 +20,9 @@
         </div>
         <!-- address(via di casa) -->
         <div class="form-group">
-          <label for="address"></label>
           <input
+            :class="validation.address"
+            @focus="noError"
             type="text"
             placeholder="Indirizzo, numero civico, Cap Paese Provincia"
             class="form-control"
@@ -31,8 +33,9 @@
         </div>
         <!-- numero del telefono -->
         <div class="form-group">
-          <label for="phone_number"></label>
           <input
+            :class="validation.phone"
+            @focus="noError"
             type="tel"
             placeholder="Numero di telefono (+39...)"
             class="form-control"
@@ -43,7 +46,6 @@
         </div>
         <!-- dettagli -->
         <div class="form-group">
-          <label for="details"></label>
           <input
             type="text"
             placeholder="Dettagli dell'ordine"
@@ -80,6 +82,11 @@ export default {
     return {
       order: {},
       newOrderId: null,
+      validation: {
+        name: "",
+        address: "",
+        phone: "",
+      },
     };
   },
   computed: {
@@ -124,18 +131,53 @@ export default {
 
   // },
   methods: {
+    noError(){
+      this.validation = {
+        name: "",
+        address: "",
+        phone: "",
+      }
+    },
     // Ora mi serve la chiamata axios per salvare i dati nello store
     sendOrder() {
-      console.log("invio");
-      axios
-        .post("api/orders", this.apiOrder)
-        .then((response) => {
-          this.newOrderId = response.data.order;
-          this.$emit("viewPayment");
-        })
-        .catch((e) => {
-          console.error(e);
-        });
+      console.log(typeof this.order.name_surname);
+      if (
+        typeof this.order.name_surname === "undefined" ||
+        this.order.name_surname.trim().length === 0 ||
+        typeof this.order.address === "undefined" ||
+        this.order.address.trim().length === 0 ||
+        typeof this.order.phone_number === "undefined" ||
+        this.order.phone_number.trim().length === 0
+      ) {
+        if (
+          typeof this.order.name_surname === "undefined" ||
+          this.order.name_surname.trim().length === 0
+        ) {
+          this.validation.name = "is-invalid";
+        }
+        if (
+          typeof this.order.address === "undefined" ||
+          this.order.address.trim().length === 0
+        ) {
+          this.validation.address = "is-invalid";
+        }
+        if (
+          typeof this.order.phone_number === "undefined" ||
+          this.order.phone_number.trim().length === 0
+        ) {
+          this.validation.phone = "is-invalid";
+        }
+      } else {
+        axios
+          .post("api/orders", this.apiOrder)
+          .then((response) => {
+            this.newOrderId = response.data.order;
+            this.$emit("viewPayment");
+          })
+          .catch((e) => {
+            console.error(e);
+          });
+      }
     },
   },
 };

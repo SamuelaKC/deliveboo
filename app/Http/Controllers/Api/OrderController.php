@@ -39,7 +39,9 @@ class OrderController extends Controller
 
         $data = $request->all();
         $newOrder = new Order();
-        $newOrder->details = $data['details']; 
+        if(key_exists('details', $data)) {
+            $newOrder->details = $data['details']; 
+        }
         $newOrder->name_surname = $data['name_surname'];
         $newOrder->address = $data['address'];
         $newOrder->phone_number = $data['phone_number'];
