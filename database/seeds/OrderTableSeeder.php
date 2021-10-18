@@ -149,9 +149,35 @@ class OrderTableSeeder extends Seeder
                 359,
                 367,
             ],
+                        [
+                172,
+                174,
+                181,
+                182,
+            ],
+            [
+                172,
+                174,
+                181,
+                182,
+            ],
+            [
+                172,
+                174,
+                181,
+                182,
+            ],
+            [
+                172,
+                174,
+                181,
+                182,
+            ],
+
+
         ];
 
-        for ($x = 0; $x < 22; $x++) {
+        for ($x = 0; $x < 26; $x++) {
             $newOrder = new Order();
             $newOrder->name_surname = $faker->name();
             $randomAddressKey = array_rand($addressOrders, 1);
@@ -159,6 +185,7 @@ class OrderTableSeeder extends Seeder
             $newOrder->address = $randomAddress;
             $newOrder->phone_number = $faker->e164PhoneNumber();
             $newOrder->total_price = $faker->randomFloat(2, 15, 50); 
+            $newOrder->created_at = $faker->dateTimeThisYear('+2 months');
             $newOrder->save();
 
 
