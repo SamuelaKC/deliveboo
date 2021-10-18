@@ -2,7 +2,10 @@
   <div class="background-opacity row">
     <div class="deliveboo-card col-4">
       <div class="ingredient-box">
-        <button @click="$emit('closeModal')" class="btn btn-danger btn-sm button-close">
+        <button
+          @click="$emit('closeModal')"
+          class="btn btn-danger btn-sm button-close"
+        >
           <i class="fa fa-times"></i>
         </button>
         <div class="img-container">
@@ -39,18 +42,36 @@
             <i class="fa fa-minus-circle"></i>
           </span>
         </div>
-        <button v-if="!showAdvisor" @click="$emit('sendIn', plateId)" class="btn btn-bluegreen">
+        <button
+          v-if="!showAdvisor"
+          @click="$emit('sendIn', plateId)"
+          class="btn btn-bluegreen"
+        >
           Aggiungi al Carrello
         </button>
 
-        <Advisor v-if="showAdvisor" @closeAdvisor="closeAdvisor"/>
+        <div v-if="showAdvisor" class="ingredient-box">
+          <div class="quantity-box">Se continui svuoterai il carrello!!!</div>
+          <div>
+            <button @click="$emit('closeAdvisor')" class="btn btn-danger">
+              Chiudi
+            </button>
+            <button
+              @click="$emit('removeAndSend', plateId)"
+              class="btn btn-bluegreen"
+            >
+              Continua
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Advisor from './Advisor.vue';
+import Advisor from "./Advisor.vue";
 export default {
   components: { Advisor },
   name: "Ingredient",
@@ -65,6 +86,14 @@ export default {
     quantityOfPlate: Number,
     plateImg: String,
     showAdvisor: Boolean,
+  },
+
+  methods: {
+    closeAdvisor() {
+      this.$emit("closeAdvisor");
+    },
+
+    
   },
 };
 </script>

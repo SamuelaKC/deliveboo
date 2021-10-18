@@ -12,6 +12,8 @@
       @minusQuantity="removeQuantity"
       @flagAddToCart="addToCart"
       @closeModal="closeIngredient"
+      @closeAdvisor="closeAdvisor"
+      @removeAndSend="removeAndSend"
     />
     <div class="row">
       <div class="col-12 mb-4">
@@ -42,7 +44,6 @@
         :cart="cart"
         :totalPrice="totalPrice"
         :showPayment="showPayment"
-       
         @viewPayment="viewPayment"
       />
 
@@ -94,7 +95,7 @@ export default {
       quantityOfPlate: 1,
       plateImg: "",
       nextToOrder: true,
-      showAdvison: false,
+      showAdvisor: false,
     };
   },
 
@@ -305,7 +306,6 @@ export default {
 
     verificationRestaurant(plateId) {
       if (this.cart.length > 0) {
-
         let plateInCartId = this.cart[0].id;
         axios.get(`/api/plates/${plateInCartId}`).then((res) => {
           let restaurantId = res.data;
@@ -338,6 +338,15 @@ export default {
 
     viewPayment() {
       this.$emit("viewPayment");
+    },
+
+    closeAdvisor() {
+      this.showAdvisor = false;
+    },
+
+    removeAndSend(plateId) {
+      this.removeAllToCart();
+      this.sendInCart(plateId);
     },
   },
 };
