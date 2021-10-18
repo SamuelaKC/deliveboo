@@ -1,5 +1,22 @@
 <template>
 <div class="container">
+   <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://www.insidemarketing.it/wp-content/uploads/2016/09/foodporn-tutto-quello-che-c%C3%A8-da-sapere-sulle-foto-di-cibo-620x346.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Comfort Food</h5>
+        <p class="card-text">
+         i grandi classici che riscaldano il cuore
+        </p>
+      </div>
+    </div>
+  </div> 
+</div>
 
   <div class="row justify-content-center home-row">
     <Loading v-if="!allRestaurant"/>
@@ -29,7 +46,9 @@
       </div>
     </div>
   </div>
+ 
 </div>
+
 </template>
 
 <script>
