@@ -1,25 +1,25 @@
 .carrello {
     position: -webkit-sticky; /* Safari */
-    position:sticky; 
-    top:24px;
+    position: sticky;
+    top: 24px;
 }
 .form-content {
-    background-color: white; 
+    background-color: $bg-color-all;
     border-radius: 5px;
-    padding:30px; 
-    margin-left:0; 
+    padding: 30px;
+    margin-left: 0;
     h2 {
-        margin-top:20px;
+        margin-top: 20px;
     }
     h4 {
         font-weight: bold;
     }
     h6 {
-        font-size:15px;
+        font-size: 15px;
         font-weight: bold;
     }
     .items {
-        display:flex;
+        display: flex;
         justify-content: space-between;
     }
     .separetor {
@@ -33,41 +33,6 @@
     }
 }
 
-// Parte del pagamento solo view
-.button {
-    cursor: pointer;
-    font-weight: 500;
-    left: 3px;
-    line-height: inherit;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    display: inline-block;
-  }
-  
-  .button--small {
-    padding: 10px 20px;
-    font-size: 0.875rem;
-  }
-  
-  .button--green {
-    outline: none;
-    background-color: #64d18a;
-    border-color: #64d18a;
-    color: white;
-    transition: all 200ms ease;
-  }
-
-  .opacity {
-      opacity: .4;
-  }
-  
-  .button--green:hover {
-    background-color: #8bdda8;
-    color: white;
-  }
+.opacity {
+    opacity: 0.4;
+}
