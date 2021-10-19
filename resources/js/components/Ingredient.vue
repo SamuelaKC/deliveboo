@@ -1,6 +1,6 @@
 <template>
   <div class="background-opacity row">
-    <div class="deliveboo-card col-4">
+    <div class="carta-ingredienti col-4">
       <div class="ingredient-box">
         <button
           @click="$emit('closeModal')"
