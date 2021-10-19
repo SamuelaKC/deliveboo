@@ -63,7 +63,6 @@ export default {
         apiString = `/api/users?query=${string}`
       }
 
-      console.log(apiString)
       axios.get(apiString).then((res) => {
         this.users = res.data.data;
         this.show.home = true;

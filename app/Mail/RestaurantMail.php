@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Order;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -12,14 +13,15 @@ class RestaurantMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $order;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(Order $order)
     {
-        $this->user = $user;
+       $this->order = $order;
     }
 
     /**
@@ -29,7 +31,8 @@ class RestaurantMail extends Mailable
      */
     public function build()
     {
-        return $this->view('layouts.mail');
+        $order = $this->order;
+        return $this->view('mail', compact('order'));
 
     }
 }

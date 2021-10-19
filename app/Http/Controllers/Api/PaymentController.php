@@ -62,7 +62,7 @@ class PaymentController extends Controller
             $order->total_price = $totalPrice;
             $order->save();
 
-            //Mail::to('prova@io.com')->send(new RestaurantMail($userToSend));
+            Mail::to($userToSend->email)->send(new RestaurantMail($order));
 
             return response()->json($data);
         } else {
