@@ -7,6 +7,7 @@
       :plateImg="plateImg"
       :quantityOfPlate="quantityOfPlate"
       :showAdvisor="showAdvisor"
+      :showIngredient="showIngredient"
       @sendIn="verificationRestaurant"
       @plusQuantity="addQuantity"
       @minusQuantity="removeQuantity"
@@ -229,6 +230,7 @@ export default {
         this.plateId = plateData.id;
       });
       this.showIngredient = true;
+
     },
     addToCart(index) {
       this.ingredients[index].value = !this.ingredients[index].value;
