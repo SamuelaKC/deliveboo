@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-md-6">
+  <div class="interline col-12 col-md-6">
     <div
       class="plate"
       @click="$emit('viewIngredient', { id: plate.id, img: plate.picture })"
@@ -7,8 +7,8 @@
     <div v-if="plate.available" class="row">
         <div class="col-7">
             <div>{{ plate.name }}</div>
-            <div>{{ plate.description }}</div>
-
+            <div class="plate-description">{{ plate.description }}</div>
+            <div class="plate-description">{{ plate.price }}€</div>
         </div>
         <div class="col-5">
             <img :src="plate.picture" alt="">
