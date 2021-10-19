@@ -2,6 +2,19 @@
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 24px;
+    .plus-icon {
+        color: #00ccbc;
+        cursor: pointer;
+        font-size:18px;
+    }
+    .name-plate {
+     width:130px;
+        div {
+            color:gray;
+            width: 60%;
+            font-size:12px;
+        }
+    }
 }
 .form-content {
     background-color: $bg-color-all;
