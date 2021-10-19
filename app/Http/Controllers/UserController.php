@@ -78,6 +78,16 @@ class UserController extends Controller
         }
     }
 
+    public function editImg(User $user)
+    {
+        $userId = Auth::id();
+        if ($userId === $user->id) {
+            return view('auth.editImg', compact('user'));
+        } else {
+            return view('error.index');
+        }
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -97,10 +107,24 @@ class UserController extends Controller
         ]);
 
         $data = $request->all();
-        $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
-        $user->picture = $imgPath;
+        // $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
+        // $user->picture = $imgPath;
         $user->update($data);
         $user->tag()->sync($data['tags']);
+
+        return redirect()->route('dashboard');
+    }
+
+    public function updateImg(Request $request, User $user)
+    {
+        $request->validate([
+            'pictureFile' => 'required|image',
+        ]);
+
+        $data = $request->all();
+        $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
+        $user->picture = $imgPath;
+        $user->save();
 
         return redirect()->route('dashboard');
     }

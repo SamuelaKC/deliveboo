@@ -6,7 +6,10 @@
         </div>
 
         <div class="container">
+            <a href="{{ route('users.editimg', $user) }}">
 
+                <button class="btn btn-sm btn-secondary">Modifica</button>
+            </a>
 
             <h1 class="font-header">{{ $user->name }}</h1>
             <h4>Questa è la tua Dashboard per la gestione della tua attività</h4>
