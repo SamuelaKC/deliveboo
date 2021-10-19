@@ -27,7 +27,7 @@
               Indirizzo: {{ restaurant.address }}
             </div>
             <div class="restaurant-number">
-              Indirizzo: {{ restaurant.phone_number }}
+              Numero di telefono: {{ restaurant.phone_number }}
             </div>
           </div>
           <div class="restaurant-img col-4">
