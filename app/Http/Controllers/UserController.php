@@ -97,8 +97,8 @@ class UserController extends Controller
         ]);
 
         $data = $request->all();
-        $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
-        $user->picture = $imgPath;
+        // $imgPath = Storage::put('restaurants-img', $data['pictureFile']);
+        // $user->picture = $imgPath;
         $user->update($data);
         $user->tag()->sync($data['tags']);
 
