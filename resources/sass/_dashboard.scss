@@ -4,17 +4,38 @@
     &-img {
         height: 200px;
         width: 100%;
+        position: relative;
+
+        
         
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    }
 
+        .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .3);
+            display: none;
+
+            button {
+                color: $bg-color-all;
+                font-size: 16px;
+            }
+        }
+    }
 
     i {
         font-size: 20px;
         padding: 0 10px 0 0;
     }
+}
+
+.dashboard-img:hover .hover-img {
+    display: block;
 }
