@@ -54,24 +54,14 @@ export default {
     searchItem(string) {
       axios.get(`/api/users?query=${string}`).then((res) => {
         this.users = res.data.data;
+        this.show.home = true;
+        this.saveShow();
       });
-    },
-
-    viewOrder() {
-      this.show.order = true;
-      this.saveShow();
-    },
-
-    viewPayment() {
-      this.show.payment = true;
-      this.saveShow();
     },
 
     showHomeRestaurant() {
       this.show = {
         home: true,
-        order: false,
-        payment: false,
       };
       this.saveShow();
     },

@@ -9,7 +9,7 @@
         class="col-6 col-md-4 col-lg-2 mt-3 mb-3"
       >
         <div @click="$emit('restaurantTag', tag.id)" class="deliveboo-card">
-          <div class="deliveboo-card-img">
+          <div class="deliveboo-card-img deliveboo-card-img-tag">
             <img :src="tag.picture" class="card-img-top" :alt="tag.name" />
           </div>
           <div class="deliveboo-card-body">
@@ -24,7 +24,7 @@
         @click="$emit('viewRestaurant', user.id)"
       >
         <div class="deliveboo-card">
-          <div class="deliveboo-card-img">
+          <div class="deliveboo-card-img deliveboo-card-img-restaurant">
             <img :src="user.picture" :alt="`Immagine profilo ${user.name}`" />
           </div>
           <div class="deliveboo-card-body">
