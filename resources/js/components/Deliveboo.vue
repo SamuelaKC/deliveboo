@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="py-4">
     <Header @viewHomeRestaurant="showHomeRestaurant" @search="searchItem"/>
 
     <HomeRestaurants @viewRestaurant="showRestaurant" v-if="show.home" :users="users" :allRestaurant="allRestaurant" @restaurantTag="restaurantTag"/>

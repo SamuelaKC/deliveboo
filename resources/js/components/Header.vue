@@ -4,7 +4,7 @@
         <div class="row bg-navbar align-items-center">
             
             <div class="col-3" @click="$emit('viewHomeRestaurant')">
-                <img style="width: 200px" src="/image/logo/deliveboo.svg" alt="" />
+                <img style="width: 200px" src="storage/image/logo/deliveboo.svg" alt="logo" />
             </div>
 
             <div class="input-group col-8">

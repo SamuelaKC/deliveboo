@@ -11,7 +11,7 @@
             <div class="plate-description">{{ plate.price }}€</div>
         </div>
         <div class="col-5">
-            <img :src="plate.picture" alt="">
+            <img :src="`storage/${plate.picture}`" alt="">
         </div>
 
     </div>

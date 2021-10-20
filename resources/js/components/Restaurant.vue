@@ -33,7 +33,7 @@
           </div>
           <div class="restaurant-img col-4">
             <img
-              :src="restaurant.picture"
+              :src="`storage/${restaurant.picture}`"
               :alt="`Immagine profilo ${restaurant.name}`"
             />
           </div>

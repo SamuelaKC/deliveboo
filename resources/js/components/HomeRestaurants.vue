@@ -10,7 +10,7 @@
       >
         <div @click="$emit('restaurantTag', tag.id)" class="deliveboo-card">
           <div class="deliveboo-card-img deliveboo-card-img-tag">
-            <img :src="tag.picture" class="card-img-top" :alt="tag.name" />
+            <img :src="`storage/${tag.picture}`" class="card-img-top" :alt="tag.name" />
           </div>
           <div class="deliveboo-card-body">
             <h5 class="deliveboo-card-title">{{ tag.name }}</h5>
@@ -25,7 +25,7 @@
       >
         <div class="deliveboo-card">
           <div class="deliveboo-card-img deliveboo-card-img-restaurant">
-            <img :src="user.picture" :alt="`Immagine profilo ${user.name}`" />
+            <img :src="`storage/${user.picture}`" :alt="`Immagine profilo ${user.name}`" />
           </div>
           <div class="deliveboo-card-body">
             <h5 class="deliveboo-card-title">{{ user.name }}</h5>

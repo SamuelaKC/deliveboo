@@ -9,7 +9,7 @@
           <i class="fa fa-times"></i>
         </button>
         <div v-if="plateImg.length > 0" class="img-container">
-          <img :src="plateImg" alt="foto piatto" />
+          <img :src="`storage/${plateImg}`" alt="foto piatto" />
           <!--ToDO da sistemare l'src-->
         </div>
 
