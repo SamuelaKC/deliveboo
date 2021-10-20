@@ -98,6 +98,15 @@ class PlateController extends Controller
 
     }
 
+    public function editImg(Plate $plate) {
+        $userId = Auth::id();
+        if ($userId === $plate->user_id) {
+            return view('plates.editImg', compact('plate'));
+        } else {
+            return view('error.index');
+        }
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -109,6 +118,16 @@ class PlateController extends Controller
     {
         $data=$request->all();
         $this->fillAndSavePlate($plate, $data);
+        return redirect()->route('plates.index', $plate);
+        // return view('plates.show', compact('plate'));
+    }
+
+    public function updateImg(Request $request, Plate $plate)
+    {
+        $data = $request->all();
+        $imgPath = Storage::put('plates-img', $data['picture']);
+        $plate->picture = $imgPath; 
+        $plate->save();
         return redirect()->route('plates.index', $plate);
         // return view('plates.show', compact('plate'));
     }
