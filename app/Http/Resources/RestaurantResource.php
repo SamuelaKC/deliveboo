@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Plate;
+use App\Category;
 
 class RestaurantResource extends JsonResource
 {
@@ -14,6 +16,17 @@ class RestaurantResource extends JsonResource
      */
     public function toArray($request)
     {
+    
+        $plates = Plate::where('user_id', $this->id)->get()->groupBy('category_id');
+        $plateCategory = [];
+        foreach ($plates as $categoryId => $plate) {
+            $category = Category::find($categoryId);
+            $plateCategory[] = [
+                'category_name' => $category->name,
+                'plates' => $plate,
+            ];
+        }
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -22,7 +35,7 @@ class RestaurantResource extends JsonResource
             'description' => $this->description,
             'picture' => $this->picture,
             'tag' => $this->tag,
-            'plates' => PlateResource::collection($this->plate),
+            'category_plate' => $plateCategory,
 
         ];
     }

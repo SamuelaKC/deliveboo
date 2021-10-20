@@ -2883,6 +2883,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -76136,7 +76152,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {},
+    { staticClass: "py-4" },
     [
       _c("Header", {
         on: {
@@ -76153,10 +76169,7 @@ var render = function() {
               restaurantTag: _vm.restaurantTag
             }
           })
-        : _c("Restaurant", {
-            attrs: { restaurant: _vm.restaurant },
-            on: { viewOrder: _vm.viewOrder, viewPayment: _vm.viewPayment }
-          })
+        : _c("Restaurant", { attrs: { restaurant: _vm.restaurant } })
     ],
     1
   )
@@ -76198,7 +76211,7 @@ var render = function() {
         [
           _c("img", {
             staticStyle: { width: "200px" },
-            attrs: { src: "/image/logo/deliveboo.svg", alt: "" }
+            attrs: { src: "storage/image/logo/deliveboo.svg", alt: "logo" }
           })
         ]
       ),
@@ -76336,7 +76349,10 @@ var render = function() {
                           [
                             _c("img", {
                               staticClass: "card-img-top",
-                              attrs: { src: tag.picture, alt: tag.name }
+                              attrs: {
+                                src: "storage/" + tag.picture,
+                                alt: tag.name
+                              }
                             })
                           ]
                         ),
@@ -76375,7 +76391,7 @@ var render = function() {
                         [
                           _c("img", {
                             attrs: {
-                              src: user.picture,
+                              src: "storage/" + user.picture,
                               alt: "Immagine profilo " + user.name
                             }
                           })
@@ -76461,7 +76477,9 @@ var render = function() {
         _vm._v(" "),
         _vm.plateImg.length > 0
           ? _c("div", { staticClass: "img-container" }, [
-              _c("img", { attrs: { src: _vm.plateImg, alt: "foto piatto" } })
+              _c("img", {
+                attrs: { src: "storage/" + _vm.plateImg, alt: "foto piatto" }
+              })
             ])
           : _vm._e(),
         _vm._v(" "),
@@ -76733,7 +76751,9 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col-5" }, [
-                _c("img", { attrs: { src: _vm.plate.picture, alt: "" } })
+                _c("img", {
+                  attrs: { src: "storage/" + _vm.plate.picture, alt: "" }
+                })
               ])
             ])
           : _vm._e()
@@ -76828,7 +76848,7 @@ var render = function() {
               _c("div", { staticClass: "restaurant-img col-4" }, [
                 _c("img", {
                   attrs: {
-                    src: _vm.restaurant.picture,
+                    src: "storage/" + _vm.restaurant.picture,
                     alt: "Immagine profilo " + _vm.restaurant.name
                   }
                 })
@@ -76841,20 +76861,27 @@ var render = function() {
                 attrs: { cart: _vm.cart, totalPrice: _vm.totalPrice },
                 on: { viewPayment: _vm.viewPayment }
               })
-            : _c("div", { staticClass: "col-lg-8" }, [
-                _c(
-                  "div",
-                  { staticClass: "row" },
-                  _vm._l(_vm.restaurant.plates, function(plate) {
-                    return _c("Plate", {
-                      key: plate.id,
-                      attrs: { plate: plate },
-                      on: { viewIngredient: _vm.viewIngredient }
-                    })
-                  }),
-                  1
-                )
-              ]),
+            : _vm._l(_vm.restaurant.category_plate, function(
+                categoryPlate,
+                index
+              ) {
+                return _c("div", { key: index, staticClass: "col-lg-8" }, [
+                  _c("div", [_vm._v(_vm._s(categoryPlate.category_name))]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "row" },
+                    _vm._l(categoryPlate.plates, function(plate) {
+                      return _c("Plate", {
+                        key: plate.id,
+                        attrs: { plate: plate },
+                        on: { viewIngredient: _vm.viewIngredient }
+                      })
+                    }),
+                    1
+                  )
+                ])
+              }),
           _vm._v(" "),
           _c("Cart", {
             attrs: {
@@ -76869,7 +76896,7 @@ var render = function() {
             }
           })
         ],
-        1
+        2
       )
     ],
     1

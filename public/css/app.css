@@ -15843,7 +15843,7 @@ a.text-dark:focus {
 }
 
 .home-row {
-  margin-top: 24px;
+  margin-top: 40px;
 }
 
 .deliveboo-card {
@@ -16039,14 +16039,16 @@ main {
 .ul-navbar {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   list-style: none;
-  margin: 0;
   border-bottom: 1px solid #12ccbc;
   padding: 0;
+  margin: 0;
+  height: 40px;
 }
 
 .ul-navbar li {
-  margin-right: 6px;
+  margin-right: 18px;
 }
 
 .ul-navbar a {

@@ -2,11 +2,9 @@
 
 namespace App\Http\Resources;
 
-use App\Category;
-use App\Plate;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PlateResource extends JsonResource
+class CategoryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,8 +14,11 @@ class PlateResource extends JsonResource
      */
     public function toArray($request)
     {
-        $plates = Plate::where('id', $this->id)->get()->groupBy('category_id');
-        
-        return $plates;
+        dd($this->id);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'plates' => $this->plate,
+        ];
     }
 }

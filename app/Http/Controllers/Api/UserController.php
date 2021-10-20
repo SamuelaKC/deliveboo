@@ -93,6 +93,7 @@ class UserController extends Controller
         //$idUser = $user->id;
         //$userNow = User::find($idUser);
         //dd($idUser);
+        
         return new RestaurantResource($user);
     }
 

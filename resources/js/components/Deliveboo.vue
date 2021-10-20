@@ -6,8 +6,8 @@
     <Restaurant
       v-else
       :restaurant="restaurant"
-      @viewOrder="viewOrder"
-      @viewPayment="viewPayment"
+     
+      
     />
   </div>
 </template>

@@ -47,7 +47,23 @@
         @viewPayment="viewPayment"
       />
 
-      <div class="col-lg-8" v-else>
+      <div
+        v-for="(categoryPlate, index) in restaurant.category_plate"
+        :key="index"
+        class="col-lg-8"
+        v-else
+      >
+        <div>{{ categoryPlate.category_name }}</div>
+        <div class="row">
+          <Plate
+            v-for="plate in categoryPlate.plates"
+            :key="plate.id"
+            :plate="plate"
+            @viewIngredient="viewIngredient"
+          />
+        </div>
+      </div>
+      <!-- <div class="col-lg-8" v-else>
         <div class="row">
           <Plate
             v-for="plate in restaurant.plates"
@@ -56,7 +72,7 @@
             @viewIngredient="viewIngredient"
           />
         </div>
-      </div>
+      </div> -->
 
       <Cart
         :cart="cart"
@@ -230,7 +246,6 @@ export default {
         this.plateId = plateData.id;
       });
       this.showIngredient = true;
-
     },
     addToCart(index) {
       this.ingredients[index].value = !this.ingredients[index].value;

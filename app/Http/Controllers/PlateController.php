@@ -44,6 +44,7 @@ class PlateController extends Controller
     {
         $categories = Category::all();
         $flag = false;
+        dd($categories[0]->plate);
         return view('plates.create',compact('categories', 'flag'));
     }
 
