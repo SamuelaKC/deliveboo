@@ -1,5 +1,5 @@
 @extends('layouts.app') @section('content')
-    <div class="dashboard">
+    <div class="dashboard py-5">
 
         <div class="container">
             <h1 class="font-header text-center dashboard-title">{{ $user->name }}</h1>
@@ -9,7 +9,7 @@
 
         <div class="dashboard-img-container">
             <div class="dashboard-img">
-                <img src="{{ $user->picture }}" alt="Foto profilo" />
+                <img src="{{ asset('storage/' . $user->picture) }}" alt="Foto profilo" />
                 <div class="hover-img">
                     <a href="{{ route('users.editimg', $user) }}">
 

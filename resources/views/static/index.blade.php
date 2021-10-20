@@ -1,5 +1,5 @@
 @extends('layouts.app') @section('content')
-<div class="container-fluid">
+<div class="container-fluid py-5">
     {{-- @dd($monthsName) 
                     @dd($monthsNo) 
                     @dd($priceAll)  --}}

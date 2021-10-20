@@ -1,8 +1,8 @@
 @extends('layouts.app') @section('content')
-<div class="container">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-12  m-3">
-            <h1 class=" font-header">I tuoi ordini</h1>
+            <h1 class="font-header title-form">I tuoi ordini</h1>
         </div>
 
         <div class="col-10">

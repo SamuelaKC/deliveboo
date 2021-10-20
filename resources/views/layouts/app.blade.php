@@ -28,7 +28,7 @@
                 @include('layouts.navbar')
             </header>
 
-            <main class="py-5">
+            <main>
                 @yield('content')
             </main>
 

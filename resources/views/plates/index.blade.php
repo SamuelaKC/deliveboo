@@ -1,5 +1,5 @@
 @extends('layouts.app') @section('content')
-    <div class="container">
+    <div class="container py-5">
         <h1 class="text-center mt-3 title-form">I Tuoi Piatti</h1>
 
         {{-- @dd($plates) --}}
