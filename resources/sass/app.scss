@@ -24,6 +24,7 @@
 @import "dashboard";
 @import "formuser";
 
+@import "chart";
 @import "createform";
 @import "errorPage";
 @import "plate";
@@ -36,6 +37,10 @@ body {
     font-family: $font-primary;
     background-color: #fff;
     position: relative;
+}
+
+main {
+    min-height: 80vh;
 }
 
 .cart-icon {

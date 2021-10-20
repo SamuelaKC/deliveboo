@@ -2,7 +2,7 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-3 ">
+            <div class="col-xs-6 col-md-3 ">
                 <div class="bkg-categories-footer">
                     <h6>Scopri Deliveroo</h6>
                     <ul class="footer-links">
