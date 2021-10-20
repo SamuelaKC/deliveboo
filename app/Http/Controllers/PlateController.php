@@ -125,7 +125,7 @@ class PlateController extends Controller
     public function updateImg(Request $request, Plate $plate)
     {
         $data = $request->all();
-        $imgPath = Storage::put('plates-img', $data['picture']);
+        $imgPath = Storage::put('plates-img', $data['pictureFile']);
         $plate->picture = $imgPath; 
         $plate->save();
         return redirect()->route('plates.index', $plate);

@@ -18,7 +18,7 @@
                         <div>Disponibilità: {{ $plate->available }}</div>
                     </div>
                     <div class="col-3 col-md-2 myplate-img">
-                        <img class="" src="{{ asset('/storage' . $plate->picture) }}" alt="{{ $plate->name }}" />
+                        <img class="" src="{{ asset("storage/" . $plate->picture) }}" alt="{{ $plate->name }}" />
                         <a href="{{ route('plates.editimg', $plate) }}" class="myplate-img-button">
                             <button class="btn btn-sm btn-bluegreen">Modifica</button>
                         </a>
