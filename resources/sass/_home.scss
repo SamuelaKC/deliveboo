@@ -10,6 +10,7 @@
         overflow: hidden;
         height: 100%;
         cursor: pointer;
+        position: relative;
 
         &:hover {
             box-shadow: 0 0 6px gray;
@@ -42,13 +43,16 @@
     }
 
     &-tag {
-        padding: 24px 12px;
+
+        background-color: $button-blue-green;
+        border: 1px solid $button-blue-green;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 0;
 
         &-text {
             color: $bg-color-all;
-            background-color: $button-blue-green;
-            border: 1px solid $button-blue-green;
-            border-radius: 3px;
+
             padding: 3px 6px;
             margin: 6px;
         }

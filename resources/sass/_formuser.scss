@@ -36,3 +36,14 @@
         object-position: center;
     }
 }
+
+.logo-login {
+    svg {
+
+        enable-background: red;
+        path {
+
+            fill: red;
+        }
+    }
+}

@@ -1,16 +1,37 @@
+.dashboard-img-container {
+    padding: 24px;
+}
+
 .dashboard {
+
+    &-title {
+        padding-top: 24px;
+        color: $button-blue-green;
+        font-size: 40px;
+    }
+
+    &-tag {
+        position: absolute;
+        bottom: 12px;
+        left: 40px;
+        color: $bg-color-all;
+        font-size: 20px;
+        background-color: $button-blue-green;
+        padding: 0 6px;
+        border-radius: 3px;
+    }
+
     &-img {
-        height: 400px;
+        height: 250px;
         width: 100%;
         position: relative;
-
-        
+        border-radius: 50px;
+        overflow: hidden;
         
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50px;
 
         }
 
@@ -23,9 +44,15 @@
             background-color: rgba($color: #000000, $alpha: .3);
             display: none;
 
+            a {
+                position: absolute;
+                bottom: 12px;
+                right: 42px;
+            }
+
             button {
                 color: $bg-color-all;
-                font-size: 16px;
+                font-size: 18px;
             }
         }
     }
@@ -33,6 +60,16 @@
     i {
         font-size: 20px;
         padding: 0 10px 0 0;
+    }
+
+    &-link {
+        color: black;
+        display: block;
+
+        &:hover {
+            color: $button-blue-green;
+
+        }
     }
 }
 

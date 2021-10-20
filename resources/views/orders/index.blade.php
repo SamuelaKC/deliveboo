@@ -8,7 +8,7 @@
         <div class="col-10">
             @foreach ($orders as $order)
             <div class="row justify-content-center">
-                <div class="col">
+                <div class="col mb-5">
                     <div class="bold-table m-t-2">Dettagli cliente</div>
                     <div>Nome: {{ $order->name_surname }}</div>
                     <div>Indirizzo: {{ $order->address }}</div>

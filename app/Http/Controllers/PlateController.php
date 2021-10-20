@@ -26,8 +26,13 @@ class PlateController extends Controller
         // $ingredients = Ingredient::all();
         $userId = Auth::id();
         $plates = Plate::where('user_id', $userId)->get()->groupBy('category_id');
-        $categories = Category::all();
-        return view('plates.index', compact('plates', 'categories'));
+        $plateCategory = [];
+        foreach ($plates as $categoryId => $plate) {
+            $category = Category::find($categoryId);
+            $plateCategory[$category->name] = $plate;
+        }
+
+        return view('plates.index', compact('plateCategory'));
     }
 
     /**

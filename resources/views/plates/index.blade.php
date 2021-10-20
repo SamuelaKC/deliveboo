@@ -3,21 +3,16 @@
     <div class="row">
         {{-- @dd($plates) --}}
         <div class="col">
-            @foreach ($plates as $categoryId => $cat)
-            @foreach ($cat as $plate)
-                         @foreach ($categories as $category )
-                        <h2>{{$category->id === $plate->category_id ? $category->name : ''}}</h2>
-                        @endforeach
+            @foreach ($plateCategory as $category => $platesOfCategory)
+            
+            <h2>{{$category}}</h2>
+            
+            @foreach ($platesOfCategory as $plate)
             <div class="row">
-                <h2></h2>
+                
                 <div class="col-10">
                     <h5 class="mt-0 mb-1">Nome: {{ $plate->name }}</h5>
-                    {{-- <div>
-                        Categoria:
-                         @foreach ($categories as $category )
-                        {{$category->id === $plate->category_id ? $category->name : ''}}
-                        @endforeach
-                    </div> --}}
+
                     <div>Descrizione: {{ $plate->description }}</div>
                     <div>Prezzo: € {{ number_format ( $plate->price, 2) }}</div>
                     <div>Disponibilità: {{ $plate->available }}</div>
@@ -30,6 +25,7 @@
                     />
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-3 col-lg-3"></div>
                 <div class="col-12 col-md-3 col-lg-3 text-center">
