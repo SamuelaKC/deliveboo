@@ -1,3 +1,8 @@
+.category-title {
+    font-family: $font-secondary;
+    padding-bottom: 12px;
+}
+
 .interline{
     margin-bottom:24px; 
     .plate {
@@ -9,16 +14,27 @@
             box-shadow: 0px 12px 14px 0px rgba(0, 0, 0, 0.08);
         }
 
+        &-name {
+            font-size: 16px;
+        }
+
         .plate-description {
             font-size:12px;
-            color:#828585;
+            color:$grey-deliveroo;
         }
+
 
         img {
             width: 100%;
             max-height: 100px;
             object-fit: contain;
             object-position: center;
+        }
+
+        &-price {
+            font-size: 16px;
+            color: $button-blue-green;
+            text-align: center;
         }
     }
 }

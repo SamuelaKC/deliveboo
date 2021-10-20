@@ -1,8 +1,8 @@
 .restaurant {
    margin-top: 24px;
 
-   &-info {
-       
+   &-title:hover {
+        text-decoration: underline;
    }
 
    &-img {

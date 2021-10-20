@@ -20,7 +20,7 @@
       <div class="col-12 mb-4">
         <div class="row">
           <div class="restaurant-info col-8">
-            <h1 class="restaurant-title">{{ restaurant.name }}</h1>
+            <h1 class="restaurant-title" @click="viewThis">{{ restaurant.name }}</h1>
             <div class="restaurant-description">
               {{ restaurant.description }}
             </div>
@@ -47,13 +47,13 @@
         @viewPayment="viewPayment"
       />
 
+  <div class="col-lg-8" v-else>
+
       <div
         v-for="(categoryPlate, index) in restaurant.category_plate"
         :key="index"
-        class="col-lg-8"
-        v-else
       >
-        <div>{{ categoryPlate.category_name }}</div>
+        <h3 class="category-title">{{ categoryPlate.category_name }}</h3>
         <div class="row">
           <Plate
             v-for="plate in categoryPlate.plates"
@@ -63,6 +63,7 @@
           />
         </div>
       </div>
+  </div>
       <!-- <div class="col-lg-8" v-else>
         <div class="row">
           <Plate
@@ -363,6 +364,12 @@ export default {
       this.removeAllToCart();
       this.sendInCart(plateId);
     },
+
+    viewThis() {
+      this.nextToOrder = true;
+      this.showAdvisor = false;
+      this.showOrder = false;
+    }
   },
 };
 </script>

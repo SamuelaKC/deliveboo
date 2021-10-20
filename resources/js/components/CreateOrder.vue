@@ -81,6 +81,9 @@ export default {
     Braintree,
     Success,
   },
+  created() {
+
+  },
   data() {
     return {
       order: {},
@@ -152,7 +155,7 @@ export default {
     },
     // Ora mi serve la chiamata axios per salvare i dati nello store
     sendOrder() {
-      console.log(typeof this.order.name_surname);
+
       if (
         typeof this.order.name_surname === "undefined" ||
         this.order.name_surname.trim().length === 0 ||
@@ -186,12 +189,18 @@ export default {
             this.newOrderId = response.data.order;
             this.showPayment = true;
             this.showOrder = false;
+            this.saveOrder();
           })
           .catch((e) => {
             console.error(e);
           });
       }
     },
+
+    // saveOrder() {
+    //   localStorage.order = this.newOrderId;
+
+    // },
   },
 };
 </script>

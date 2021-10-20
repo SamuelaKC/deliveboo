@@ -6,12 +6,13 @@
     >
     <div v-if="plate.available" class="row">
         <div class="col-7">
-            <div>{{ plate.name }}</div>
+            <div class="plate-name">{{ plate.name }}</div>
             <div class="plate-description">{{ plate.description }}</div>
-            <div class="plate-description">{{ plate.price }}€</div>
+            
         </div>
         <div class="col-5">
-            <img :src="`storage/${plate.picture}`" alt="">
+            <img :src="`storage/${plate.picture}`" :alt="`Foto di ${plate.name}`">
+            <div class="plate-price">{{ plate.price.toFixed(2) }}€</div>
         </div>
 
     </div>
