@@ -1,16 +1,28 @@
 @extends('layouts.app') @section('content')
-    <div class="dashboard">
+    <div class="dashboard text-center">
 
-        <div class="dashboard-img">
-            <img src="/image/panino.jpg" alt="Foto profilo {{ $user->name }}" />
-        </div>
+        <br>
 
         <div class="container">
+            <h1 style="border-bottom: 1px solid black" class="font-header">{{ $user->name }}</h1>
+            <div>
+                {{-- {{ $category-> }} --}}
+            </div>
+        </div>
 
 
-            <h1 class="font-header">{{ $user->name }}</h1>
+        <div class="dashboard-img p-5">
+            <img src="{{ $user->picture }}" alt="Foto profilo" />
+        </div>
+
+        <br>
+
+        <div style="border-top: 1px solid black" class="container">
+
+            <br>
+
             <h4>Questa è la tua Dashboard per la gestione della tua attività</h4>
-            <div class="col-4">
+            <div class=" container col-4">
                 <a class="dropdown-item" href="{{ route('users.edit', $user) }}">
                     <i class="bi bi-pencil"></i> Modifica i tuoi dati
                 </a>
