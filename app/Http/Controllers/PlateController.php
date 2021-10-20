@@ -141,10 +141,10 @@ class PlateController extends Controller
         $plate->description = $data['description'];
         $plate->available = key_exists('available', $data) ? true: false;
         $plate->price = $data['price'];
-        // $plate->picture = $data['picture'];
+
         // mi deve mettere l'immagine nella cartella plates-img prendendo il dato dall'id picture della form:
-        $imgPath = Storage::put('plates-img', $data['picture']);
-        $plate->picture = $imgPath; 
+        // $imgPath = Storage::put('plates-img', $data['picture']);
+        // $plate->picture = $imgPath; 
         $plate->category_id = $data['category'];
         $plate->user_id = Auth::id();
         $plate->save();

@@ -1,58 +1,56 @@
 @extends('layouts.app') @section('content')
-<div class="container">
-    <div class="row">
-        {{-- @dd($plates) --}}
-        <div class="col">
-            @foreach ($plateCategory as $category => $platesOfCategory)
-            
-            <h2>{{$category}}</h2>
-            
-            @foreach ($platesOfCategory as $plate)
-            <div class="row">
-                
-                <div class="col-10">
-                    <h5 class="mt-0 mb-1">Nome: {{ $plate->name }}</h5>
+    <div class="container">
+        <h1 class="text-center mt-3 title-form">I Tuoi Piatti</h1>
 
-                    <div>Descrizione: {{ $plate->description }}</div>
-                    <div>Prezzo: € {{ number_format ( $plate->price, 2) }}</div>
-                    <div>Disponibilità: {{ $plate->available }}</div>
+        {{-- @dd($plates) --}}
+        @foreach ($plateCategory as $category => $platesOfCategory)
+
+            <h2 class="mt-4 mb-3">{{ $category }}</h2>
+
+            @foreach ($platesOfCategory as $plate)
+                <div class="row">
+
+                    <div class="col-9 col-md-10 myplate-text">
+                        <h5 class="mt-0 mb-1">Nome: {{ $plate->name }}</h5>
+
+                        <div>Descrizione: {{ $plate->description }}</div>
+                        <div>Prezzo: € {{ number_format($plate->price, 2) }}</div>
+                        <div>Disponibilità: {{ $plate->available }}</div>
+                    </div>
+                    <div class="col-3 col-md-2 myplate-img">
+                        <img class="" src="{{ $plate->picture }}" alt="{{ $plate->name }}" />
+                        <a href="" class="myplate-img-button">
+                            <button class="btn btn-sm btn-bluegreen">Modifica</button>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-2">
-                    <img
-                        class="img-thumbnail"
-                        src="{{ $plate->picture }}"
-                        alt="{{ $plate->name }}"
-                    />
+
+                <div class="row">
+
+                    <div class="col-8 col-md-9">
+                        <div class="row justify-content-end">
+
+                            <a href="{{ route('plates.edit', $plate) }}" class="mr-3">
+                                <button class="btn btn-bluegreen">
+                                    Modifica
+                                </button>
+                            </a>
+                        
+                            <form action="{{ route('plates.destroy', $plate) }}" method="POST">
+                                @csrf @method('DELETE')
+                                <button class="btn btn-danger">
+                                    Cancella
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-3 col-lg-3"></div>
-                <div class="col-12 col-md-3 col-lg-3 text-center">
-                    <a href="{{ route('plates.edit', $plate) }}">
-                        <button class="btn btn-bluegreen">
-                            Modifica
-                        </button>
-                    </a>
-                </div>
-                <div class="col-12 col-md-3 col-lg-3 text-center">
-                    <form
-                        action="{{ route('plates.destroy', $plate) }}"
-                        method="POST"
-                    >
-                        @csrf @method('DELETE')
-                        <button class="btn btn-danger">
-                            Cancella
-                        </button>
-                    </form>
-                </div>
-                <div class="col-md-3 col-lg-3"></div>
-            </div>
-            <hr />
-            
+                <hr />
+
             @endforeach
-            @endforeach
-        </div>
+        @endforeach
+
     </div>
-</div>
 @endsection
