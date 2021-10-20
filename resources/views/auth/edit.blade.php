@@ -1,10 +1,11 @@
 @extends('layouts.app') @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-header">Modifica i tuoi dati</h1>
+                    <h1 class="font-header title-form">Modifica i tuoi dati</h1>
                     <form
                         method="POST"
                         action="{{ route('users.update', $user) }}"
@@ -12,9 +13,9 @@
                     >
                         @csrf @method('PUT')
 
-                        <div class="">
+                        <div>
                             <label for="name" class="text-md-right"></label>
-                            <div class="col">
+                            <div>
                                 <input
                                     id="name"
                                     type="text"
@@ -34,10 +35,10 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div>
                             <label for="address" class="text-md-right"></label>
 
-                            <div class="col">
+                            <div>
                                 <input
                                     id="address"
                                     type="text"
@@ -57,13 +58,13 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div>
                             <label
                                 for="phone_number"
                                 class="text-md-right"
                             ></label>
 
-                            <div class="col">
+                            <div>
                                 <input
                                     id="phone_number"
                                     type="tel"
@@ -83,10 +84,10 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div>
                             <label for="piva" class="text-md-right"></label>
 
-                            <div class="col">
+                            <div>
                                 <input
                                     id="piva"
                                     type="text"
@@ -106,13 +107,13 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div>
                             <label
                                 for="description"
                                 class="text-md-right"
                             ></label>
 
-                            <div class="col">
+                            <div>
                                 <textarea
                                     id="description"
                                     type="text"
@@ -132,44 +133,28 @@
                             </div>
                         </div>
                         <!-- Scelta tag: -->
-                        <div>
+                        <div class="mt-3">
                             <label
                                 for="tag[]"
                                 class="text-md-right"
                             >Scegli i tui tag:</label>
-                            <div class="col">
+                            <div class="row">
                                
                                 @foreach($tags as $tag)
-                                    <input name="tags[]" id="tag" value="{{ $tag->id }}" type="checkbox"> {{ $tag->name }} <br>
-                                    
+                                <div class="col-6 col-sm-4 col-lg-3">
+                                    <input name="tags[]" id="tag" value="{{ $tag->id }}" type="checkbox"
+                                        @foreach ($user->tag as $tagUser)
+                                            @if ($tagUser->id === $tag->id)
+                                                {{ 'checked' }}
+                                            @endif
+                                        @endforeach
+                                    > {{ $tag->name }} <br>
+                                </div>
                                 @endforeach
                                 
                             </div>
                         </div>
 
-                        <div class="">
-                            <div class="col">
-                                <label
-                                    for="pictureFile"
-                                    class="text-md-right"
-                                ></label>
-                                <input
-                                    id="pictureFile"
-                                    type="file"
-                                    class="form-control @error('pictureFile') is-invalid @enderror"
-                                    name="pictureFile"
-                                    required
-                                    autocomplete="pictureFile"
-                                    autofocus
-                                />
-
-                                @error('pictureFile')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
                         <div class="container">
                             <div class="row py-2">
                                 <div class="col">

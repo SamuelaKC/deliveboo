@@ -16,6 +16,7 @@
                     aria-label="Search"
                     aria-describedby="search-addon"
                     v-model="searchString"
+                    @input="getSearchInput()"
                     @keyup.enter="getSearch()"
                 />
                 <span style="padding-left: 20px;">
@@ -39,8 +40,13 @@ export default {
         }
     },
     methods:{
+        getSearchInput(){
+            this.$emit('search', this.searchString);
+        },
+
         getSearch(){
             this.$emit('search', this.searchString);
+            this.searchString = "";
         }
     } 
 };

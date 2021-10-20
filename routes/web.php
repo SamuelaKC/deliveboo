@@ -27,3 +27,5 @@ Route::resource('orders', 'OrderController');
 Route::resource('plates', 'PlateController');
 Route::resource('static', 'ChartController');
 Route::resource('users', 'UserController');
+Route::get('users/img/{user}/edit', 'UserController@editImg')->name('users.editimg');
+Route::put('users/img/{user}', 'UserController@updateImg')->name('users.updateimg');

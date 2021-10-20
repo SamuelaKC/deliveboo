@@ -1,10 +1,11 @@
 @extends('layouts.app') @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-header">
+                    <h1 class="font-header title-form">
                         Diventa subito partner di Deliveboo
                     </h1>
                     <form method="POST" action="{{ route('register') }}">
@@ -202,7 +203,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-lg-4 col-xl-4">qui ci va l'immagine</div>
+        <div class="col-md-4 img-form">
+            <img src="/image/restaurant.jpg" alt="restaurant">
+        </div>
     </div>
 </div>
 @endsection

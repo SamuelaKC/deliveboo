@@ -6,22 +6,29 @@
         background-color: $bg-color-all;
         border: 1px solid $border-grey;
         word-wrap: break-word;
-        box-shadow: 0 0 6px gray;
+        box-shadow: 0 0 3px gray;
         overflow: hidden;
         height: 100%;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 6px gray;
+        }
 
         &-img {
             width: 100%;
-            height: 250px;
             overflow: hidden;
-            object-fit: cover;
-            object-position: center;
 
+            &-restaurant {
+                height: 200px;
+            }
+            &-tag {
+                height: 80px;
+            }
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                object-position: center;
             }
         }
 

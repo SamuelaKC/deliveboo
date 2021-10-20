@@ -1,7 +1,16 @@
 @extends('layouts.app') @section('content')
     <div class="dashboard text-center">
 
-        <br>
+        <div class="dashboard-img">
+            <img src="/image/panino.jpg" alt="Foto profilo {{ $user->name }}" />
+
+            <div class="hover-img">
+                <a href="{{ route('users.editimg', $user) }}">
+
+                    <button class="btn btn-sm">Modifica</button>
+                </a>
+            </div>
+        </div>
 
         <div class="container">
             <h1 style="border-bottom: 1px solid black" class="font-header">{{ $user->name }}</h1>

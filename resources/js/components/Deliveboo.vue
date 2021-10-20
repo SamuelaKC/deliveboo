@@ -33,11 +33,7 @@ export default {
     };
   },
   created() {
-    axios.get("/api/users").then((response) => {
-      this.users = response.data.data;
-      this.allRestaurant = true;
-      console.log(this.users);
-    });
+    this.getAllRestaurants();
     this.getLocalStore();
   },
   methods: {
@@ -51,27 +47,33 @@ export default {
       //this.restaurantId = restaurantId;
     },
 
+    getAllRestaurants() {
+      axios.get("/api/users").then((response) => {
+      this.users = response.data.data;
+      this.allRestaurant = true;
+      console.log(this.users);
+    });
+    },
+
     searchItem(string) {
-      axios.get(`/api/users?query=${string}`).then((res) => {
+      let apiString = '';
+      if(string.trim().length === 0) {
+        apiString = `/api/users`;
+      } else {
+        apiString = `/api/users?query=${string}`
+      }
+
+      axios.get(apiString).then((res) => {
         this.users = res.data.data;
+        this.show.home = true;
+        this.saveShow();
       });
     },
 
-    viewOrder() {
-      this.show.order = true;
-      this.saveShow();
-    },
-
-    viewPayment() {
-      this.show.payment = true;
-      this.saveShow();
-    },
-
     showHomeRestaurant() {
+      this.getAllRestaurants();
       this.show = {
         home: true,
-        order: false,
-        payment: false,
       };
       this.saveShow();
     },
