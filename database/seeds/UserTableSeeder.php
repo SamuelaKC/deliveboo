@@ -84,14 +84,14 @@ class UserTableSeeder extends Seeder
 
         $pictureRestaurants = [
             '/image/restaurants/pasta-arrabbiata.jpeg',
-            '/image/restaurants/piadineria.jpeg',
+            '/image/restaurants/piadineria.jpg',
             '/image/restaurants/kebab.png',
             '/image/restaurants/pizza_restaurant.jpg',
             '/image/restaurants/gelato.jpg',
             '/image/restaurants/macrobiotic.jpg',
             '/image/restaurants/polpette.jpg',
             '/image/restaurants/pesce_griglia.jpg',
-            '/image/restaurants/griglia_mista.jpg',
+            '/image/restaurants/grigliata_mista.jpg',
             '/image/restaurants/italiano.jpg',
             '/image/restaurants/panino_pub.jpg',
             '/image/restaurants/sushi2.jpg',
