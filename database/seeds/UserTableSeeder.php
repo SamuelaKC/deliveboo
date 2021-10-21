@@ -91,7 +91,7 @@ class UserTableSeeder extends Seeder
             'image/restaurants/macrobiotic.jpg',
             'image/restaurants/polpette.jpg',
             'image/restaurants/pesce_griglia.jpg',
-            'image/restaurants/grigliata_mista.jpg',
+            'image/restaurants/grigliata-mista.jpg',
             'image/restaurants/italiano.jpg',
             'image/restaurants/panino_pub.jpg',
             'image/restaurants/sushi2.jpg',
