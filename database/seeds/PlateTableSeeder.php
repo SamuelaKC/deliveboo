@@ -2860,7 +2860,7 @@ class PlateTableSeeder extends Seeder
             48,
             12,
             48,
-            47,
+            48,
             48,
             51,
             4,

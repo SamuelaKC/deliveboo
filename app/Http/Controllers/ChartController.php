@@ -33,7 +33,7 @@ class ChartController extends Controller
 
 
         foreach($orders as $order){
-        $month_name = $order->created_at->format('d M, Y');
+        $month_name = $order->created_at->format('M, Y');
         $monthsName[]=$month_name;
         $price = $order->total_price;
         $priceAll[] = $price; 

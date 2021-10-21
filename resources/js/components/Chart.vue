@@ -19,7 +19,7 @@ export default {
           labels: JSON.parse(this.labels),
           datasets: [
             {
-              label: 'Ricavo Mensile',
+              label: 'Ricavi',
               data: JSON.parse(this.dataProp),
               backgroundColor: [
                 '#12ccbc',
