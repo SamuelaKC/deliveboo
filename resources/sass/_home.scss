@@ -7,10 +7,12 @@
         border: 1px solid $border-grey;
         word-wrap: break-word;
         box-shadow: 0 0 3px gray;
-        overflow: hidden;
         height: 100%;
         cursor: pointer;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &:hover {
             box-shadow: 0 0 6px gray;
@@ -42,19 +44,24 @@
         }
     }
 
+    &-tag-container {
+        position: relative;
+    }
+
     &-tag {
 
-        background-color: $button-blue-green;
-        border: 1px solid $button-blue-green;
+        background-color: $bg-color-all;
+        //border: 1px solid $button-blue-green;
         border-radius: 3px;
-        position: absolute;
-        bottom: 0;
+        // position: absolute;
+        // bottom: 0;
 
         &-text {
-            color: $bg-color-all;
+            color: $button-blue-green;
 
             padding: 3px 6px;
             margin: 6px;
         }
     }
 }
+

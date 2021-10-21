@@ -10,7 +10,12 @@
       >
         <div @click="$emit('restaurantTag', tag.id)" class="deliveboo-card">
           <div class="deliveboo-card-img deliveboo-card-img-tag">
-            <img :src="`storage/${tag.picture}`" class="card-img-top" :alt="tag.name" />
+            <img
+              v-if="tag.picture.length > 0"
+              :src="`storage/${tag.picture}`"
+              class="card-img-top"
+              :alt="tag.name"
+            />
           </div>
           <div class="deliveboo-card-body">
             <h5 class="deliveboo-card-title">{{ tag.name }}</h5>
@@ -25,20 +30,25 @@
       >
         <div class="deliveboo-card">
           <div class="deliveboo-card-img deliveboo-card-img-restaurant">
-            <img :src="`storage/${user.picture}`" :alt="`Immagine profilo ${user.name}`" />
+            <img
+              :src="`storage/${user.picture}`"
+              :alt="`Immagine profilo ${user.name}`"
+            />
           </div>
           <div class="deliveboo-card-body">
             <h5 class="deliveboo-card-title">{{ user.name }}</h5>
             <p class="deliveboo-card-text">{{ user.description }}</p>
           </div>
-          <div class="deliveboo-tag">
-            <span
-              v-for="tag in user.tag"
-              :key="tag.id"
-              class="deliveboo-tag-text"
-            >
-              #{{ tag.name.toLowerCase() }}
-            </span>
+          <div class="deliveboo-tag-container">
+            <div class="deliveboo-tag">
+              <span
+                v-for="tag in user.tag"
+                :key="tag.id"
+                class="deliveboo-tag-text"
+              >
+                #{{ tag.name.toLowerCase() }}
+              </span>
+            </div>
           </div>
         </div>
       </div>

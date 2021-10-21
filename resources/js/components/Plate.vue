@@ -11,7 +11,7 @@
             
         </div>
         <div class="col-5">
-            <img :src="`storage/${plate.picture}`" :alt="`Foto di ${plate.name}`">
+            <img v-if="plate.picture.length > 0" :src="`storage/${plate.picture}`" :alt="`Foto di ${plate.name}`">
             <div class="plate-price">{{ plate.price.toFixed(2) }}€</div>
         </div>
 

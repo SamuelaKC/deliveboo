@@ -246,9 +246,13 @@ export default {
         }
         this.plateId = plateData.id;
       });
+      this.ingredients.forEach(ingredient => {
+        ingredient.value = false;
+      });
       this.showIngredient = true;
     },
     addToCart(index) {
+      console.log(this.ingredients[index].value)
       this.ingredients[index].value = !this.ingredients[index].value;
       let verifyAdd = [];
       this.ingredients.forEach((ingredient) => {
@@ -259,7 +263,7 @@ export default {
           });
         }
       });
-      this.addingToCart = verifyAdd;
+      this.addingToCart = verifyAdd;     
     },
     addQuantity() {
       this.quantityOfPlate++;
