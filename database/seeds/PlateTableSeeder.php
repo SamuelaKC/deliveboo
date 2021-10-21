@@ -1687,7 +1687,7 @@ class PlateTableSeeder extends Seeder
             'image/plates/user-id-8/spaghetto-astice.jpg',
             'image/plates/user-id-8/paccheri.jpg',
             'image/plates/user-id-8/spaghettone.jpg',
-            'image/plates/user-id-8/grigliata-mista.jpg',
+            'image/plates/user-id-8/grigliata-pesce.jpg',
             'image/plates/user-id-8/catalana.jpg',
             'image/plates/user-id-8/tonno.jpg',
             'image/plates/user-id-8/polpo.jpg',

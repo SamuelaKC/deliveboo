@@ -77,7 +77,6 @@ export default {
     this.ingredients.forEach((ingredient) => {
       ingredient.value = false;
     });
-    this.getScroll();
   },
   props: {
     ingredients: Array,

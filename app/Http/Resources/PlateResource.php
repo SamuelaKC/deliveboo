@@ -16,8 +16,12 @@ class PlateResource extends JsonResource
      */
     public function toArray($request)
     {
-        $plates = Plate::where('id', $this->id)->get()->groupBy('category_id');
-        
-        return $plates;
+
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'price' => $this->price,
+            'ingredients' => $this->ingredient,
+        ];
     }
 }

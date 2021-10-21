@@ -118,6 +118,7 @@ export default {
         arrayPlate.push({
           id: plate.id,
           quantity: plate.quantity,
+          addition: plate.details,
         });
       });
       return arrayPlate;

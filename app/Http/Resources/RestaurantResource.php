@@ -36,6 +36,7 @@ class RestaurantResource extends JsonResource
             'picture' => $this->picture,
             'tag' => $this->tag,
             'category_plate' => $plateCategory,
+            'plates' => PlateResource::collection($this->plate),
 
         ];
     }

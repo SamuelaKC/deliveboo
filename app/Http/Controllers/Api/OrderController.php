@@ -38,6 +38,7 @@ class OrderController extends Controller
     {
 
         $data = $request->all();
+        //dd($data);
         $newOrder = new Order();
         if(key_exists('details', $data)) {
             $newOrder->details = $data['details']; 
@@ -51,7 +52,11 @@ class OrderController extends Controller
         foreach ($data['plates'] as $plate) {
             $plateId = $plate['id'];
             $quantityPlate = $plate['quantity'];
-            $newOrder->plate()->attach($plateId, ['quantity' => $quantityPlate]);
+            $additionPlate = $plate['addition'];
+            $newOrder->plate()->attach($plateId, [
+                'quantity' => $quantityPlate,
+                'addition' => $additionPlate,
+            ]);
         }
         // Creazione api:
         return response()->json([

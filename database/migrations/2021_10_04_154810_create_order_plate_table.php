@@ -23,6 +23,7 @@ class CreateOrderPlateTable extends Migration
             $table->foreign('plate_id')->references('id')->on('plates')->onDelete('cascade')->onUpdate('cascade');
 
             $table->unsignedTinyInteger('quantity')->default(1);
+            $table->text('addition')->nullable();
 
             $table->timestamps();
         });
