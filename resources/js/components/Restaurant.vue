@@ -367,6 +367,7 @@ export default {
     removeAndSend(plateId) {
       this.removeAllToCart();
       this.sendInCart(plateId);
+      this.showAdvisor = false;
     },
 
     viewThis() {
