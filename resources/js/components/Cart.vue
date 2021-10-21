@@ -10,8 +10,8 @@
           <span class="plus-icon" @click="$emit('minusCartQuantity', index)"><i class="fa fa-minus-circle"></i></span>
         </div>
         <div class="name-plate">
-          {{ plate.name }} <br>
-          <div>{{ plate.details}}</div>
+          <div class="name-plate-text">{{ plate.name }}</div>
+          <div class="name-plate-details">{{ plate.details}}</div>
         </div>
         
         <div class="price">{{ (plate.price * plate.quantity).toFixed(2) }} €</div>

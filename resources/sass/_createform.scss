@@ -9,7 +9,11 @@
     }
     .name-plate {
      width:130px;
-        div {
+     &-text {
+
+         text-transform: capitalize;
+     }
+        &-details {
             color:gray;
             width: 60%;
             font-size:12px;
