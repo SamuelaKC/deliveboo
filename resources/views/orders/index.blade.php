@@ -17,7 +17,7 @@
                         Dettagli dell'ordine
                     </div>
                     <div class="m-2">
-                        Aggiunte all'ordine: {{ $order->details }}
+                        Dettagli ordine: {{ $order->details }}
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-2 d-none d-md-block  bold-table">
@@ -39,6 +39,9 @@
                         <div class="col-6 col-md-7 text-nowrap">
                             @foreach ($order->plate as $plate )
                             <div>{{ $plate->name }}</div>
+                            @endforeach
+                            @foreach ($order->plate as $plate )
+                            <div>{{$plate->pivot->addition}}</div>
                             @endforeach
                         </div>
                         <div class="col-4 col-md-2 border-bottom">
