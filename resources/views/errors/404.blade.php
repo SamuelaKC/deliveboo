@@ -4,7 +4,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="col-4">
             <img
-                src="/image/logo/deliveboo_sorry1.svg"
+                src="storage/image/logo/deliveboo_sorry1.svg"
                 alt="Logo Deliveboo Sorry"
                 class="svg-color-yellow"
             />
