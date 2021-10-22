@@ -8,6 +8,10 @@
         >
           <i class="fa fa-times"></i>
         </button>
+        <div class="text-center">
+          <h3 class="title-ingredient">{{ namePlate }}</h3>
+          <div>{{ descriptionPlate }}</div>
+        </div>
         <div v-if="plateImg.length > 0" class="img-container">
           <img :src="`storage/${plateImg}`" alt="foto piatto" />
           <!--ToDO da sistemare l'src-->
@@ -85,6 +89,8 @@ export default {
     plateImg: String,
     showAdvisor: Boolean,
     showIngredient: Boolean,
+    namePlate: String,
+    descriptionPlate: String,
   },
 
   methods: {

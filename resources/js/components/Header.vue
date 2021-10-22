@@ -24,7 +24,7 @@
                 </span>
             </div>
             <div class="col-1 justify-content-end cart-icon">
-                <i class="fa fa-shopping-cart"></i>
+                <!-- <i class="fa fa-shopping-cart"></i> -->
             </div>
 
         </div>

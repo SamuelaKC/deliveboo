@@ -3,7 +3,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="col-4">
             <img
-                src="storage/image/logo/deliveboo_angry1.svg"
+                src="/storage/image/logo/deliveboo_angry1.svg"
                 alt="Logo Deliveboo Angry"
                 class="svg-color-red"
             />

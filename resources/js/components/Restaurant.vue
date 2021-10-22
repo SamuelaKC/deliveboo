@@ -8,6 +8,8 @@
       :quantityOfPlate="quantityOfPlate"
       :showAdvisor="showAdvisor"
       :showIngredient="showIngredient"
+      :namePlate="namePlate"
+      :descriptionPlate="descriptionPlate"
       @sendIn="verificationRestaurant"
       @plusQuantity="addQuantity"
       @minusQuantity="removeQuantity"
@@ -114,6 +116,8 @@ export default {
       nextToOrder: true,
       showAdvisor: false,
       showOrder: false,
+      namePlate: '',
+      descriptionPlate: '',
     };
   },
 
@@ -244,6 +248,8 @@ export default {
           console.log(plate.ingredients);
           this.ingredients = plate.ingredients;
         }
+        this.namePlate = plateData.name;
+        this.descriptionPlate = plateData.description;
         this.plateId = plateData.id;
       });
       this.ingredients.forEach(ingredient => {

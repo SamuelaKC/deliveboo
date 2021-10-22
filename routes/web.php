@@ -20,9 +20,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-// Route::resource('static', 'ChartDataController');
-// Route::resource('static', 'ChartController');
-// Route::get('/test', 'ChartDataController@getMonthlyOrderData');
+
 Route::resource('orders', 'OrderController');
 Route::resource('plates', 'PlateController');
 Route::resource('static', 'ChartController');

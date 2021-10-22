@@ -2,7 +2,7 @@
   <div class="interline col-12 col-md-6">
     <div
       class="plate"
-      @click="$emit('viewIngredient', { id: plate.id, img: plate.picture })"
+      @click="$emit('viewIngredient', { id: plate.id, img: plate.picture, name: plate.name, description: plate.description })"
     >
     <div v-if="plate.available" class="row">
         <div class="col-7">

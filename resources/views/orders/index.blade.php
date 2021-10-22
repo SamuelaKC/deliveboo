@@ -38,16 +38,16 @@
                         </div>
                         <div class="col-6 col-md-7 text-nowrap">
                             @foreach ($order->plate as $plate )
-                            <div>{{ $plate->name }}</div>
+                            <div>{{ ucwords($plate->name) }}</div>
                             @endforeach
                             @foreach ($order->plate as $plate )
-                            <div>{{$plate->pivot->addition}}</div>
+                            <div class="details-order">{{$plate->pivot->addition}}</div>
                             @endforeach
                         </div>
                         <div class="col-4 col-md-2 border-bottom">
                             @foreach ($order->plate as $plate )
                             <div class="text-right">
-                                € {{ number_format ( $plate->price, 2) }}
+                                € {{ number_format ( ($plate->price * $plate->pivot->quantity), 2) }}
                             </div>
                             @endforeach
                         </div>

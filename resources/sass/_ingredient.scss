@@ -7,6 +7,10 @@
     overflow: hidden;
     position: fixed;
     top:100px;
+
+    .title-ingredient {
+        text-transform: capitalize;
+    }
 }
 .background-opacity {
 

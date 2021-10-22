@@ -86,7 +86,7 @@ export default {
           this.$emit("bt.error", this.errorMessage);
           return;
         }
-
+this.viewDropIn = false;
         console.log('payload', payload.nonce);
         let paymentData = this.getPaymentData(payload.nonce);
         console.log('payment', paymentData);
