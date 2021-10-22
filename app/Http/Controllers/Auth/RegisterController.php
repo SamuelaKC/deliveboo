@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'phone_number' => $data['phone_number'],
             'piva' => $data['piva'],
             'description' => $data['description'],
+            'picture' => 'image/logo/deliveboo-back.png'
         ]);
     }
 }

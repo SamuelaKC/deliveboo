@@ -11,14 +11,18 @@
                 <div class="row">
 
                     <div class="col-9 col-md-10 myplate-text">
-                        <h5 class="mt-0 mb-1">Nome: {{ $plate->name }}</h5>
+                        <h5 class="mt-0 mb-1">Nome: {{ ucwords($plate->name) }}</h5>
 
                         <div>Descrizione: {{ $plate->description }}</div>
                         <div>Prezzo: € {{ number_format($plate->price, 2) }}</div>
                         <div>Disponibilità: {{ $plate->available }}</div>
                     </div>
                     <div class="col-3 col-md-2 myplate-img">
+                        @if(strlen($plate->picture) > 0)
                         <img class="" src="{{ asset("storage/" . $plate->picture) }}" alt="{{ $plate->name }}" />
+                        @else 
+                        <span>Inserisci la foto del tuo piatto</span>
+                        @endif
                         <a href="{{ route('plates.editimg', $plate) }}" class="myplate-img-button">
                             <button class="btn btn-sm btn-bluegreen">Modifica</button>
                         </a>
