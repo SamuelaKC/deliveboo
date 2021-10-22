@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PaymentRequest;
+use App\Ingredient;
 use App\Mail\RestaurantMail;
 use App\Order;
 use App\Plate;
@@ -29,13 +30,24 @@ class PaymentController extends Controller
     public function makePayment(PaymentRequest $request, Gateway $gateway)
     {
         $order = Order::find($request->order);
+        $ingredients = Ingredient::all();
 
 
         $totalPrice = 0;
 
         foreach ($order->plate as $plate) {
+            $addArray = explode(', ', $plate->pivot->addition);
+            $totalAdd = 0;
+            foreach ($addArray as $stringAdd) {
+                foreach ($ingredients as $ingredient) {
 
-            $totalPrice += ($plate->price * $plate->pivot->quantity);
+                    if ($stringAdd === $ingredient->name) {
+                        $totalAdd += $ingredient->price;
+                    }
+                }
+            }
+
+            $totalPrice += (($plate->price * $plate->pivot->quantity) + $totalAdd);
             $plateId = $plate->id;
         }
 
