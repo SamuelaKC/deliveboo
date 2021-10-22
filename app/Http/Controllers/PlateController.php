@@ -94,7 +94,7 @@ class PlateController extends Controller
             if ($userId === $plate->user_id) {
                 return view('plates.edit', compact('plate', 'categories')); 
             } else {
-                return view('error.index');
+                return view('errors.401');
             }
 
     }
@@ -104,7 +104,7 @@ class PlateController extends Controller
         if ($userId === $plate->user_id) {
             return view('plates.editImg', compact('plate'));
         } else {
-            return view('error.index');
+            return view('errors.401');
         }
     }
 
