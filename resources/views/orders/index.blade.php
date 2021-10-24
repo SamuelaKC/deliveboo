@@ -6,18 +6,18 @@
         </div>
 
         <div class="col-10">
-            @foreach ($orders as $order)
+            @foreach ($allOrders as $order)
             <div class="row justify-content-center">
                 <div class="col mb-5">
                     <div class="bold-table m-t-2">Dettagli cliente</div>
-                    <div>Nome: {{ $order->name_surname }}</div>
-                    <div>Indirizzo: {{ $order->address }}</div>
-                    <div>Numero di Telefono: {{ $order->phone_number }}</div>
+                    <div>Nome: {{ $order['name_surname'] }}</div>
+                    <div>Indirizzo: {{ $order['address'] }}</div>
+                    <div>Numero di Telefono: {{ $order['phone_number'] }}</div>
                     <div class="bold-table m-t-2">
                         Dettagli dell'ordine
                     </div>
                     <div class="m-2">
-                        Dettagli ordine: {{ $order->details }}
+                        Dettagli ordine: {{ $order['details'] }}
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-2 d-none d-md-block  bold-table">
@@ -31,26 +31,26 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
+                        @foreach ($order['plateOrder'] as $plate )
                         <div class="col-1 col-md-2">
-                            @foreach ($order->plate as $plate )
-                            <div>{{$plate->pivot->quantity}}</div>
-                            @endforeach
+                            <div>{{$plate['quantity']}}</div>
+                            
                         </div>
                         <div class="col-6 col-md-7 text-nowrap">
-                            @foreach ($order->plate as $plate )
-                            <div>{{ ucwords($plate->name) }}</div>
-                            @endforeach
-                            @foreach ($order->plate as $plate )
-                            <div class="details-order">{{$plate->pivot->addition}}</div>
-                            @endforeach
+                            
+                            <div>{{ ucwords($plate['name']) }}</div>
+                            
+                            
+                            <div class="details-order">{{$plate['addition']}}</div>
+                            
                         </div>
                         <div class="col-4 col-md-2 border-bottom">
-                            @foreach ($order->plate as $plate )
+                            
                             <div class="text-right">
-                                € {{ number_format ( ($plate->price * $plate->pivot->quantity), 2) }}
+                                € {{ number_format ( (($plate['price'] * $plate['quantity']) + $plate['priceAdd']), 2) }}
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                     </div>
                     <div class="row justify-content-center border-bottom">
                         <div class="col-8 col-md-9 bold-table">
@@ -58,7 +58,7 @@
                         </div>
                         <div class="col-4 col-md-2">
                             <div class="bold-table text-right">
-                                € {{ number_format($order->total_price, 2) }}
+                                € {{ number_format($order['total_price'], 2) }}
                             </div>
                         </div>
                     </div>
